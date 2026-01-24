@@ -1,13 +1,15 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { ContactForm } from '@/components/ContactForm';
 
 export async function generateMetadata({
-  params: { locale }
+  params
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }> | { locale: string };
 }): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'contact' });
+  const { locale } = await Promise.resolve(params);
+  setRequestLocale(locale);
+  const t = await getTranslations({ namespace: 'contact' });
 
   return {
     title: t('title'),

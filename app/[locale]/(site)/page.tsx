@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { Hero } from '@/components/Hero';
 import { MainMessage } from '@/components/MainMessage';
@@ -8,11 +8,13 @@ import { HowIWork } from '@/components/HowIWork';
 import { CTA } from '@/components/CTA';
 
 export async function generateMetadata({
-  params: { locale }
+  params
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }> | { locale: string };
 }): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'home' });
+  const { locale } = await Promise.resolve(params);
+  setRequestLocale(locale);
+  const t = await getTranslations({ namespace: 'home' });
 
   return {
     title: t('title'),
