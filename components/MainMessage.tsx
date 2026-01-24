@@ -10,6 +10,7 @@ export function MainMessage() {
       <Container>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Ícone multiplataforma - Imagem importada (flutuante) */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <div className="mb-6 md:mb-8 flex items-center floating-icon">
             <img
               src="/images/sessao.png"

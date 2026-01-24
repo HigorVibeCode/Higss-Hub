@@ -85,11 +85,14 @@ export function HowIWork() {
             )}
 
             {items.map((item, index) => (
-              <div key={item} className="relative z-10 flex">
+              <div 
+                key={item} 
+                className="relative z-10 flex"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
                 <Card 
                   className="group relative overflow-hidden flex flex-col w-full"
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
                 >
                   {/* Overlay tipo blueprint/interface sutil no hover */}
                   <div 
