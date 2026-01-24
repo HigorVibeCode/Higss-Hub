@@ -23,10 +23,13 @@
       "ctaSecondary": "Explorar Productos y Servicios"
     },
     "mainMessage": {
-      "paragraph1": "Lo que estás viendo aquí no es solo software. De hecho, el software no es el resultado final. Es la ejecución de una estrategia.",
-      "paragraph2": "Este sistema se construyó sobre una base muy clara: personas, productos y procesos. Cada elemento fue cuidadosamente diseñado para trabajar juntos, creando un sistema cohesivo que genera resultados.",
-      "paragraph3": "La estrategia detrás de este sistema se enfoca en entender tu negocio en su esencia, mapear tus procesos e implementar tecnología que realmente sirva a tus objetivos.",
-      "paragraph4": "No se trata de agregar más herramientas a tu stack. Se trata de construir un sistema de ejecución que transforme cómo trabajas, cómo mides el éxito y cómo creces."
+      "lead": "No es solo software. Es estrategia en ejecución.",
+      "paragraph1": "Lo que ves aquí va mucho más allá de la tecnología.",
+      "paragraph2": "El software no es el fin — es el medio.",
+      "paragraph3": "Este sistema se construye sobre una base sólida y esencial: personas, productos y procesos. Cada elemento está cuidadosamente diseñado para trabajar en armonía, creando un ecosistema eficiente que genera resultados reales.",
+      "paragraph4": "La estrategia detrás de este sistema comienza con una comprensión profunda de tu negocio. Mapeamos tus procesos, identificamos cuellos de botella y aplicamos tecnología de manera inteligente — siempre al servicio de tus objetivos.",
+      "paragraph5": "No se trata de agregar más herramientas o complicar tu operación.",
+      "paragraph6": "Se trata de construir un sistema de ejecución que transforme cómo trabajas, cómo mides el éxito y cómo creces de manera consistente."
     },
     "metrics": {
       "title": "Impacto en Números"
@@ -47,8 +50,8 @@
       }
     },
     "cta": {
-      "title": "¿Está tu empresa en el cantón de Berna?",
-      "button": "Comenzar"
+      "title": "¿Cerca de Interlaken?",
+      "button": "Reservar visita"
     }
   },
   "products": {

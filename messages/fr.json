@@ -23,10 +23,13 @@
       "ctaSecondary": "Explorer les Produits et Services"
     },
     "mainMessage": {
-      "paragraph1": "Ce que vous voyez ici n'est pas seulement un logiciel. En fait, le logiciel n'est pas le résultat final. C'est l'exécution d'une stratégie.",
-      "paragraph2": "Ce système a été construit sur une base très claire : les personnes, les produits et les processus. Chaque élément a été soigneusement conçu pour fonctionner ensemble, créant un système cohérent qui génère des résultats.",
-      "paragraph3": "La stratégie derrière ce système se concentre sur la compréhension de votre entreprise dans son essence, la cartographie de vos processus et la mise en œuvre d'une technologie qui sert vraiment vos objectifs.",
-      "paragraph4": "Il ne s'agit pas d'ajouter plus d'outils à votre pile. Il s'agit de construire un système d'exécution qui transforme la façon dont vous travaillez, dont vous mesurez le succès et dont vous grandissez."
+      "lead": "Ce n'est pas seulement un logiciel. C'est une stratégie en exécution.",
+      "paragraph1": "Ce que vous voyez ici va bien au-delà de la technologie.",
+      "paragraph2": "Le logiciel n'est pas la fin — c'est le moyen.",
+      "paragraph3": "Ce système est construit sur une base solide et essentielle : les personnes, les produits et les processus. Chaque élément est conçu avec soin pour fonctionner en harmonie, créant un écosystème efficace qui génère de vrais résultats.",
+      "paragraph4": "La stratégie derrière ce système commence par une compréhension approfondie de votre entreprise. Nous cartographions vos processus, identifions les goulots d'étranglement et appliquons la technologie intelligemment — toujours au service de vos objectifs.",
+      "paragraph5": "Il ne s'agit pas d'ajouter plus d'outils ou de compliquer votre opération.",
+      "paragraph6": "Il s'agit de construire un système d'exécution qui transforme la façon dont vous travaillez, dont vous mesurez le succès et dont vous grandissez de manière cohérente."
     },
     "metrics": {
       "title": "Impact en Chiffres"
@@ -47,8 +50,8 @@
       }
     },
     "cta": {
-      "title": "Votre entreprise est-elle dans le canton de Berne?",
-      "button": "Commencer"
+      "title": "Près d'Interlaken?",
+      "button": "Réserver une visite"
     }
   },
   "products": {

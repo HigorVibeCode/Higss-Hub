@@ -15,10 +15,13 @@
       "ctaSecondary": "Explorar Produtos e Serviços"
     },
     "mainMessage": {
-      "paragraph1": "O que você está vendo aqui não é apenas software. Na verdade, o software não é o resultado final. É a execução de uma estratégia.",
-      "paragraph2": "Este sistema foi construído sobre uma base muito clara: pessoas, produtos e processos. Cada elemento foi cuidadosamente projetado para trabalhar em conjunto, criando um sistema coeso que gera resultados.",
-      "paragraph3": "A estratégia por trás deste sistema foca em entender seu negócio em sua essência, mapear seus processos e implementar tecnologia que verdadeiramente serve aos seus objetivos.",
-      "paragraph4": "Não se trata de adicionar mais ferramentas à sua pilha. Trata-se de construir um sistema de execução que transforma como você trabalha, como mede o sucesso e como cresce."
+      "lead": "Não é apenas software. É estratégia em execução.",
+      "paragraph1": "O que você vê aqui vai muito além da tecnologia.",
+      "paragraph2": "O software não é o fim — é o meio.",
+      "paragraph3": "Este sistema é construído sobre uma base sólida e essencial: pessoas, produtos e processos. Cada elemento é cuidadosamente projetado para trabalhar em harmonia, criando um ecossistema eficiente que gera resultados reais.",
+      "paragraph4": "A estratégia por trás deste sistema começa com uma compreensão profunda do seu negócio. Mapeamos seus processos, identificamos gargalos e aplicamos tecnologia de forma inteligente — sempre a serviço dos seus objetivos.",
+      "paragraph5": "Não se trata de adicionar mais ferramentas ou complicar sua operação.",
+      "paragraph6": "Trata-se de construir um sistema de execução que transforma como você trabalha, como mede o sucesso e como cresce de forma consistente."
     },
     "metrics": {
       "title": "Impacto em Números"
@@ -39,8 +42,8 @@
       }
     },
     "cta": {
-      "title": "Sua empresa está no Cantão de Berna?",
-      "button": "Começar"
+      "title": "Perto de Interlaken?",
+      "button": "Agendar visita"
     }
   },
   "products": {

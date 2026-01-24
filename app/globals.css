@@ -105,4 +105,47 @@ body {
   .section-divider {
     @apply border-t border-border/50;
   }
+
+  /* Animação para seta de scroll (mobile) */
+  @keyframes scroll-indicator {
+    0%, 100% {
+      opacity: 0.4;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 0.8;
+      transform: translateY(8px);
+    }
+  }
+
+  .scroll-arrow {
+    animation: scroll-indicator 2s ease-in-out infinite;
+  }
+
+  /* Respeitar prefers-reduced-motion para a seta */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-arrow {
+      animation: none;
+      opacity: 0.6;
+    }
+  }
+
+  /* Imagem flutuante sem bordas */
+  .floating-icon {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+  }
+
+  .floating-icon img {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+  }
 }

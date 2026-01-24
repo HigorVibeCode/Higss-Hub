@@ -23,10 +23,13 @@
       "ctaSecondary": "Produkte & Dienstleistungen erkunden"
     },
     "mainMessage": {
-      "paragraph1": "Was Sie hier sehen, ist nicht nur Software. Tatsächlich ist die Software nicht das Endergebnis. Es ist die Umsetzung einer Strategie.",
-      "paragraph2": "Dieses System wurde auf einer sehr klaren Grundlage aufgebaut: Menschen, Produkte und Prozesse. Jedes Element wurde sorgfältig entwickelt, um zusammenzuarbeiten und ein kohärentes System zu schaffen, das Ergebnisse liefert.",
-      "paragraph3": "Die Strategie hinter diesem System konzentriert sich darauf, Ihr Geschäft im Kern zu verstehen, Ihre Prozesse zu kartieren und Technologie zu implementieren, die wirklich Ihren Zielen dient.",
-      "paragraph4": "Es geht nicht darum, mehr Tools zu Ihrem Stack hinzuzufügen. Es geht darum, ein Ausführungssystem zu bauen, das transformiert, wie Sie arbeiten, wie Sie Erfolg messen und wie Sie wachsen."
+      "lead": "Es ist nicht nur Software. Es ist Strategie in der Umsetzung.",
+      "paragraph1": "Was Sie hier sehen, geht weit über Technologie hinaus.",
+      "paragraph2": "Software ist nicht das Ende — sie ist das Mittel.",
+      "paragraph3": "Dieses System basiert auf einer soliden und wesentlichen Grundlage: Menschen, Produkte und Prozesse. Jedes Element ist durchdacht gestaltet, um harmonisch zusammenzuarbeiten und ein effizientes Ökosystem zu schaffen, das echte Ergebnisse liefert.",
+      "paragraph4": "Die Strategie hinter diesem System beginnt mit einem tiefen Verständnis Ihres Geschäfts. Wir kartieren Ihre Prozesse, identifizieren Engpässe und wenden Technologie intelligent an — immer im Dienst Ihrer Ziele.",
+      "paragraph5": "Es geht nicht darum, mehr Tools hinzuzufügen oder Ihren Betrieb zu komplizieren.",
+      "paragraph6": "Es geht darum, ein Ausführungssystem zu bauen, das transformiert, wie Sie arbeiten, wie Sie Erfolg messen und wie Sie kontinuierlich wachsen."
     },
     "metrics": {
       "title": "Auswirkungen in Zahlen"
@@ -47,8 +50,8 @@
       }
     },
     "cta": {
-      "title": "Ist Ihr Unternehmen im Kanton Bern?",
-      "button": "Loslegen"
+      "title": "In der Nähe von Interlaken?",
+      "button": "Besuch buchen"
     }
   },
   "products": {

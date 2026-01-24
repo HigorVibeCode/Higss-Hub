@@ -23,10 +23,13 @@
       "ctaSecondary": "Esplora Prodotti e Servizi"
     },
     "mainMessage": {
-      "paragraph1": "Quello che stai vedendo qui non è solo software. In effetti, il software non è il risultato finale. È l'esecuzione di una strategia.",
-      "paragraph2": "Questo sistema è stato costruito su una base molto chiara: persone, prodotti e processi. Ogni elemento è stato attentamente progettato per lavorare insieme, creando un sistema coeso che genera risultati.",
-      "paragraph3": "La strategia dietro questo sistema si concentra sulla comprensione della tua azienda nella sua essenza, sulla mappatura dei tuoi processi e sull'implementazione di tecnologia che serve veramente i tuoi obiettivi.",
-      "paragraph4": "Non si tratta di aggiungere più strumenti al tuo stack. Si tratta di costruire un sistema di esecuzione che trasforma come lavori, come misuri il successo e come cresci."
+      "lead": "Non è solo software. È strategia in esecuzione.",
+      "paragraph1": "Quello che vedi qui va ben oltre la tecnologia.",
+      "paragraph2": "Il software non è la fine — è il mezzo.",
+      "paragraph3": "Questo sistema è costruito su una base solida ed essenziale: persone, prodotti e processi. Ogni elemento è attentamente progettato per lavorare in armonia, creando un ecosistema efficiente che produce risultati reali.",
+      "paragraph4": "La strategia dietro questo sistema inizia con una profonda comprensione della tua azienda. Mappiamo i tuoi processi, identifichiamo i colli di bottiglia e applichiamo la tecnologia in modo intelligente — sempre al servizio dei tuoi obiettivi.",
+      "paragraph5": "Non si tratta di aggiungere più strumenti o complicare la tua operazione.",
+      "paragraph6": "Si tratta di costruire un sistema di esecuzione che trasforma come lavori, come misuri il successo e come cresci in modo coerente."
     },
     "metrics": {
       "title": "Impatto in Numeri"
@@ -47,8 +50,8 @@
       }
     },
     "cta": {
-      "title": "La tua azienda è nel Canton Berna?",
-      "button": "Inizia"
+      "title": "Vicino a Interlaken?",
+      "button": "Prenota visita"
     }
   },
   "products": {

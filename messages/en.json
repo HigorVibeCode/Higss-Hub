@@ -15,10 +15,13 @@
       "ctaSecondary": "Explore Products & Services"
     },
     "mainMessage": {
-      "paragraph1": "What you're seeing here is not just software. In fact, the software is not the final result. It is the execution of a strategy.",
-      "paragraph2": "This system was built on a very clear foundation: people, products, and processes. Each element was carefully designed to work together, creating a cohesive system that drives results.",
-      "paragraph3": "The strategy behind this system focuses on understanding your business at its core, mapping out your processes, and implementing technology that truly serves your goals.",
-      "paragraph4": "This is not about adding more tools to your stack. It's about building an execution system that transforms how you work, how you measure success, and how you grow."
+      "lead": "It's not just software. It's strategy in execution.",
+      "paragraph1": "What you see here goes far beyond technology.",
+      "paragraph2": "Software is not the end — it's the means.",
+      "paragraph3": "This system is built on a solid and essential foundation: people, products, and processes. Each element is thoughtfully designed to work together in harmony, creating an efficient ecosystem that delivers real results.",
+      "paragraph4": "The strategy behind this system starts with a deep understanding of your business. We map your processes, identify bottlenecks, and apply technology intelligently — always in service of your goals.",
+      "paragraph5": "This is not about adding more tools or complicating your operation.",
+      "paragraph6": "It's about building an execution system that transforms how you work, how you measure success, and how you grow consistently."
     },
     "metrics": {
       "title": "Impact by Numbers"
@@ -39,8 +42,8 @@
       }
     },
     "cta": {
-      "title": "Is your company in the Canton of Bern?",
-      "button": "Get Started"
+      "title": "Near Interlaken?",
+      "button": "Get a visit"
     }
   },
   "products": {

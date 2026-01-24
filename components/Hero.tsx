@@ -11,6 +11,7 @@ export function Hero() {
   const locale = useLocale();
   const headline = t('headline');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [scrollPosition, setScrollPosition] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -22,6 +23,18 @@ export function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Parallax baseado em scroll para mobile
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setScrollPosition(scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Parallax baseado em mouse para desktop
   useEffect(() => {
     if (isMobile) return;
 
@@ -88,7 +101,7 @@ export function Hero() {
   });
 
   return (
-    <section className="relative overflow-hidden min-h-screen flex items-center" style={{ marginTop: 0, paddingTop: '5rem' }}>
+    <section className="relative overflow-hidden min-h-screen flex items-start md:items-center pt-24 md:pt-16 pb-5 md:pb-0" style={{ marginTop: 0 }}>
       {/* Background image com parallax - full screen, sem bordas, cobre toda a viewport */}
       {/* A imagem fica atrás da navbar (z-index menor que 50) */}
       <div 
@@ -96,11 +109,14 @@ export function Hero() {
         style={{
           backgroundImage: `url('/images/hero-background.jpg')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center right',
+          backgroundPosition: isMobile ? 'center 30%' : 'center right', // Mobile: 30% do topo mostra o rosto, Desktop: mantém right
           backgroundRepeat: 'no-repeat',
-          opacity: 0.4,
-          transform: isMobile ? 'none' : `translate(${mousePosition.x}px, ${mousePosition.y}px) scale(1.15)`,
-          transition: 'transform 0.1s ease-out',
+          backgroundAttachment: 'fixed', // Parallax effect
+          opacity: isMobile ? 0.5 : 0.4, // Mobile: um pouco mais visível
+          transform: isMobile 
+            ? `translateY(${scrollPosition * 0.3}px)` // Parallax sutil no mobile baseado em scroll
+            : `translate(${mousePosition.x}px, ${mousePosition.y}px) scale(1.15)`, // Desktop: parallax no mouse
+          transition: isMobile ? 'transform 0.1s ease-out' : 'transform 0.1s ease-out',
           zIndex: 0,
           top: '-5rem', // Compensa o padding-top da section
           left: 0,
@@ -123,35 +139,37 @@ export function Hero() {
         }} 
       />
       
-      <Container className="relative z-10">
+      <Container className="relative z-10 pt-8 md:pt-0">
         <div className="max-w-4xl">
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             {/* Eyebrow com linha laranja - serif itálico */}
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-0.5 bg-accent" />
+            <div className="flex items-center gap-3 md:gap-4">
+              <div className="w-10 md:w-12 h-0.5 bg-accent" />
               <p className="text-sm md:text-base text-muted font-serif italic not-uppercase tracking-normal">
                 {t('subheadline')}
               </p>
             </div>
             
-            <div className="space-y-6">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-manrope text-text leading-[1.1] tracking-tight uppercase">
+            <div className="space-y-5 md:space-y-6">
+              <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-manrope text-text leading-[1.2] md:leading-[1.1] tracking-tight uppercase">
                 {formattedHeadline}
               </h1>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-4 pt-6 md:pt-4">
               <Button
                 href={`/${locale}/contact`}
                 variant="primary"
-                size="md"
+                size="lg"
+                className="text-base md:text-base min-h-[48px] md:min-h-[44px]"
               >
                 {t('ctaPrimary')}
               </Button>
               <Button
                 href={`/${locale}/products-services`}
                 variant="secondary"
-                size="md"
+                size="lg"
+                className="text-base md:text-base min-h-[48px] md:min-h-[44px]"
               >
                 {t('ctaSecondary')}
               </Button>
@@ -159,6 +177,28 @@ export function Hero() {
           </div>
         </div>
       </Container>
+
+      {/* Seta discreta piscando indicando scroll - apenas mobile */}
+      {isMobile && (
+        <div className="absolute bottom-40 left-1/2 transform -translate-x-1/2 z-20 pointer-events-none">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="text-muted/50 scroll-arrow"
+          >
+            <path
+              d="M7 10L12 15L17 10"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+      )}
     </section>
   );
 }

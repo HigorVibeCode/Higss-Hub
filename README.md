@@ -187,4 +187,100 @@ As rotas seguem o padrão: `/{locale}/{page}`
 
 ## 🚀 Deploy
 
-O site está configurado para ser hospedado no mesmo domínio `higsshub.com`. Certifique-se de configurar as variáveis de ambiente necessárias no ambiente de produção.
+### Opção 1: Vercel (Recomendado para Next.js)
+
+A Vercel é a plataforma recomendada para projetos Next.js e oferece deploy automático.
+
+#### Passo a Passo:
+
+1. **Teste o build localmente:**
+   ```bash
+   npm run build
+   npm run start
+   ```
+   Teste em `http://localhost:3000` para garantir que tudo funciona.
+
+2. **Instale a CLI da Vercel (opcional):**
+   ```bash
+   npm i -g vercel
+   ```
+
+3. **Deploy via CLI:**
+   ```bash
+   vercel
+   ```
+   Siga as instruções no terminal.
+
+4. **Deploy via Dashboard (recomendado):**
+   - Acesse [vercel.com](https://vercel.com)
+   - Faça login com GitHub/GitLab/Bitbucket
+   - Clique em "Add New Project"
+   - Importe o repositório do projeto
+   - A Vercel detectará automaticamente Next.js
+   - Clique em "Deploy"
+
+5. **Configuração do Domínio:**
+   - No dashboard da Vercel, vá em Settings > Domains
+   - Adicione `higsshub.com` e `www.higsshub.com`
+   - Configure os registros DNS conforme instruções da Vercel
+
+#### Configurações Importantes:
+
+- **Framework Preset:** Next.js (detectado automaticamente)
+- **Build Command:** `npm run build` (padrão)
+- **Output Directory:** `.next` (padrão)
+- **Install Command:** `npm install` (padrão)
+
+### Opção 2: Netlify
+
+1. **Crie `netlify.toml` na raiz do projeto:**
+   ```toml
+   [build]
+     command = "npm run build"
+     publish = ".next"
+   
+   [[plugins]]
+     package = "@netlify/plugin-nextjs"
+   ```
+
+2. **Deploy:**
+   - Acesse [netlify.com](https://netlify.com)
+   - Conecte o repositório
+   - Configure o domínio
+
+### Opção 3: Outros Provedores
+
+Para outros provedores (AWS, DigitalOcean, etc.), você precisará:
+
+1. **Build do projeto:**
+   ```bash
+   npm run build
+   ```
+
+2. **Iniciar o servidor:**
+   ```bash
+   npm run start
+   ```
+
+3. **Configurar variáveis de ambiente** (se necessário)
+
+### Checklist Antes do Deploy
+
+- [ ] Teste o build local: `npm run build && npm run start`
+- [ ] Verifique todas as rotas em todos os idiomas
+- [ ] Confirme que as imagens estão na pasta `public/images/`
+- [ ] Verifique o sitemap e robots.txt
+- [ ] Teste responsividade em mobile e desktop
+- [ ] Verifique SEO (metadata, OpenGraph)
+
+### Variáveis de Ambiente
+
+Atualmente, o projeto não requer variáveis de ambiente. Se precisar adicionar no futuro, configure no painel do provedor de hospedagem.
+
+### Domínio Personalizado
+
+Para usar `higsshub.com`:
+
+1. Configure os registros DNS conforme instruções do provedor
+2. Adicione o domínio no painel de controle
+3. Aguarde a propagação DNS (pode levar até 48 horas)

@@ -30,27 +30,28 @@ export function Header() {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      // Fechar menu de idiomas
-      if (
-        isLanguageMenuOpen &&
-        languageMenuRef.current &&
-        !languageMenuRef.current.contains(event.target as Node) &&
-        buttonRefDesktop.current &&
-        !buttonRefDesktop.current.contains(event.target as Node) &&
-        buttonRefMobile.current &&
-        !buttonRefMobile.current.contains(event.target as Node)
-      ) {
-        setIsLanguageMenuOpen(false);
+      const target = event.target as Node;
+      
+      // Verifica se o clique foi dentro do menu de idiomas ou no botão
+      const clickedInsideLanguageMenu = 
+        languageMenuRef.current?.contains(target) ||
+        buttonRefDesktop.current?.contains(target) ||
+        buttonRefMobile.current?.contains(target);
+      
+      // Fechar menu de idiomas apenas se clicou fora
+      // Usa um pequeno delay para garantir que o onClick do botão seja processado primeiro
+      if (isLanguageMenuOpen && !clickedInsideLanguageMenu) {
+        setTimeout(() => {
+          setIsLanguageMenuOpen(false);
+        }, 100);
       }
       
       // Fechar menu mobile
-      if (
-        isMobileMenuOpen &&
-        mobileMenuRef.current &&
-        !mobileMenuRef.current.contains(event.target as Node) &&
-        mobileMenuButtonRef.current &&
-        !mobileMenuButtonRef.current.contains(event.target as Node)
-      ) {
+      const clickedInsideMobileMenu = 
+        mobileMenuRef.current?.contains(target) ||
+        mobileMenuButtonRef.current?.contains(target);
+      
+      if (isMobileMenuOpen && !clickedInsideMobileMenu) {
         setIsMobileMenuOpen(false);
       }
     };
@@ -70,14 +71,22 @@ export function Header() {
     };
 
     if (isLanguageMenuOpen || isMobileMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      // Usa 'click' ao invés de 'mousedown' para evitar conflitos
+      // Adiciona um pequeno delay para garantir que o onClick do botão seja processado primeiro
+      const timeoutId = setTimeout(() => {
+        document.addEventListener('click', handleClickOutside, true);
+      }, 0);
+      
       document.addEventListener('keydown', handleEscape);
+      
+      return () => {
+        clearTimeout(timeoutId);
+        document.removeEventListener('click', handleClickOutside, true);
+        document.removeEventListener('keydown', handleEscape);
+      };
     }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('keydown', handleEscape);
-    };
+    
+    return () => {};
   }, [isLanguageMenuOpen, isMobileMenuOpen]);
 
   const isActive = (path: string) => {
@@ -86,65 +95,73 @@ export function Header() {
   };
 
   const switchLocale = (newLocale: Locale) => {
+    // Se já está no locale selecionado, apenas fecha o menu
     if (newLocale === locale) {
       setIsLanguageMenuOpen(false);
       return;
     }
     
+    // Fecha os menus
     setIsLanguageMenuOpen(false);
     setIsMobileMenuOpen(false);
     
-    // O pathname do Next.js já inclui o locale (ex: /en, /pt/products-services)
-    // Precisamos extrair apenas a parte sem o locale
-    let pathWithoutLocale = pathname;
+    // Usa window.location.pathname para obter o pathname completo da URL atual
+    // Isso garante que temos o pathname real incluindo o locale
+    const currentPath = window.location.pathname;
     
-    // Remove o locale do início do pathname
-    // Primeiro tenta com barra no final (ex: /en/)
-    const localeWithSlash = `/${locale}/`;
-    if (pathWithoutLocale.startsWith(localeWithSlash)) {
-      pathWithoutLocale = pathWithoutLocale.substring(localeWithSlash.length - 1);
-    } 
-    // Depois tenta sem barra no final (ex: /en)
-    else if (pathWithoutLocale === `/${locale}` || pathWithoutLocale.startsWith(`/${locale}`)) {
-      pathWithoutLocale = pathWithoutLocale.substring(`/${locale}`.length);
+    // Remove o locale atual do início do pathname
+    // Exemplos de input:
+    // /en -> output: /
+    // /en/ -> output: /
+    // /en/products-services -> output: /products-services
+    // /pt/contact -> output: /contact
+    // /pt/products-services/slug -> output: /products-services/slug
+    
+    let pathWithoutLocale = currentPath;
+    const localePattern = `/${locale}`;
+    
+    // Remove o locale do início do path
+    if (pathWithoutLocale.startsWith(localePattern)) {
+      pathWithoutLocale = pathWithoutLocale.substring(localePattern.length);
     }
     
-    // Se ficou vazio, significa que estamos na home
-    if (!pathWithoutLocale || pathWithoutLocale === '') {
-      pathWithoutLocale = '/';
-    }
-    
-    // Garante que comece com /
-    if (!pathWithoutLocale.startsWith('/')) {
-      pathWithoutLocale = '/' + pathWithoutLocale;
-    }
-    
-    // Remove a barra final se não for a home
-    if (pathWithoutLocale !== '/' && pathWithoutLocale.endsWith('/')) {
-      pathWithoutLocale = pathWithoutLocale.slice(0, -1);
+    // Normaliza o path
+    // Se ficou vazio ou só tem barra, é a home
+    if (!pathWithoutLocale || pathWithoutLocale === '' || pathWithoutLocale === '/') {
+      pathWithoutLocale = '';
+    } else {
+      // Garante que comece com /
+      if (!pathWithoutLocale.startsWith('/')) {
+        pathWithoutLocale = '/' + pathWithoutLocale;
+      }
+      // Remove barra final se não for home
+      if (pathWithoutLocale.endsWith('/') && pathWithoutLocale.length > 1) {
+        pathWithoutLocale = pathWithoutLocale.slice(0, -1);
+      }
     }
     
     // Constrói a nova URL
     // Se for home, apenas /locale, senão /locale/path
-    const newUrl = pathWithoutLocale === '/' 
+    const newUrl = pathWithoutLocale === '' 
       ? `/${newLocale}` 
       : `/${newLocale}${pathWithoutLocale}`;
     
-    // Debug temporário - remover depois
-    console.log('[Locale Switch]', {
+    // Debug (pode remover depois)
+    console.log('[Locale Switch Debug]', {
       currentLocale: locale,
       newLocale,
-      originalPathname: pathname,
+      currentPath,
       pathWithoutLocale,
       newUrl
     });
     
     // Força navegação completa - necessário para o middleware processar
-    // Usa window.location.href para garantir reload completo
+    // Usa window.location.href para garantir reload completo e re-processamento do middleware
+    // Isso é essencial para o next-intl funcionar corretamente
     try {
       window.location.href = newUrl;
     } catch (error) {
-      console.error('Error switching locale:', error);
+      console.error('[Locale Switch Error]', error);
       // Fallback: tenta usar replace
       window.location.replace(newUrl);
     }
@@ -215,12 +232,19 @@ export function Header() {
             <div className="relative ml-4 pl-4 border-l border-border">
               <button
                 ref={buttonRefDesktop}
-                onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  console.log('[Desktop] Toggle language menu, current state:', isLanguageMenuOpen);
+                  setIsLanguageMenuOpen(!isLanguageMenuOpen);
+                }}
                 onKeyDown={handleLanguageButtonKeyDown}
                 aria-label="Select language"
                 aria-expanded={isLanguageMenuOpen}
                 aria-haspopup="true"
                 className="p-2 text-muted hover:text-text transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-surface rounded"
+                style={{ pointerEvents: 'auto' }}
               >
                 <svg
                   className="w-5 h-5"
@@ -240,22 +264,41 @@ export function Header() {
               {isLanguageMenuOpen && (
                 <div
                   ref={languageMenuRef}
-                  className="absolute right-0 mt-2 w-32 bg-card border border-border rounded-lg shadow-lg py-2 z-50"
+                  className="absolute right-0 mt-2 w-32 bg-card border border-border rounded-lg shadow-lg py-2 z-[100]"
                   role="menu"
                   aria-orientation="vertical"
+                  style={{ pointerEvents: 'auto' }}
+                  onClick={(e) => {
+                    // Previne que o clique no dropdown feche o menu
+                    e.stopPropagation();
+                  }}
                 >
                   {locales.map((loc, index) => (
                     <button
                       key={loc}
+                      type="button"
                       onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
+                        console.log('[Desktop] Clicked on locale:', loc, 'Current locale:', locale);
+                        // Fecha o menu imediatamente
+                        setIsLanguageMenuOpen(false);
+                        // Chama diretamente - window.location.href não precisa de setTimeout
+                        console.log('[Desktop] About to call switchLocale');
                         switchLocale(loc);
+                        console.log('[Desktop] switchLocale called');
+                      }}
+                      onMouseDown={(e) => {
+                        // Previne que o mousedown feche o menu antes do onClick
+                        e.stopPropagation();
                       }}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault();
-                          switchLocale(loc);
+                          e.stopPropagation();
+                          setTimeout(() => {
+                            switchLocale(loc);
+                          }, 0);
                         } else if (e.key === 'ArrowDown') {
                           e.preventDefault();
                           const next = e.currentTarget.nextElementSibling as HTMLElement;
@@ -358,15 +401,22 @@ export function Header() {
                   {locales.map((loc) => (
                     <button
                       key={loc}
+                      type="button"
                       onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
-                        switchLocale(loc);
+                        // Usa setTimeout para garantir que o estado seja atualizado antes da navegação
+                        setTimeout(() => {
+                          switchLocale(loc);
+                        }, 0);
                       }}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault();
-                          switchLocale(loc);
+                          e.stopPropagation();
+                          setTimeout(() => {
+                            switchLocale(loc);
+                          }, 0);
                         } else if (e.key === 'ArrowDown') {
                           e.preventDefault();
                           const next = e.currentTarget.nextElementSibling as HTMLElement;
