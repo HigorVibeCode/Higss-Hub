@@ -1,0 +1,400 @@
+{
+  "en": {
+    "items": [
+      {
+        "phase": "Phase 1",
+        "year": "2020",
+        "title": "The Foundation: Understanding Business First",
+        "insight": "Every successful transformation starts with understanding the business, not the technology. Technology is a means, not an end.",
+        "tags": [
+          "Strategy",
+          "Leadership"
+        ],
+        "link": {
+          "label": "Read more",
+          "url": "#"
+        },
+        "howIApplyIt": "I always start with a comprehensive business analysis before recommending any technology. This ensures that every solution aligns with actual business needs and goals."
+      },
+      {
+        "phase": "Phase 2",
+        "year": "2021",
+        "title": "Process Mapping: The Hidden Infrastructure",
+        "insight": "Most businesses operate on undocumented processes. Mapping these processes reveals inefficiencies and opportunities that technology can address.",
+        "tags": [
+          "Operations",
+          "Processes"
+        ],
+        "howIApplyIt": "I use process mapping as a diagnostic tool to understand how work actually gets done, not just how it's supposed to be done. This reveals the real bottlenecks."
+      },
+      {
+        "phase": "Phase 3",
+        "year": "2022",
+        "title": "The Power of Small Wins",
+        "insight": "Big transformations happen through small, consistent improvements. Focus on quick wins that build momentum and demonstrate value early.",
+        "tags": [
+          "Strategy",
+          "Operations"
+        ],
+        "howIApplyIt": "I structure projects to deliver value in phases, ensuring clients see results quickly while building toward larger strategic goals."
+      },
+      {
+        "phase": "Phase 4",
+        "year": "2023",
+        "title": "AI as an Enabler, Not a Replacement",
+        "insight": "Artificial intelligence should augment human capabilities, not replace them. The best AI implementations enhance decision-making and automate routine tasks.",
+        "tags": [
+          "AI",
+          "Technology",
+          "Strategy"
+        ],
+        "link": {
+          "label": "Article",
+          "url": "#"
+        },
+        "howIApplyIt": "I help businesses identify where AI can create real value—usually in data analysis, customer service, and repetitive task automation—while keeping human judgment at the center."
+      },
+      {
+        "phase": "Phase 5",
+        "year": "2024",
+        "title": "Building Execution Systems",
+        "insight": "Strategy without execution is just planning. The real value comes from building systems that make execution automatic and measurable.",
+        "tags": [
+          "Strategy",
+          "Operations",
+          "Leadership"
+        ],
+        "howIApplyIt": "I focus on creating systems that make good execution the default, not the exception. This means clear processes, visible metrics, and accountability built into the workflow."
+      }
+    ]
+  },
+  "pt": {
+    "items": [
+      {
+        "phase": "Fase 1",
+        "year": "2020",
+        "title": "A Fundação: Entendendo o Negócio Primeiro",
+        "insight": "Toda transformação bem-sucedida começa entendendo o negócio, não a tecnologia. Tecnologia é um meio, não um fim.",
+        "tags": [
+          "Estratégia",
+          "Liderança"
+        ],
+        "link": {
+          "label": "Ler mais",
+          "url": "#"
+        },
+        "howIApplyIt": "Sempre começo com uma análise abrangente do negócio antes de recomendar qualquer tecnologia. Isso garante que cada solução se alinhe com as necessidades e objetivos reais do negócio."
+      },
+      {
+        "phase": "Fase 2",
+        "year": "2021",
+        "title": "Mapeamento de Processos: A Infraestrutura Oculta",
+        "insight": "A maioria das empresas opera com processos não documentados. Mapear esses processos revela ineficiências e oportunidades que a tecnologia pode abordar.",
+        "tags": [
+          "Operações",
+          "Processos"
+        ],
+        "howIApplyIt": "Uso mapeamento de processos como ferramenta de diagnóstico para entender como o trabalho realmente é feito, não apenas como deveria ser feito. Isso revela os verdadeiros gargalos."
+      },
+      {
+        "phase": "Fase 3",
+        "year": "2022",
+        "title": "O Poder das Pequenas Vitórias",
+        "insight": "Grandes transformações acontecem através de pequenas melhorias consistentes. Foque em vitórias rápidas que criam momentum e demonstram valor cedo.",
+        "tags": [
+          "Estratégia",
+          "Operações"
+        ],
+        "howIApplyIt": "Estruturei projetos para entregar valor em fases, garantindo que os clientes vejam resultados rapidamente enquanto construímos em direção a objetivos estratégicos maiores."
+      },
+      {
+        "phase": "Fase 4",
+        "year": "2023",
+        "title": "IA como Facilitador, Não Substituição",
+        "insight": "A inteligência artificial deve aumentar as capacidades humanas, não substituí-las. As melhores implementações de IA melhoram a tomada de decisão e automatizam tarefas rotineiras.",
+        "tags": [
+          "IA",
+          "Tecnologia",
+          "Estratégia"
+        ],
+        "link": {
+          "label": "Artigo",
+          "url": "#"
+        },
+        "howIApplyIt": "Ajudo empresas a identificar onde a IA pode criar valor real—geralmente em análise de dados, atendimento ao cliente e automação de tarefas repetitivas—mantendo o julgamento humano no centro."
+      },
+      {
+        "phase": "Fase 5",
+        "year": "2024",
+        "title": "Construindo Sistemas de Execução",
+        "insight": "Estratégia sem execução é apenas planejamento. O valor real vem de construir sistemas que tornam a execução automática e mensurável.",
+        "tags": [
+          "Estratégia",
+          "Operações",
+          "Liderança"
+        ],
+        "howIApplyIt": "Foco em criar sistemas que tornam a boa execução o padrão, não a exceção. Isso significa processos claros, métricas visíveis e responsabilidade integrada ao fluxo de trabalho."
+      }
+    ]
+  },
+  "de": {
+    "items": [
+      {
+        "phase": "Phase 1",
+        "year": "2020",
+        "title": "Das Fundament: Business zuerst verstehen",
+        "insight": "Jede erfolgreiche Transformation beginnt mit dem Verständnis des Geschäfts, nicht der Technologie. Technologie ist ein Mittel, kein Zweck.",
+        "tags": [
+          "Strategie",
+          "Führung"
+        ],
+        "howIApplyIt": "Ich beginne immer mit einer umfassenden Geschäftsanalyse, bevor ich Technologie empfehle. Dies stellt sicher, dass jede Lösung mit tatsächlichen Geschäftsbedürfnissen und -zielen übereinstimmt."
+      },
+      {
+        "phase": "Phase 2",
+        "year": "2021",
+        "title": "Prozessmapping: Die verborgene Infrastruktur",
+        "insight": "Die meisten Unternehmen arbeiten mit undokumentierten Prozessen. Die Kartierung dieser Prozesse zeigt Ineffizienzen und Möglichkeiten auf, die Technologie angehen kann.",
+        "tags": [
+          "Operationen",
+          "Prozesse"
+        ],
+        "howIApplyIt": "Ich verwende Prozessmapping als Diagnosewerkzeug, um zu verstehen, wie Arbeit tatsächlich erledigt wird, nicht nur wie sie erledigt werden soll. Dies zeigt die wahren Engpässe auf."
+      },
+      {
+        "phase": "Phase 3",
+        "year": "2022",
+        "title": "Die Macht kleiner Siege",
+        "insight": "Große Transformationen geschehen durch kleine, konsistente Verbesserungen. Konzentrieren Sie sich auf schnelle Siege, die Momentum aufbauen und früh Wert demonstrieren.",
+        "tags": [
+          "Strategie",
+          "Operationen"
+        ],
+        "howIApplyIt": "Ich strukturiere Projekte, um Wert in Phasen zu liefern, sodass Kunden schnell Ergebnisse sehen, während wir auf größere strategische Ziele hinarbeiten."
+      },
+      {
+        "phase": "Phase 4",
+        "year": "2023",
+        "title": "KI als Ermöglicher, nicht als Ersatz",
+        "insight": "Künstliche Intelligenz sollte menschliche Fähigkeiten erweitern, nicht ersetzen. Die besten KI-Implementierungen verbessern die Entscheidungsfindung und automatisieren Routineaufgaben.",
+        "tags": [
+          "KI",
+          "Technologie",
+          "Strategie"
+        ],
+        "howIApplyIt": "Ich helfe Unternehmen zu identifizieren, wo KI echten Wert schaffen kann—normalerweise in Datenanalyse, Kundenservice und Automatisierung repetitiver Aufgaben—während menschliches Urteilsvermögen im Zentrum bleibt.",
+        "link": {
+          "label": "Artikel",
+          "url": "#"
+        }
+      },
+      {
+        "phase": "Phase 5",
+        "year": "2024",
+        "title": "Ausführungssysteme aufbauen",
+        "insight": "Strategie ohne Ausführung ist nur Planung. Der wahre Wert kommt vom Aufbau von Systemen, die Ausführung automatisch und messbar machen.",
+        "tags": [
+          "Strategie",
+          "Operationen",
+          "Führung"
+        ],
+        "howIApplyIt": "Ich konzentriere mich darauf, Systeme zu schaffen, die gute Ausführung zur Regel machen, nicht zur Ausnahme. Das bedeutet klare Prozesse, sichtbare Metriken und Verantwortlichkeit, die in den Workflow eingebaut ist."
+      }
+    ]
+  },
+  "fr": {
+    "items": [
+      {
+        "phase": "Phase 1",
+        "year": "2020",
+        "title": "Les Fondations: Comprendre le Business d'Abord",
+        "insight": "Chaque transformation réussie commence par comprendre l'entreprise, pas la technologie. La technologie est un moyen, pas une fin.",
+        "tags": [
+          "Stratégie",
+          "Leadership"
+        ],
+        "howIApplyIt": "Je commence toujours par une analyse commerciale complète avant de recommander une technologie. Cela garantit que chaque solution s'aligne avec les besoins et objectifs réels de l'entreprise."
+      },
+      {
+        "phase": "Phase 2",
+        "year": "2021",
+        "title": "Cartographie des Processus: L'Infrastructure Cachée",
+        "insight": "La plupart des entreprises fonctionnent avec des processus non documentés. La cartographie de ces processus révèle des inefficacités et des opportunités que la technologie peut traiter.",
+        "tags": [
+          "Opérations",
+          "Processus"
+        ],
+        "howIApplyIt": "J'utilise la cartographie des processus comme outil de diagnostic pour comprendre comment le travail est réellement effectué, pas seulement comment il est censé être fait. Cela révèle les vrais goulots d'étranglement."
+      },
+      {
+        "phase": "Phase 3",
+        "year": "2022",
+        "title": "Le Pouvoir des Petites Victoires",
+        "insight": "Les grandes transformations se produisent grâce à de petites améliorations cohérentes. Concentrez-vous sur des victoires rapides qui créent de l'élan et démontrent de la valeur tôt.",
+        "tags": [
+          "Stratégie",
+          "Opérations"
+        ],
+        "howIApplyIt": "Je structure les projets pour fournir de la valeur par phases, garantissant que les clients voient des résultats rapidement tout en progressant vers des objectifs stratégiques plus larges."
+      },
+      {
+        "phase": "Phase 4",
+        "year": "2023",
+        "title": "L'IA comme Facilitateur, Pas un Remplacement",
+        "insight": "L'intelligence artificielle devrait augmenter les capacités humaines, pas les remplacer. Les meilleures implémentations d'IA améliorent la prise de décision et automatisent les tâches routinières.",
+        "tags": [
+          "IA",
+          "Technologie",
+          "Stratégie"
+        ],
+        "howIApplyIt": "J'aide les entreprises à identifier où l'IA peut créer de la valeur réelle—généralement dans l'analyse de données, le service client et l'automatisation des tâches répétitives—tout en gardant le jugement humain au centre.",
+        "link": {
+          "label": "Article",
+          "url": "#"
+        }
+      },
+      {
+        "phase": "Phase 5",
+        "year": "2024",
+        "title": "Construire des Systèmes d'Exécution",
+        "insight": "La stratégie sans exécution n'est que de la planification. La vraie valeur vient de la construction de systèmes qui rendent l'exécution automatique et mesurable.",
+        "tags": [
+          "Stratégie",
+          "Opérations",
+          "Leadership"
+        ],
+        "howIApplyIt": "Je me concentre sur la création de systèmes qui font de la bonne exécution la norme, pas l'exception. Cela signifie des processus clairs, des métriques visibles et une responsabilité intégrée au flux de travail."
+      }
+    ]
+  },
+  "es": {
+    "items": [
+      {
+        "phase": "Fase 1",
+        "year": "2020",
+        "title": "Los Fundamentos: Entender el Negocio Primero",
+        "insight": "Toda transformación exitosa comienza entendiendo el negocio, no la tecnología. La tecnología es un medio, no un fin.",
+        "tags": [
+          "Estrategia",
+          "Liderazgo"
+        ],
+        "howIApplyIt": "Siempre comienzo con un análisis empresarial completo antes de recomendar cualquier tecnología. Esto asegura que cada solución se alinee con las necesidades y objetivos reales del negocio."
+      },
+      {
+        "phase": "Fase 2",
+        "year": "2021",
+        "title": "Mapeo de Procesos: La Infraestructura Oculta",
+        "insight": "La mayoría de las empresas operan con procesos no documentados. Mapear estos procesos revela ineficiencias y oportunidades que la tecnología puede abordar.",
+        "tags": [
+          "Operaciones",
+          "Procesos"
+        ],
+        "howIApplyIt": "Uso el mapeo de procesos como herramienta de diagnóstico para entender cómo se hace realmente el trabajo, no solo cómo se supone que debe hacerse. Esto revela los verdaderos cuellos de botella."
+      },
+      {
+        "phase": "Fase 3",
+        "year": "2022",
+        "title": "El Poder de las Pequeñas Victorias",
+        "insight": "Las grandes transformaciones ocurren a través de pequeñas mejoras consistentes. Enfócate en victorias rápidas que generan impulso y demuestran valor temprano.",
+        "tags": [
+          "Estrategia",
+          "Operaciones"
+        ],
+        "howIApplyIt": "Estructuro proyectos para entregar valor en fases, asegurando que los clientes vean resultados rápidamente mientras construimos hacia objetivos estratégicos más grandes."
+      },
+      {
+        "phase": "Fase 4",
+        "year": "2023",
+        "title": "IA como Facilitador, No un Reemplazo",
+        "insight": "La inteligencia artificial debe aumentar las capacidades humanas, no reemplazarlas. Las mejores implementaciones de IA mejoran la toma de decisiones y automatizan tareas rutinarias.",
+        "tags": [
+          "IA",
+          "Tecnología",
+          "Estrategia"
+        ],
+        "howIApplyIt": "Ayudo a las empresas a identificar dónde la IA puede crear valor real—generalmente en análisis de datos, servicio al cliente y automatización de tareas repetitivas—mientras mantengo el juicio humano en el centro.",
+        "link": {
+          "label": "Artículo",
+          "url": "#"
+        }
+      },
+      {
+        "phase": "Fase 5",
+        "year": "2024",
+        "title": "Construyendo Sistemas de Ejecución",
+        "insight": "La estrategia sin ejecución es solo planificación. El valor real viene de construir sistemas que hacen la ejecución automática y medible.",
+        "tags": [
+          "Estrategia",
+          "Operaciones",
+          "Liderazgo"
+        ],
+        "howIApplyIt": "Me enfoco en crear sistemas que hacen de la buena ejecución la norma, no la excepción. Esto significa procesos claros, métricas visibles y responsabilidad integrada en el flujo de trabajo."
+      }
+    ]
+  },
+  "it": {
+    "items": [
+      {
+        "phase": "Fase 1",
+        "year": "2020",
+        "title": "Le Fondamenta: Capire il Business Prima",
+        "insight": "Ogni trasformazione di successo inizia comprendendo il business, non la tecnologia. La tecnologia è un mezzo, non un fine.",
+        "tags": [
+          "Strategia",
+          "Leadership"
+        ],
+        "howIApplyIt": "Inizio sempre con un'analisi aziendale completa prima di raccomandare qualsiasi tecnologia. Questo garantisce che ogni soluzione si allinei con le esigenze e gli obiettivi reali dell'azienda."
+      },
+      {
+        "phase": "Fase 2",
+        "year": "2021",
+        "title": "Mappatura dei Processi: L'Infrastruttura Nascosta",
+        "insight": "La maggior parte delle aziende opera con processi non documentati. Mappare questi processi rivela inefficienze e opportunità che la tecnologia può affrontare.",
+        "tags": [
+          "Operazioni",
+          "Processi"
+        ],
+        "howIApplyIt": "Uso la mappatura dei processi come strumento diagnostico per capire come il lavoro viene effettivamente svolto, non solo come dovrebbe essere fatto. Questo rivela i veri colli di bottiglia."
+      },
+      {
+        "phase": "Fase 3",
+        "year": "2022",
+        "title": "Il Potere delle Piccole Vittorie",
+        "insight": "Le grandi trasformazioni avvengono attraverso piccoli miglioramenti consistenti. Concentrati su vittorie rapide che creano slancio e dimostrano valore presto.",
+        "tags": [
+          "Strategia",
+          "Operazioni"
+        ],
+        "howIApplyIt": "Strutturo progetti per fornire valore in fasi, assicurando che i clienti vedano risultati rapidamente mentre costruiamo verso obiettivi strategici più grandi."
+      },
+      {
+        "phase": "Fase 4",
+        "year": "2023",
+        "title": "IA come Abilitatore, Non un Sostituto",
+        "insight": "L'intelligenza artificiale dovrebbe aumentare le capacità umane, non sostituirle. Le migliori implementazioni di IA migliorano il processo decisionale e automatizzano compiti di routine.",
+        "tags": [
+          "IA",
+          "Tecnologia",
+          "Strategia"
+        ],
+        "howIApplyIt": "Aiuto le aziende a identificare dove l'IA può creare valore reale—solitamente nell'analisi dei dati, nel servizio clienti e nell'automatizzazione di compiti ripetitivi—mantenendo il giudizio umano al centro.",
+        "link": {
+          "label": "Articolo",
+          "url": "#"
+        }
+      },
+      {
+        "phase": "Fase 5",
+        "year": "2024",
+        "title": "Costruire Sistemi di Esecuzione",
+        "insight": "La strategia senza esecuzione è solo pianificazione. Il vero valore viene dalla costruzione di sistemi che rendono l'esecuzione automatica e misurabile.",
+        "tags": [
+          "Strategia",
+          "Operazioni",
+          "Leadership"
+        ],
+        "howIApplyIt": "Mi concentro sulla creazione di sistemi che rendono la buona esecuzione la norma, non l'eccezione. Questo significa processi chiari, metriche visibili e responsabilità integrate nel flusso di lavoro."
+      }
+    ]
+  }
+}

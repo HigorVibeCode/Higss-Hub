@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos y Servicios",
+    "smartLab": "The Smart Lab",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "tagline": "Creando grandes resultados para pequeñas empresas a través de tecnología y estrategia empresarial.",
+    "quickLinks": "Enlaces Rápidos",
+    "home": "Inicio",
+    "products": "Productos y Servicios",
+    "smartLab": "The Smart Lab",
+    "contact": "Contacto"
+  },
+  "home": {
+    "title": "HIGSS HUB - Estratega de Tecnología y Negocios",
+    "description": "Creando grandes resultados para pequeñas empresas a través de tecnología y estrategia empresarial.",
+    "hero": {
+      "headline": "CREANDO GRANDES RESULTADOS para PEQUEÑAS EMPRESAS",
+      "subheadline": "Estratega de Tecnología y Negocios",
+      "ctaPrimary": "Reservar un Diagnóstico",
+      "ctaSecondary": "Explorar Productos y Servicios"
+    },
+    "mainMessage": {
+      "paragraph1": "Lo que estás viendo aquí no es solo software. De hecho, el software no es el resultado final. Es la ejecución de una estrategia.",
+      "paragraph2": "Este sistema se construyó sobre una base muy clara: personas, productos y procesos. Cada elemento fue cuidadosamente diseñado para trabajar juntos, creando un sistema cohesivo que genera resultados.",
+      "paragraph3": "La estrategia detrás de este sistema se enfoca en entender tu negocio en su esencia, mapear tus procesos e implementar tecnología que realmente sirva a tus objetivos.",
+      "paragraph4": "No se trata de agregar más herramientas a tu stack. Se trata de construir un sistema de ejecución que transforme cómo trabajas, cómo mides el éxito y cómo creces."
+    },
+    "metrics": {
+      "title": "Impacto en Números"
+    },
+    "howIWork": {
+      "title": "Los Fundamentos",
+      "people": {
+        "title": "Personas",
+        "description": "Entender tu equipo, sus necesidades y cómo trabajan juntos es la base de cualquier sistema exitoso."
+      },
+      "products": {
+        "title": "Productos",
+        "description": "Seleccionar e implementar las herramientas y tecnologías correctas que se alinean con tus objetivos empresariales."
+      },
+      "processes": {
+        "title": "Procesos",
+        "description": "Mapear, estandarizar y optimizar tus flujos de trabajo para crear eficiencia y claridad."
+      }
+    },
+    "cta": {
+      "title": "¿Está tu empresa en el cantón de Berna?",
+      "button": "Comenzar"
+    }
+  },
+  "products": {
+    "title": "Productos y Servicios",
+    "description": "Soluciones integrales para transformar tus operaciones empresariales e impulsar el crecimiento.",
+    "categories": {
+      "all": "Todos",
+      "services": "Servicios",
+      "digital-products": "Productos Digitales",
+      "software-systems": "Sistemas de Software"
+    },
+    "viewDetails": "Ver detalles",
+    "backToCatalog": "Volver al catálogo",
+    "detail": {
+      "whoItsFor": "Para quién es",
+      "whatYouGet": "Lo que obtienes",
+      "howItWorks": "Cómo funciona",
+      "timeline": "Cronograma típico",
+      "faq": "Preguntas Frecuentes",
+      "ctaTitle": "¿Listo para comenzar?",
+      "ctaButton": "Solicitar propuesta"
+    }
+  },
+  "smartLab": {
+    "title": "The Smart Lab",
+    "description": "Una colección curada de insights, aprendizajes y pensamiento estratégico que moldea cómo trabajo.",
+    "allTags": "Todos",
+    "howIApplyIt": "Cómo lo aplico"
+  },
+  "contact": {
+    "title": "CONTÁCTAME",
+    "titleItalic": "CONTÁCTA",
+    "titleNormal": "ME",
+    "eyebrow": "Ponerse en Contacto",
+    "description": "Hablemos de cómo podemos transformar tus operaciones empresariales y generar resultados significativos.",
+    "bodyText": {
+      "paragraph1": "En el juego de los negocios, aquellos con claridad no compiten — dominan.",
+      "paragraph2": "Mientras tus competidores se ahogan en datos inútiles, yo construyo el activo más valioso para tu operación:",
+      "clarity": "claridad",
+      "paragraph2Cont": "Mi trabajo es crear herramientas que convierten el ruido en ganancias, permitiéndote tomar decisiones rápidas y precisas.",
+      "paragraph3": "Hablemos y planifiquemos una solución para tu negocio."
+    },
+    "info": {
+      "title": "Ponerse en Contacto",
+      "location": "Ubicación",
+      "email": "Email",
+      "phone": "Teléfono"
+    },
+    "form": {
+      "title": "Enviar Mensaje",
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu.email@ejemplo.com",
+      "company": "Empresa",
+      "companyPlaceholder": "Nombre de tu empresa",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+      "submit": "Enviar Mensaje"
+    },
+    "whatsapp": {
+      "title": "O contáctame en WhatsApp",
+      "phonePlaceholder": "Tu número de teléfono",
+      "send": "Enviar",
+      "defaultMessage": "Hola, me gustaría discutir un proyecto con HIGSS HUB."
+    },
+    "onsiteVisit": {
+      "title": "Visitas in situ",
+      "description": "Reserve una visita in situ en el cantón de Berna",
+      "cta": "Reservar visita in situ",
+      "message": "Hola, me gustaría reservar una visita in situ en el cantón de Berna."
+    }
+  },
+  "footer": {
+    "tagline": "Creando grandes resultados para pequeñas empresas a través de tecnología y estrategia empresarial.",
+    "quickLinks": "Enlaces rápidos",
+    "home": "Inicio",
+    "products": "Productos y Servicios",
+    "smartLab": "The Smart Lab",
+    "contact": "Contacto",
+    "onsiteVisit": {
+      "title": "Visitas in situ",
+      "cta": "Reservar visita in situ en el cantón de Berna"
+    }
+  }
+}

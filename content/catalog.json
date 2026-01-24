@@ -1,0 +1,1640 @@
+{
+  "en": {
+    "items": [
+      {
+        "slug": "business-first-analysis",
+        "title": "Business First Analysis",
+        "category": "services",
+        "shortDescription": "A comprehensive diagnostic of your business operations, identifying opportunities for improvement and growth.",
+        "tags": [
+          "Strategy",
+          "Analysis",
+          "Diagnostic"
+        ],
+        "whoItsFor": "Small to medium businesses looking to understand their current state and identify strategic opportunities.",
+        "whatYouGet": [
+          "Comprehensive business assessment report",
+          "Identified bottlenecks and inefficiencies",
+          "Strategic recommendations",
+          "Priority action plan",
+          "KPI framework proposal"
+        ],
+        "howItWorks": [
+          "Initial consultation to understand your business context",
+          "Data collection and analysis of current operations",
+          "Stakeholder interviews and process mapping",
+          "Comprehensive report with findings and recommendations",
+          "Presentation and discussion of results"
+        ],
+        "typicalTimeline": "2-3 weeks from kickoff to final report delivery.",
+        "faq": [
+          {
+            "question": "What information do you need from us?",
+            "answer": "We'll need access to key business metrics, process documentation, and time with key team members for interviews."
+          },
+          {
+            "question": "How detailed is the analysis?",
+            "answer": "The analysis covers people, processes, and technology, providing a holistic view of your operations."
+          }
+        ]
+      },
+      {
+        "slug": "process-mapping-standardization",
+        "title": "Process Mapping & Standardization",
+        "category": "services",
+        "shortDescription": "Document and standardize your business processes to improve efficiency and consistency.",
+        "tags": [
+          "Processes",
+          "Documentation",
+          "Efficiency"
+        ],
+        "whoItsFor": "Businesses with undocumented or inconsistent processes that want to scale efficiently.",
+        "whatYouGet": [
+          "Complete process documentation",
+          "Standard Operating Procedures (SOPs)",
+          "Process flow diagrams",
+          "Training materials",
+          "Process improvement recommendations"
+        ],
+        "howItWorks": [
+          "Discovery sessions to map current processes",
+          "Documentation of existing workflows",
+          "Identification of standardization opportunities",
+          "Creation of SOPs and process documentation",
+          "Review and refinement with your team"
+        ],
+        "typicalTimeline": "3-4 weeks depending on process complexity.",
+        "faq": [
+          {
+            "question": "How many processes can you document?",
+            "answer": "We typically focus on 3-5 core processes per engagement, ensuring quality and depth."
+          }
+        ]
+      },
+      {
+        "slug": "kpi-dashboard-management",
+        "title": "KPI Dashboard & Management System",
+        "category": "services",
+        "shortDescription": "Build a custom KPI dashboard and management system to track what matters most to your business.",
+        "tags": [
+          "KPIs",
+          "Analytics",
+          "Reporting"
+        ],
+        "whoItsFor": "Businesses that need better visibility into their performance metrics and want data-driven decision making.",
+        "whatYouGet": [
+          "Custom KPI framework",
+          "Interactive dashboard",
+          "Data collection setup",
+          "Reporting templates",
+          "Training on system usage"
+        ],
+        "howItWorks": [
+          "Define key metrics relevant to your business",
+          "Design dashboard layout and visualizations",
+          "Set up data collection and integration",
+          "Build and deploy the dashboard",
+          "Train your team on usage and maintenance"
+        ],
+        "typicalTimeline": "4-6 weeks including setup and training.",
+        "faq": []
+      },
+      {
+        "slug": "marketing-pack",
+        "title": "Marketing Pack",
+        "category": "digital-products",
+        "shortDescription": "A comprehensive collection of marketing templates, frameworks, and guides to accelerate your marketing efforts.",
+        "tags": [
+          "Marketing",
+          "Templates",
+          "Strategy"
+        ],
+        "whoItsFor": "Small businesses and entrepreneurs who need professional marketing materials without the agency price tag.",
+        "whatYouGet": [
+          "Marketing strategy templates",
+          "Content calendar templates",
+          "Social media templates",
+          "Email campaign templates",
+          "Marketing analytics framework"
+        ],
+        "howItWorks": [
+          "Purchase and download the pack",
+          "Customize templates with your brand",
+          "Follow included guides and frameworks",
+          "Implement your marketing strategy"
+        ],
+        "typicalTimeline": "Instant download after purchase.",
+        "faq": [
+          {
+            "question": "Are the templates customizable?",
+            "answer": "Yes, all templates are provided in editable formats (PDF, Word, Excel) for easy customization."
+          }
+        ]
+      },
+      {
+        "slug": "business-plan-template-pack",
+        "title": "Business Plan Template Pack",
+        "category": "digital-products",
+        "shortDescription": "Professional business plan templates and guides to help you create a compelling business plan.",
+        "tags": [
+          "Business Plan",
+          "Templates",
+          "Planning"
+        ],
+        "whoItsFor": "Entrepreneurs and business owners who need to create or update their business plan.",
+        "whatYouGet": [
+          "Complete business plan template",
+          "Financial projection templates",
+          "Market analysis framework",
+          "Executive summary template",
+          "Step-by-step guide"
+        ],
+        "howItWorks": [
+          "Download the template pack",
+          "Follow the included guide",
+          "Fill in your business information",
+          "Review and refine your plan"
+        ],
+        "typicalTimeline": "Instant download after purchase.",
+        "faq": []
+      },
+      {
+        "slug": "sop-templates",
+        "title": "SOP Templates",
+        "category": "digital-products",
+        "shortDescription": "A library of Standard Operating Procedure templates for common business processes.",
+        "tags": [
+          "SOPs",
+          "Processes",
+          "Documentation"
+        ],
+        "whoItsFor": "Businesses that want to standardize their operations with professional SOP templates.",
+        "whatYouGet": [
+          "20+ SOP templates for common processes",
+          "SOP writing guide",
+          "Template customization guide",
+          "Best practices documentation"
+        ],
+        "howItWorks": [
+          "Purchase and download the templates",
+          "Select relevant SOPs for your business",
+          "Customize with your specific processes",
+          "Implement and train your team"
+        ],
+        "typicalTimeline": "Instant download after purchase.",
+        "faq": []
+      },
+      {
+        "slug": "custom-execution-system",
+        "title": "Custom Execution System (Company OS)",
+        "category": "software-systems",
+        "shortDescription": "A fully customized business operating system built specifically for your company's needs.",
+        "tags": [
+          "Custom Development",
+          "Business OS",
+          "Integration"
+        ],
+        "whoItsFor": "Growing businesses that need a unified system to manage operations, processes, and data.",
+        "whatYouGet": [
+          "Custom-built software system",
+          "Integration with existing tools",
+          "User training and documentation",
+          "Ongoing support and maintenance",
+          "Source code ownership"
+        ],
+        "howItWorks": [
+          "Discovery and requirements gathering",
+          "System design and architecture",
+          "Development and testing",
+          "Deployment and integration",
+          "Training and handover"
+        ],
+        "typicalTimeline": "8-12 weeks depending on complexity.",
+        "faq": [
+          {
+            "question": "What technologies do you use?",
+            "answer": "We use modern web technologies and can integrate with your existing tools and systems."
+          },
+          {
+            "question": "Do we own the code?",
+            "answer": "Yes, you receive full ownership of the source code upon project completion."
+          }
+        ]
+      },
+      {
+        "slug": "operations-tracker",
+        "title": "Operations Tracker",
+        "category": "software-systems",
+        "shortDescription": "A lightweight system to track and manage your daily operations, tasks, and workflows.",
+        "tags": [
+          "Operations",
+          "Task Management",
+          "Tracking"
+        ],
+        "whoItsFor": "Small teams that need better visibility and control over their daily operations.",
+        "whatYouGet": [
+          "Operations tracking dashboard",
+          "Task and workflow management",
+          "Team collaboration features",
+          "Reporting and analytics",
+          "Mobile-responsive interface"
+        ],
+        "howItWorks": [
+          "Setup and configuration",
+          "Team onboarding and training",
+          "Customization to your workflows",
+          "Go-live and support"
+        ],
+        "typicalTimeline": "2-3 weeks from setup to go-live.",
+        "faq": []
+      },
+      {
+        "slug": "sales-crm-lightweight",
+        "title": "Sales + CRM Lightweight System",
+        "category": "software-systems",
+        "shortDescription": "A simple, effective CRM system designed for small businesses that don't need enterprise complexity.",
+        "tags": [
+          "CRM",
+          "Sales",
+          "Customer Management"
+        ],
+        "whoItsFor": "Small businesses that need CRM functionality without the complexity and cost of enterprise solutions.",
+        "whatYouGet": [
+          "Customer database",
+          "Sales pipeline management",
+          "Contact management",
+          "Basic reporting",
+          "Email integration"
+        ],
+        "howItWorks": [
+          "System setup and configuration",
+          "Data migration (if applicable)",
+          "Team training",
+          "Go-live and ongoing support"
+        ],
+        "typicalTimeline": "2-4 weeks from setup to go-live.",
+        "faq": [
+          {
+            "question": "Can it integrate with our email?",
+            "answer": "Yes, the system includes email integration for seamless communication tracking."
+          }
+        ]
+      }
+    ]
+  },
+  "pt": {
+    "items": [
+      {
+        "slug": "business-first-analysis",
+        "title": "Análise Business First",
+        "category": "services",
+        "shortDescription": "Um diagnóstico abrangente das operações do seu negócio, identificando oportunidades de melhoria e crescimento.",
+        "tags": [
+          "Estratégia",
+          "Análise",
+          "Diagnóstico"
+        ],
+        "whoItsFor": "Pequenas e médias empresas que buscam entender seu estado atual e identificar oportunidades estratégicas.",
+        "whatYouGet": [
+          "Relatório completo de avaliação do negócio",
+          "Gargalos e ineficiências identificados",
+          "Recomendações estratégicas",
+          "Plano de ação prioritário",
+          "Proposta de framework de KPIs"
+        ],
+        "howItWorks": [
+          "Consulta inicial para entender o contexto do seu negócio",
+          "Coleta de dados e análise das operações atuais",
+          "Entrevistas com stakeholders e mapeamento de processos",
+          "Relatório abrangente com descobertas e recomendações",
+          "Apresentação e discussão dos resultados"
+        ],
+        "typicalTimeline": "2-3 semanas do início à entrega do relatório final.",
+        "faq": []
+      },
+      {
+        "slug": "process-mapping-standardization",
+        "title": "Mapeamento e Padronização de Processos",
+        "category": "services",
+        "shortDescription": "Documente e padronize os processos do seu negócio para melhorar eficiência e consistência.",
+        "tags": [
+          "Processos",
+          "Documentação",
+          "Eficiência"
+        ],
+        "whoItsFor": "Empresas com processos não documentados ou inconsistentes que desejam escalar com eficiência.",
+        "whatYouGet": [
+          "Documentação completa de processos",
+          "Procedimentos Operacionais Padrão (POPs)",
+          "Diagramas de fluxo de processos",
+          "Materiais de treinamento",
+          "Recomendações de melhoria de processos"
+        ],
+        "howItWorks": [
+          "Sessões de descoberta para mapear processos atuais",
+          "Documentação dos fluxos de trabalho existentes",
+          "Identificação de oportunidades de padronização",
+          "Criação de POPs e documentação de processos",
+          "Revisão e refinamento com sua equipe"
+        ],
+        "typicalTimeline": "3-4 semanas dependendo da complexidade dos processos.",
+        "faq": []
+      },
+      {
+        "slug": "kpi-dashboard-management",
+        "title": "Dashboard de KPIs e Sistema de Gestão",
+        "category": "services",
+        "shortDescription": "Construa um dashboard de KPIs personalizado e sistema de gestão para acompanhar o que mais importa para seu negócio.",
+        "tags": [
+          "KPIs",
+          "Analytics",
+          "Relatórios"
+        ],
+        "whoItsFor": "Empresas que precisam de melhor visibilidade em suas métricas de desempenho e querem tomada de decisão baseada em dados.",
+        "whatYouGet": [
+          "Framework de KPIs personalizado",
+          "Dashboard interativo",
+          "Configuração de coleta de dados",
+          "Modelos de relatórios",
+          "Treinamento no uso do sistema"
+        ],
+        "howItWorks": [
+          "Definir métricas-chave relevantes para seu negócio",
+          "Projetar layout e visualizações do dashboard",
+          "Configurar coleta de dados e integração",
+          "Construir e implantar o dashboard",
+          "Treinar sua equipe no uso e manutenção"
+        ],
+        "typicalTimeline": "4-6 semanas incluindo configuração e treinamento.",
+        "faq": []
+      },
+      {
+        "slug": "marketing-pack",
+        "title": "Pacote de Marketing",
+        "category": "digital-products",
+        "shortDescription": "Uma coleção abrangente de modelos, frameworks e guias de marketing para acelerar seus esforços de marketing.",
+        "tags": [
+          "Marketing",
+          "Modelos",
+          "Estratégia"
+        ],
+        "whoItsFor": "Pequenas empresas e empreendedores que precisam de materiais de marketing profissionais sem o preço de agência.",
+        "whatYouGet": [
+          "Modelos de estratégia de marketing",
+          "Modelos de calendário de conteúdo",
+          "Modelos de mídia social",
+          "Modelos de campanhas de email",
+          "Framework de analytics de marketing"
+        ],
+        "howItWorks": [
+          "Comprar e baixar o pacote",
+          "Personalizar modelos com sua marca",
+          "Seguir guias e frameworks incluídos",
+          "Implementar sua estratégia de marketing"
+        ],
+        "typicalTimeline": "Download instantâneo após a compra.",
+        "faq": []
+      },
+      {
+        "slug": "business-plan-template-pack",
+        "title": "Pacote de Modelos de Plano de Negócios",
+        "category": "digital-products",
+        "shortDescription": "Modelos profissionais de plano de negócios e guias para ajudá-lo a criar um plano de negócios convincente.",
+        "tags": [
+          "Plano de Negócios",
+          "Modelos",
+          "Planejamento"
+        ],
+        "whoItsFor": "Empreendedores e empresários que precisam criar ou atualizar seu plano de negócios.",
+        "whatYouGet": [
+          "Modelo completo de plano de negócios",
+          "Modelos de projeções financeiras",
+          "Framework de análise de mercado",
+          "Modelo de resumo executivo",
+          "Guia passo a passo"
+        ],
+        "howItWorks": [
+          "Baixar o pacote de modelos",
+          "Seguir o guia incluído",
+          "Preencher informações do seu negócio",
+          "Revisar e refinar seu plano"
+        ],
+        "typicalTimeline": "Download instantâneo após a compra.",
+        "faq": []
+      },
+      {
+        "slug": "sop-templates",
+        "title": "Modelos de POPs",
+        "category": "digital-products",
+        "shortDescription": "Uma biblioteca de modelos de Procedimentos Operacionais Padrão para processos de negócios comuns.",
+        "tags": [
+          "POPs",
+          "Processos",
+          "Documentação"
+        ],
+        "whoItsFor": "Empresas que desejam padronizar suas operações com modelos profissionais de POPs.",
+        "whatYouGet": [
+          "20+ modelos de POPs para processos comuns",
+          "Guia de escrita de POPs",
+          "Guia de personalização de modelos",
+          "Documentação de melhores práticas"
+        ],
+        "howItWorks": [
+          "Comprar e baixar os modelos",
+          "Selecionar POPs relevantes para seu negócio",
+          "Personalizar com seus processos específicos",
+          "Implementar e treinar sua equipe"
+        ],
+        "typicalTimeline": "Download instantâneo após a compra.",
+        "faq": []
+      },
+      {
+        "slug": "custom-execution-system",
+        "title": "Sistema de Execução Personalizado (OS da Empresa)",
+        "category": "software-systems",
+        "shortDescription": "Um sistema operacional de negócios totalmente personalizado construído especificamente para as necessidades da sua empresa.",
+        "tags": [
+          "Desenvolvimento Customizado",
+          "OS de Negócios",
+          "Integração"
+        ],
+        "whoItsFor": "Empresas em crescimento que precisam de um sistema unificado para gerenciar operações, processos e dados.",
+        "whatYouGet": [
+          "Sistema de software construído sob medida",
+          "Integração com ferramentas existentes",
+          "Treinamento de usuários e documentação",
+          "Suporte e manutenção contínuos",
+          "Propriedade do código-fonte"
+        ],
+        "howItWorks": [
+          "Descoberta e coleta de requisitos",
+          "Design e arquitetura do sistema",
+          "Desenvolvimento e testes",
+          "Implantação e integração",
+          "Treinamento e transferência"
+        ],
+        "typicalTimeline": "8-12 semanas dependendo da complexidade.",
+        "faq": []
+      },
+      {
+        "slug": "operations-tracker",
+        "title": "Rastreador de Operações",
+        "category": "software-systems",
+        "shortDescription": "Um sistema leve para rastrear e gerenciar suas operações diárias, tarefas e fluxos de trabalho.",
+        "tags": [
+          "Operações",
+          "Gestão de Tarefas",
+          "Rastreamento"
+        ],
+        "whoItsFor": "Pequenas equipes que precisam de melhor visibilidade e controle sobre suas operações diárias.",
+        "whatYouGet": [
+          "Dashboard de rastreamento de operações",
+          "Gestão de tarefas e fluxos de trabalho",
+          "Recursos de colaboração em equipe",
+          "Relatórios e analytics",
+          "Interface responsiva para mobile"
+        ],
+        "howItWorks": [
+          "Configuração",
+          "Onboarding e treinamento da equipe",
+          "Personalização para seus fluxos de trabalho",
+          "Go-live e suporte"
+        ],
+        "typicalTimeline": "2-3 semanas da configuração ao go-live.",
+        "faq": []
+      },
+      {
+        "slug": "sales-crm-lightweight",
+        "title": "Sistema Leve de Vendas + CRM",
+        "category": "software-systems",
+        "shortDescription": "Um sistema CRM simples e eficaz projetado para pequenas empresas que não precisam da complexidade empresarial.",
+        "tags": [
+          "CRM",
+          "Vendas",
+          "Gestão de Clientes"
+        ],
+        "whoItsFor": "Pequenas empresas que precisam de funcionalidade CRM sem a complexidade e o custo de soluções empresariais.",
+        "whatYouGet": [
+          "Banco de dados de clientes",
+          "Gestão de pipeline de vendas",
+          "Gestão de contatos",
+          "Relatórios básicos",
+          "Integração de email"
+        ],
+        "howItWorks": [
+          "Configuração do sistema",
+          "Migração de dados (se aplicável)",
+          "Treinamento da equipe",
+          "Go-live e suporte contínuo"
+        ],
+        "typicalTimeline": "2-4 semanas da configuração ao go-live.",
+        "faq": []
+      }
+    ]
+  },
+  "de": {
+    "items": [
+      {
+        "slug": "business-first-analysis",
+        "title": "Business First Analyse",
+        "category": "services",
+        "shortDescription": "Eine umfassende Diagnose Ihrer Geschäftsabläufe zur Identifizierung von Verbesserungs- und Wachstumschancen.",
+        "tags": [
+          "Strategie",
+          "Analyse",
+          "Diagnose"
+        ],
+        "whoItsFor": "Kleine bis mittlere Unternehmen, die ihren aktuellen Zustand verstehen und strategische Chancen identifizieren möchten.",
+        "whatYouGet": [
+          "Umfassender Geschäftsbewertungsbericht",
+          "Identifizierte Engpässe und Ineffizienzen",
+          "Strategische Empfehlungen",
+          "Priorisierter Aktionsplan",
+          "KPI-Framework-Vorschlag"
+        ],
+        "howItWorks": [
+          "Erstberatung zur Verständnis Ihres Geschäftskontexts",
+          "Datensammlung und Analyse der aktuellen Abläufe",
+          "Stakeholder-Interviews und Prozessmapping",
+          "Umfassender Bericht mit Erkenntnissen und Empfehlungen",
+          "Präsentation und Diskussion der Ergebnisse"
+        ],
+        "typicalTimeline": "2-3 Wochen vom Start bis zur Lieferung des endgültigen Berichts.",
+        "faq": [
+          {
+            "question": "Welche Informationen benötigen Sie von uns?",
+            "answer": "Wir benötigen Zugang zu wichtigen Geschäftskennzahlen, Prozessdokumentation und Zeit mit wichtigen Teammitgliedern für Interviews."
+          },
+          {
+            "question": "Wie detailliert ist die Analyse?",
+            "answer": "Die Analyse deckt Menschen, Prozesse und Technologie ab und bietet einen ganzheitlichen Überblick über Ihre Abläufe."
+          }
+        ]
+      },
+      {
+        "slug": "process-mapping-standardization",
+        "title": "Prozessmapping & Standardisierung",
+        "category": "services",
+        "shortDescription": "Dokumentieren und standardisieren Sie Ihre Geschäftsprozesse, um Effizienz und Konsistenz zu verbessern.",
+        "tags": [
+          "Prozesse",
+          "Dokumentation",
+          "Effizienz"
+        ],
+        "whoItsFor": "Unternehmen mit undokumentierten oder inkonsistenten Prozessen, die effizient skalieren möchten.",
+        "whatYouGet": [
+          "Vollständige Prozessdokumentation",
+          "Standardarbeitsanweisungen (SOPs)",
+          "Prozessflussdiagramme",
+          "Schulungsmaterialien",
+          "Prozessverbesserungsempfehlungen"
+        ],
+        "howItWorks": [
+          "Entdeckungssitzungen zur Kartierung aktueller Prozesse",
+          "Dokumentation bestehender Workflows",
+          "Identifizierung von Standardisierungsmöglichkeiten",
+          "Erstellung von SOPs und Prozessdokumentation",
+          "Überprüfung und Verfeinerung mit Ihrem Team"
+        ],
+        "typicalTimeline": "3-4 Wochen je nach Prozesskomplexität.",
+        "faq": [
+          {
+            "question": "Wie viele Prozesse können Sie dokumentieren?",
+            "answer": "Wir konzentrieren uns typischerweise auf 3-5 Kernprozesse pro Engagement, um Qualität und Tiefe zu gewährleisten."
+          }
+        ]
+      },
+      {
+        "slug": "kpi-dashboard-management",
+        "title": "KPI-Dashboard & Managementsystem",
+        "category": "services",
+        "shortDescription": "Erstellen Sie ein benutzerdefiniertes KPI-Dashboard und Managementsystem, um das zu verfolgen, was für Ihr Unternehmen am wichtigsten ist.",
+        "tags": [
+          "KPIs",
+          "Analytik",
+          "Berichterstattung"
+        ],
+        "whoItsFor": "Unternehmen, die bessere Einblicke in ihre Leistungskennzahlen benötigen und datengestützte Entscheidungen treffen möchten.",
+        "whatYouGet": [
+          "Benutzerdefiniertes KPI-Framework",
+          "Interaktives Dashboard",
+          "Datensammlungssetup",
+          "Berichtsvorlagen",
+          "Schulung zur Systemnutzung"
+        ],
+        "howItWorks": [
+          "Definieren Sie wichtige Kennzahlen für Ihr Unternehmen",
+          "Design des Dashboard-Layouts und der Visualisierungen",
+          "Einrichtung der Datensammlung und Integration",
+          "Erstellen und Bereitstellen des Dashboards",
+          "Schulung Ihres Teams zur Nutzung und Wartung"
+        ],
+        "typicalTimeline": "4-6 Wochen einschließlich Setup und Schulung.",
+        "faq": []
+      },
+      {
+        "slug": "marketing-pack",
+        "title": "Marketing-Paket",
+        "category": "digital-products",
+        "shortDescription": "Eine umfassende Sammlung von Marketing-Vorlagen, Frameworks und Leitfäden zur Beschleunigung Ihrer Marketing-Bemühungen.",
+        "tags": [
+          "Marketing",
+          "Vorlagen",
+          "Strategie"
+        ],
+        "whoItsFor": "Kleine Unternehmen und Unternehmer, die professionelle Marketing-Materialien ohne Agenturpreis benötigen.",
+        "whatYouGet": [
+          "Marketing-Strategievorlagen",
+          "Content-Kalendervorlagen",
+          "Social-Media-Vorlagen",
+          "E-Mail-Kampagnenvorlagen",
+          "Marketing-Analytics-Framework"
+        ],
+        "howItWorks": [
+          "Kaufen und laden Sie das Paket herunter",
+          "Passen Sie Vorlagen mit Ihrer Marke an",
+          "Folgen Sie den enthaltenen Leitfäden und Frameworks",
+          "Implementieren Sie Ihre Marketing-Strategie"
+        ],
+        "typicalTimeline": "Sofortiger Download nach dem Kauf.",
+        "faq": [
+          {
+            "question": "Sind die Vorlagen anpassbar?",
+            "answer": "Ja, alle Vorlagen werden in bearbeitbaren Formaten (PDF, Word, Excel) bereitgestellt, um eine einfache Anpassung zu ermöglichen."
+          }
+        ]
+      },
+      {
+        "slug": "business-plan-template-pack",
+        "title": "Businessplan-Vorlagenpaket",
+        "category": "digital-products",
+        "shortDescription": "Professionelle Businessplan-Vorlagen und Leitfäden zur Erstellung eines überzeugenden Businessplans.",
+        "tags": [
+          "Businessplan",
+          "Vorlagen",
+          "Planung"
+        ],
+        "whoItsFor": "Unternehmer und Geschäftsinhaber, die ihren Businessplan erstellen oder aktualisieren müssen.",
+        "whatYouGet": [
+          "Vollständige Businessplan-Vorlage",
+          "Finanzprognosevorlagen",
+          "Marktanalyse-Framework",
+          "Executive-Summary-Vorlage",
+          "Schritt-für-Schritt-Anleitung"
+        ],
+        "howItWorks": [
+          "Laden Sie das Vorlagenpaket herunter",
+          "Folgen Sie dem enthaltenen Leitfaden",
+          "Füllen Sie Ihre Geschäftsinformationen ein",
+          "Überprüfen und verfeinern Sie Ihren Plan"
+        ],
+        "typicalTimeline": "Sofortiger Download nach dem Kauf.",
+        "faq": []
+      },
+      {
+        "slug": "sop-templates",
+        "title": "SOP-Vorlagen",
+        "category": "digital-products",
+        "shortDescription": "Eine Bibliothek von Standardarbeitsanweisungsvorlagen für gängige Geschäftsprozesse.",
+        "tags": [
+          "SOPs",
+          "Prozesse",
+          "Dokumentation"
+        ],
+        "whoItsFor": "Unternehmen, die ihre Abläufe mit professionellen SOP-Vorlagen standardisieren möchten.",
+        "whatYouGet": [
+          "20+ SOP-Vorlagen für gängige Prozesse",
+          "SOP-Schreibanleitung",
+          "Vorlagenanpassungsanleitung",
+          "Best-Practice-Dokumentation"
+        ],
+        "howItWorks": [
+          "Kaufen und laden Sie die Vorlagen herunter",
+          "Wählen Sie relevante SOPs für Ihr Unternehmen",
+          "Passen Sie sie an Ihre spezifischen Prozesse an",
+          "Implementieren und schulen Sie Ihr Team"
+        ],
+        "typicalTimeline": "Sofortiger Download nach dem Kauf.",
+        "faq": []
+      },
+      {
+        "slug": "custom-execution-system",
+        "title": "Benutzerdefiniertes Ausführungssystem (Unternehmens-OS)",
+        "category": "software-systems",
+        "shortDescription": "Ein vollständig angepasstes Geschäftsbetriebssystem, das speziell für die Bedürfnisse Ihres Unternehmens entwickelt wurde.",
+        "tags": [
+          "Benutzerdefinierte Entwicklung",
+          "Business OS",
+          "Integration"
+        ],
+        "whoItsFor": "Wachsende Unternehmen, die ein einheitliches System zur Verwaltung von Abläufen, Prozessen und Daten benötigen.",
+        "whatYouGet": [
+          "Benutzerdefiniertes Softwaresystem",
+          "Integration mit bestehenden Tools",
+          "Benutzerschulung und Dokumentation",
+          "Laufender Support und Wartung",
+          "Quellcode-Eigentum"
+        ],
+        "howItWorks": [
+          "Entdeckung und Anforderungserfassung",
+          "Systemdesign und -architektur",
+          "Entwicklung und Tests",
+          "Bereitstellung und Integration",
+          "Schulung und Übergabe"
+        ],
+        "typicalTimeline": "8-12 Wochen je nach Komplexität.",
+        "faq": [
+          {
+            "question": "Welche Technologien verwenden Sie?",
+            "answer": "Wir verwenden moderne Webtechnologien und können mit Ihren bestehenden Tools und Systemen integrieren."
+          },
+          {
+            "question": "Gehört uns der Code?",
+            "answer": "Ja, Sie erhalten nach Projektabschluss vollständiges Eigentum am Quellcode."
+          }
+        ]
+      },
+      {
+        "slug": "operations-tracker",
+        "title": "Operations-Tracker",
+        "category": "software-systems",
+        "shortDescription": "Ein leichtgewichtiges System zur Verfolgung und Verwaltung Ihrer täglichen Abläufe, Aufgaben und Workflows.",
+        "tags": [
+          "Operationen",
+          "Aufgabenverwaltung",
+          "Verfolgung"
+        ],
+        "whoItsFor": "Kleine Teams, die bessere Einblicke und Kontrolle über ihre täglichen Abläufe benötigen.",
+        "whatYouGet": [
+          "Operations-Tracking-Dashboard",
+          "Aufgaben- und Workflow-Verwaltung",
+          "Team-Kollaborationsfunktionen",
+          "Berichterstattung und Analytik",
+          "Mobile-responsive Oberfläche"
+        ],
+        "howItWorks": [
+          "Setup und Konfiguration",
+          "Team-Onboarding und Schulung",
+          "Anpassung an Ihre Workflows",
+          "Go-Live und Support"
+        ],
+        "typicalTimeline": "2-3 Wochen vom Setup bis zum Go-Live.",
+        "faq": []
+      },
+      {
+        "slug": "sales-crm-lightweight",
+        "title": "Verkaufs- + CRM-Leichtgewichtssystem",
+        "category": "software-systems",
+        "shortDescription": "Ein einfaches, effektives CRM-System für kleine Unternehmen, die keine Unternehmenskomplexität benötigen.",
+        "tags": [
+          "CRM",
+          "Verkauf",
+          "Kundenverwaltung"
+        ],
+        "whoItsFor": "Kleine Unternehmen, die CRM-Funktionalität ohne die Komplexität und Kosten von Unternehmenslösungen benötigen.",
+        "whatYouGet": [
+          "Kundendatenbank",
+          "Verkaufspipeline-Verwaltung",
+          "Kontaktverwaltung",
+          "Grundlegende Berichterstattung",
+          "E-Mail-Integration"
+        ],
+        "howItWorks": [
+          "System-Setup und Konfiguration",
+          "Datenmigration (falls zutreffend)",
+          "Team-Schulung",
+          "Go-Live und laufender Support"
+        ],
+        "typicalTimeline": "2-4 Wochen vom Setup bis zum Go-Live.",
+        "faq": [
+          {
+            "question": "Kann es mit unserer E-Mail integriert werden?",
+            "answer": "Ja, das System enthält E-Mail-Integration für nahtlose Kommunikationsverfolgung."
+          }
+        ]
+      }
+    ]
+  },
+  "fr": {
+    "items": [
+      {
+        "slug": "business-first-analysis",
+        "title": "Analyse Business First",
+        "category": "services",
+        "shortDescription": "Un diagnostic complet de vos opérations commerciales, identifiant les opportunités d'amélioration et de croissance.",
+        "tags": [
+          "Stratégie",
+          "Analyse",
+          "Diagnostic"
+        ],
+        "whoItsFor": "Petites et moyennes entreprises cherchant à comprendre leur état actuel et identifier des opportunités stratégiques.",
+        "whatYouGet": [
+          "Rapport d'évaluation commerciale complet",
+          "Goulots d'étranglement et inefficacités identifiés",
+          "Recommandations stratégiques",
+          "Plan d'action prioritaire",
+          "Proposition de cadre KPI"
+        ],
+        "howItWorks": [
+          "Consultation initiale pour comprendre le contexte de votre entreprise",
+          "Collecte de données et analyse des opérations actuelles",
+          "Entretiens avec les parties prenantes et cartographie des processus",
+          "Rapport complet avec conclusions et recommandations",
+          "Présentation et discussion des résultats"
+        ],
+        "typicalTimeline": "2-3 semaines du démarrage à la livraison du rapport final.",
+        "faq": []
+      },
+      {
+        "slug": "process-mapping-standardization",
+        "title": "Cartographie & Standardisation des Processus",
+        "category": "services",
+        "shortDescription": "Documentez et standardisez vos processus commerciaux pour améliorer l'efficacité et la cohérence.",
+        "tags": [
+          "Processus",
+          "Documentation",
+          "Efficacité"
+        ],
+        "whoItsFor": "Entreprises avec des processus non documentés ou incohérents qui souhaitent évoluer efficacement.",
+        "whatYouGet": [
+          "Documentation complète des processus",
+          "Procédures opérationnelles standard (SOP)",
+          "Diagrammes de flux de processus",
+          "Matériel de formation",
+          "Recommandations d'amélioration des processus"
+        ],
+        "howItWorks": [
+          "Sessions de découverte pour cartographier les processus actuels",
+          "Documentation des flux de travail existants",
+          "Identification des opportunités de standardisation",
+          "Création de SOP et documentation des processus",
+          "Révision et raffinement avec votre équipe"
+        ],
+        "typicalTimeline": "3-4 semaines selon la complexité des processus.",
+        "faq": [
+          {
+            "question": "Combien de processus pouvez-vous documenter?",
+            "answer": "Nous nous concentrons généralement sur 3-5 processus clés par engagement, garantissant qualité et profondeur."
+          }
+        ]
+      },
+      {
+        "slug": "kpi-dashboard-management",
+        "title": "Tableau de bord KPI & Système de gestion",
+        "category": "services",
+        "shortDescription": "Créez un tableau de bord KPI personnalisé et un système de gestion pour suivre ce qui compte le plus pour votre entreprise.",
+        "tags": [
+          "KPIs",
+          "Analytique",
+          "Rapports"
+        ],
+        "whoItsFor": "Entreprises qui ont besoin d'une meilleure visibilité sur leurs métriques de performance et souhaitent une prise de décision basée sur les données.",
+        "whatYouGet": [
+          "Cadre KPI personnalisé",
+          "Tableau de bord interactif",
+          "Configuration de collecte de données",
+          "Modèles de rapports",
+          "Formation à l'utilisation du système"
+        ],
+        "howItWorks": [
+          "Définir les métriques clés pertinentes pour votre entreprise",
+          "Concevoir la mise en page et les visualisations du tableau de bord",
+          "Configurer la collecte et l'intégration des données",
+          "Construire et déployer le tableau de bord",
+          "Former votre équipe à l'utilisation et à la maintenance"
+        ],
+        "typicalTimeline": "4-6 semaines incluant la configuration et la formation.",
+        "faq": []
+      },
+      {
+        "slug": "marketing-pack",
+        "title": "Pack Marketing",
+        "category": "digital-products",
+        "shortDescription": "Une collection complète de modèles, cadres et guides marketing pour accélérer vos efforts marketing.",
+        "tags": [
+          "Marketing",
+          "Modèles",
+          "Stratégie"
+        ],
+        "whoItsFor": "Petites entreprises et entrepreneurs qui ont besoin de matériel marketing professionnel sans le prix d'agence.",
+        "whatYouGet": [
+          "Modèles de stratégie marketing",
+          "Modèles de calendrier de contenu",
+          "Modèles de médias sociaux",
+          "Modèles de campagnes email",
+          "Cadre d'analyse marketing"
+        ],
+        "howItWorks": [
+          "Achetez et téléchargez le pack",
+          "Personnalisez les modèles avec votre marque",
+          "Suivez les guides et cadres inclus",
+          "Implémentez votre stratégie marketing"
+        ],
+        "typicalTimeline": "Téléchargement instantané après achat.",
+        "faq": [
+          {
+            "question": "Les modèles sont-ils personnalisables?",
+            "answer": "Oui, tous les modèles sont fournis dans des formats modifiables (PDF, Word, Excel) pour une personnalisation facile."
+          }
+        ]
+      },
+      {
+        "slug": "business-plan-template-pack",
+        "title": "Pack de Modèles de Plan d'Affaires",
+        "category": "digital-products",
+        "shortDescription": "Modèles de plan d'affaires professionnels et guides pour vous aider à créer un plan d'affaires convaincant.",
+        "tags": [
+          "Plan d'Affaires",
+          "Modèles",
+          "Planification"
+        ],
+        "whoItsFor": "Entrepreneurs et propriétaires d'entreprise qui doivent créer ou mettre à jour leur plan d'affaires.",
+        "whatYouGet": [
+          "Modèle de plan d'affaires complet",
+          "Modèles de projections financières",
+          "Cadre d'analyse de marché",
+          "Modèle de résumé exécutif",
+          "Guide étape par étape"
+        ],
+        "howItWorks": [
+          "Téléchargez le pack de modèles",
+          "Suivez le guide inclus",
+          "Remplissez vos informations commerciales",
+          "Examinez et affinez votre plan"
+        ],
+        "typicalTimeline": "Téléchargement instantané après achat.",
+        "faq": []
+      },
+      {
+        "slug": "sop-templates",
+        "title": "Modèles SOP",
+        "category": "digital-products",
+        "shortDescription": "Une bibliothèque de modèles de procédures opérationnelles standard pour les processus commerciaux courants.",
+        "tags": [
+          "SOP",
+          "Processus",
+          "Documentation"
+        ],
+        "whoItsFor": "Entreprises qui souhaitent standardiser leurs opérations avec des modèles SOP professionnels.",
+        "whatYouGet": [
+          "20+ modèles SOP pour processus courants",
+          "Guide d'écriture SOP",
+          "Guide de personnalisation de modèles",
+          "Documentation des meilleures pratiques"
+        ],
+        "howItWorks": [
+          "Achetez et téléchargez les modèles",
+          "Sélectionnez les SOP pertinents pour votre entreprise",
+          "Personnalisez avec vos processus spécifiques",
+          "Implémentez et formez votre équipe"
+        ],
+        "typicalTimeline": "Téléchargement instantané après achat.",
+        "faq": []
+      },
+      {
+        "slug": "custom-execution-system",
+        "title": "Système d'Exécution Personnalisé (OS Entreprise)",
+        "category": "software-systems",
+        "shortDescription": "Un système d'exploitation commercial entièrement personnalisé conçu spécifiquement pour les besoins de votre entreprise.",
+        "tags": [
+          "Développement Personnalisé",
+          "OS Entreprise",
+          "Intégration"
+        ],
+        "whoItsFor": "Entreprises en croissance qui ont besoin d'un système unifié pour gérer les opérations, processus et données.",
+        "whatYouGet": [
+          "Système logiciel sur mesure",
+          "Intégration avec outils existants",
+          "Formation utilisateur et documentation",
+          "Support et maintenance continus",
+          "Propriété du code source"
+        ],
+        "howItWorks": [
+          "Découverte et collecte des exigences",
+          "Conception et architecture du système",
+          "Développement et tests",
+          "Déploiement et intégration",
+          "Formation et transfert"
+        ],
+        "typicalTimeline": "8-12 semaines selon la complexité.",
+        "faq": [
+          {
+            "question": "Quelles technologies utilisez-vous?",
+            "answer": "Nous utilisons des technologies web modernes et pouvons nous intégrer à vos outils et systèmes existants."
+          },
+          {
+            "question": "Possédons-nous le code?",
+            "answer": "Oui, vous recevez la pleine propriété du code source à la fin du projet."
+          }
+        ]
+      },
+      {
+        "slug": "operations-tracker",
+        "title": "Suivi des Opérations",
+        "category": "software-systems",
+        "shortDescription": "Un système léger pour suivre et gérer vos opérations quotidiennes, tâches et flux de travail.",
+        "tags": [
+          "Opérations",
+          "Gestion des Tâches",
+          "Suivi"
+        ],
+        "whoItsFor": "Petites équipes qui ont besoin d'une meilleure visibilité et contrôle sur leurs opérations quotidiennes.",
+        "whatYouGet": [
+          "Tableau de bord de suivi des opérations",
+          "Gestion des tâches et flux de travail",
+          "Fonctionnalités de collaboration d'équipe",
+          "Rapports et analyses",
+          "Interface responsive mobile"
+        ],
+        "howItWorks": [
+          "Configuration",
+          "Intégration et formation de l'équipe",
+          "Personnalisation de vos flux de travail",
+          "Mise en service et support"
+        ],
+        "typicalTimeline": "2-3 semaines de la configuration à la mise en service.",
+        "faq": []
+      },
+      {
+        "slug": "sales-crm-lightweight",
+        "title": "Système Léger Ventes + CRM",
+        "category": "software-systems",
+        "shortDescription": "Un système CRM simple et efficace conçu pour les petites entreprises qui n'ont pas besoin de la complexité d'entreprise.",
+        "tags": [
+          "CRM",
+          "Ventes",
+          "Gestion Client"
+        ],
+        "whoItsFor": "Petites entreprises qui ont besoin de fonctionnalités CRM sans la complexité et le coût des solutions d'entreprise.",
+        "whatYouGet": [
+          "Base de données clients",
+          "Gestion du pipeline de ventes",
+          "Gestion des contacts",
+          "Rapports de base",
+          "Intégration email"
+        ],
+        "howItWorks": [
+          "Configuration du système",
+          "Migration des données (si applicable)",
+          "Formation de l'équipe",
+          "Mise en service et support continu"
+        ],
+        "typicalTimeline": "2-4 semaines de la configuration à la mise en service.",
+        "faq": [
+          {
+            "question": "Peut-il s'intégrer à notre email?",
+            "answer": "Oui, le système inclut l'intégration email pour un suivi de communication transparent."
+          }
+        ]
+      }
+    ]
+  },
+  "es": {
+    "items": [
+      {
+        "slug": "business-first-analysis",
+        "title": "Análisis Business First",
+        "category": "services",
+        "shortDescription": "Un diagnóstico integral de tus operaciones empresariales, identificando oportunidades de mejora y crecimiento.",
+        "tags": [
+          "Estrategia",
+          "Análisis",
+          "Diagnóstico"
+        ],
+        "whoItsFor": "Pequeñas y medianas empresas que buscan entender su estado actual e identificar oportunidades estratégicas.",
+        "whatYouGet": [
+          "Informe completo de evaluación empresarial",
+          "Cuellos de botella e ineficiencias identificados",
+          "Recomendaciones estratégicas",
+          "Plan de acción prioritario",
+          "Propuesta de marco KPI"
+        ],
+        "howItWorks": [
+          "Consulta inicial para entender el contexto de tu negocio",
+          "Recopilación de datos y análisis de operaciones actuales",
+          "Entrevistas con partes interesadas y mapeo de procesos",
+          "Informe integral con hallazgos y recomendaciones",
+          "Presentación y discusión de resultados"
+        ],
+        "typicalTimeline": "2-3 semanas desde el inicio hasta la entrega del informe final.",
+        "faq": []
+      },
+      {
+        "slug": "process-mapping-standardization",
+        "title": "Mapeo y Estandarización de Procesos",
+        "category": "services",
+        "shortDescription": "Documente y estandarice sus procesos comerciales para mejorar la eficiencia y la consistencia.",
+        "tags": [
+          "Procesos",
+          "Documentación",
+          "Eficiencia"
+        ],
+        "whoItsFor": "Empresas con procesos no documentados o inconsistentes que desean escalar de manera eficiente.",
+        "whatYouGet": [
+          "Documentación completa de procesos",
+          "Procedimientos Operativos Estándar (SOP)",
+          "Diagramas de flujo de procesos",
+          "Materiales de capacitación",
+          "Recomendaciones de mejora de procesos"
+        ],
+        "howItWorks": [
+          "Sesiones de descubrimiento para mapear procesos actuales",
+          "Documentación de flujos de trabajo existentes",
+          "Identificación de oportunidades de estandarización",
+          "Creación de SOP y documentación de procesos",
+          "Revisión y refinamiento con su equipo"
+        ],
+        "typicalTimeline": "3-4 semanas dependiendo de la complejidad de los procesos.",
+        "faq": [
+          {
+            "question": "¿Cuántos procesos puede documentar?",
+            "answer": "Normalmente nos enfocamos en 3-5 procesos principales por compromiso, asegurando calidad y profundidad."
+          }
+        ]
+      },
+      {
+        "slug": "kpi-dashboard-management",
+        "title": "Tablero KPI y Sistema de Gestión",
+        "category": "services",
+        "shortDescription": "Construya un tablero KPI personalizado y sistema de gestión para rastrear lo que más importa a su negocio.",
+        "tags": [
+          "KPIs",
+          "Analítica",
+          "Informes"
+        ],
+        "whoItsFor": "Empresas que necesitan mejor visibilidad en sus métricas de rendimiento y quieren toma de decisiones basada en datos.",
+        "whatYouGet": [
+          "Marco KPI personalizado",
+          "Tablero interactivo",
+          "Configuración de recopilación de datos",
+          "Plantillas de informes",
+          "Capacitación en el uso del sistema"
+        ],
+        "howItWorks": [
+          "Definir métricas clave relevantes para su negocio",
+          "Diseñar diseño y visualizaciones del tablero",
+          "Configurar recopilación e integración de datos",
+          "Construir e implementar el tablero",
+          "Capacitar a su equipo en uso y mantenimiento"
+        ],
+        "typicalTimeline": "4-6 semanas incluyendo configuración y capacitación.",
+        "faq": []
+      },
+      {
+        "slug": "marketing-pack",
+        "title": "Paquete de Marketing",
+        "category": "digital-products",
+        "shortDescription": "Una colección integral de plantillas, marcos y guías de marketing para acelerar sus esfuerzos de marketing.",
+        "tags": [
+          "Marketing",
+          "Plantillas",
+          "Estrategia"
+        ],
+        "whoItsFor": "Pequeñas empresas y emprendedores que necesitan materiales de marketing profesionales sin el precio de agencia.",
+        "whatYouGet": [
+          "Plantillas de estrategia de marketing",
+          "Plantillas de calendario de contenido",
+          "Plantillas de redes sociales",
+          "Plantillas de campañas por email",
+          "Marco de análisis de marketing"
+        ],
+        "howItWorks": [
+          "Compre y descargue el paquete",
+          "Personalice las plantillas con su marca",
+          "Siga las guías y marcos incluidos",
+          "Implemente su estrategia de marketing"
+        ],
+        "typicalTimeline": "Descarga instantánea después de la compra.",
+        "faq": [
+          {
+            "question": "¿Son personalizables las plantillas?",
+            "answer": "Sí, todas las plantillas se proporcionan en formatos editables (PDF, Word, Excel) para una fácil personalización."
+          }
+        ]
+      },
+      {
+        "slug": "business-plan-template-pack",
+        "title": "Paquete de Plantillas de Plan de Negocios",
+        "category": "digital-products",
+        "shortDescription": "Plantillas profesionales de plan de negocios y guías para ayudarlo a crear un plan de negocios convincente.",
+        "tags": [
+          "Plan de Negocios",
+          "Plantillas",
+          "Planificación"
+        ],
+        "whoItsFor": "Emprendedores y propietarios de negocios que necesitan crear o actualizar su plan de negocios.",
+        "whatYouGet": [
+          "Plantilla completa de plan de negocios",
+          "Plantillas de proyecciones financieras",
+          "Marco de análisis de mercado",
+          "Plantilla de resumen ejecutivo",
+          "Guía paso a paso"
+        ],
+        "howItWorks": [
+          "Descargue el paquete de plantillas",
+          "Siga la guía incluida",
+          "Complete su información comercial",
+          "Revise y refine su plan"
+        ],
+        "typicalTimeline": "Descarga instantánea después de la compra.",
+        "faq": []
+      },
+      {
+        "slug": "sop-templates",
+        "title": "Plantillas SOP",
+        "category": "digital-products",
+        "shortDescription": "Una biblioteca de plantillas de procedimientos operativos estándar para procesos comerciales comunes.",
+        "tags": [
+          "SOP",
+          "Procesos",
+          "Documentación"
+        ],
+        "whoItsFor": "Empresas que desean estandarizar sus operaciones con plantillas SOP profesionales.",
+        "whatYouGet": [
+          "20+ plantillas SOP para procesos comunes",
+          "Guía de escritura SOP",
+          "Guía de personalización de plantillas",
+          "Documentación de mejores prácticas"
+        ],
+        "howItWorks": [
+          "Compre y descargue las plantillas",
+          "Seleccione SOP relevantes para su negocio",
+          "Personalice con sus procesos específicos",
+          "Implemente y capacite a su equipo"
+        ],
+        "typicalTimeline": "Descarga instantánea después de la compra.",
+        "faq": []
+      },
+      {
+        "slug": "custom-execution-system",
+        "title": "Sistema de Ejecución Personalizado (OS Empresarial)",
+        "category": "software-systems",
+        "shortDescription": "Un sistema operativo comercial completamente personalizado construido específicamente para las necesidades de su empresa.",
+        "tags": [
+          "Desarrollo Personalizado",
+          "OS Empresarial",
+          "Integración"
+        ],
+        "whoItsFor": "Empresas en crecimiento que necesitan un sistema unificado para gestionar operaciones, procesos y datos.",
+        "whatYouGet": [
+          "Sistema de software personalizado",
+          "Integración con herramientas existentes",
+          "Capacitación de usuarios y documentación",
+          "Soporte y mantenimiento continuo",
+          "Propiedad del código fuente"
+        ],
+        "howItWorks": [
+          "Descubrimiento y recopilación de requisitos",
+          "Diseño y arquitectura del sistema",
+          "Desarrollo y pruebas",
+          "Implementación e integración",
+          "Capacitación y transferencia"
+        ],
+        "typicalTimeline": "8-12 semanas dependiendo de la complejidad.",
+        "faq": [
+          {
+            "question": "¿Qué tecnologías utiliza?",
+            "answer": "Utilizamos tecnologías web modernas y podemos integrarnos con sus herramientas y sistemas existentes."
+          },
+          {
+            "question": "¿Poseemos el código?",
+            "answer": "Sí, recibe la propiedad completa del código fuente al finalizar el proyecto."
+          }
+        ]
+      },
+      {
+        "slug": "operations-tracker",
+        "title": "Rastreador de Operaciones",
+        "category": "software-systems",
+        "shortDescription": "Un sistema ligero para rastrear y gestionar sus operaciones diarias, tareas y flujos de trabajo.",
+        "tags": [
+          "Operaciones",
+          "Gestión de Tareas",
+          "Rastreo"
+        ],
+        "whoItsFor": "Pequeños equipos que necesitan mejor visibilidad y control sobre sus operaciones diarias.",
+        "whatYouGet": [
+          "Tablero de rastreo de operaciones",
+          "Gestión de tareas y flujos de trabajo",
+          "Características de colaboración en equipo",
+          "Informes y análisis",
+          "Interfaz responsive móvil"
+        ],
+        "howItWorks": [
+          "Configuración",
+          "Incorporación y capacitación del equipo",
+          "Personalización de sus flujos de trabajo",
+          "Puesta en marcha y soporte"
+        ],
+        "typicalTimeline": "2-3 semanas desde la configuración hasta la puesta en marcha.",
+        "faq": []
+      },
+      {
+        "slug": "sales-crm-lightweight",
+        "title": "Sistema Ligero de Ventas + CRM",
+        "category": "software-systems",
+        "shortDescription": "Un sistema CRM simple y efectivo diseñado para pequeñas empresas que no necesitan complejidad empresarial.",
+        "tags": [
+          "CRM",
+          "Ventas",
+          "Gestión de Clientes"
+        ],
+        "whoItsFor": "Pequeñas empresas que necesitan funcionalidad CRM sin la complejidad y el costo de soluciones empresariales.",
+        "whatYouGet": [
+          "Base de datos de clientes",
+          "Gestión de pipeline de ventas",
+          "Gestión de contactos",
+          "Informes básicos",
+          "Integración de email"
+        ],
+        "howItWorks": [
+          "Configuración del sistema",
+          "Migración de datos (si aplica)",
+          "Capacitación del equipo",
+          "Puesta en marcha y soporte continuo"
+        ],
+        "typicalTimeline": "2-4 semanas desde la configuración hasta la puesta en marcha.",
+        "faq": [
+          {
+            "question": "¿Puede integrarse con nuestro email?",
+            "answer": "Sí, el sistema incluye integración de email para un seguimiento de comunicación fluido."
+          }
+        ]
+      }
+    ]
+  },
+  "it": {
+    "items": [
+      {
+        "slug": "business-first-analysis",
+        "title": "Analisi Business First",
+        "category": "services",
+        "shortDescription": "Una diagnosi completa delle tue operazioni aziendali, identificando opportunità di miglioramento e crescita.",
+        "tags": [
+          "Strategia",
+          "Analisi",
+          "Diagnosi"
+        ],
+        "whoItsFor": "Piccole e medie imprese che cercano di comprendere il loro stato attuale e identificare opportunità strategiche.",
+        "whatYouGet": [
+          "Rapporto completo di valutazione aziendale",
+          "Colli di bottiglia e inefficienze identificati",
+          "Raccomandazioni strategiche",
+          "Piano d'azione prioritario",
+          "Proposta di framework KPI"
+        ],
+        "howItWorks": [
+          "Consultazione iniziale per comprendere il contesto della tua azienda",
+          "Raccolta dati e analisi delle operazioni attuali",
+          "Interviste con stakeholder e mappatura dei processi",
+          "Rapporto completo con risultati e raccomandazioni",
+          "Presentazione e discussione dei risultati"
+        ],
+        "typicalTimeline": "2-3 settimane dall'avvio alla consegna del rapporto finale.",
+        "faq": []
+      },
+      {
+        "slug": "process-mapping-standardization",
+        "title": "Mappatura e Standardizzazione dei Processi",
+        "category": "services",
+        "shortDescription": "Documenta e standardizza i tuoi processi aziendali per migliorare efficienza e coerenza.",
+        "tags": [
+          "Processi",
+          "Documentazione",
+          "Efficienza"
+        ],
+        "whoItsFor": "Aziende con processi non documentati o inconsistenti che vogliono scalare in modo efficiente.",
+        "whatYouGet": [
+          "Documentazione completa dei processi",
+          "Procedure operative standard (SOP)",
+          "Diagrammi di flusso dei processi",
+          "Materiali di formazione",
+          "Raccomandazioni di miglioramento dei processi"
+        ],
+        "howItWorks": [
+          "Sessioni di scoperta per mappare i processi attuali",
+          "Documentazione dei flussi di lavoro esistenti",
+          "Identificazione delle opportunità di standardizzazione",
+          "Creazione di SOP e documentazione dei processi",
+          "Revisione e perfezionamento con il tuo team"
+        ],
+        "typicalTimeline": "3-4 settimane a seconda della complessità dei processi.",
+        "faq": [
+          {
+            "question": "Quanti processi puoi documentare?",
+            "answer": "Ci concentriamo tipicamente su 3-5 processi chiave per impegno, garantendo qualità e profondità."
+          }
+        ]
+      },
+      {
+        "slug": "kpi-dashboard-management",
+        "title": "Dashboard KPI e Sistema di Gestione",
+        "category": "services",
+        "shortDescription": "Costruisci un dashboard KPI personalizzato e sistema di gestione per tracciare ciò che conta di più per la tua azienda.",
+        "tags": [
+          "KPIs",
+          "Analitica",
+          "Reportistica"
+        ],
+        "whoItsFor": "Aziende che necessitano di migliore visibilità sulle loro metriche di performance e vogliono decisioni basate sui dati.",
+        "whatYouGet": [
+          "Framework KPI personalizzato",
+          "Dashboard interattivo",
+          "Configurazione raccolta dati",
+          "Modelli di report",
+          "Formazione sull'uso del sistema"
+        ],
+        "howItWorks": [
+          "Definire metriche chiave rilevanti per la tua azienda",
+          "Progettare layout e visualizzazioni del dashboard",
+          "Configurare raccolta e integrazione dati",
+          "Costruire e distribuire il dashboard",
+          "Formare il tuo team su uso e manutenzione"
+        ],
+        "typicalTimeline": "4-6 settimane inclusa configurazione e formazione.",
+        "faq": []
+      },
+      {
+        "slug": "marketing-pack",
+        "title": "Pacchetto Marketing",
+        "category": "digital-products",
+        "shortDescription": "Una collezione completa di modelli, framework e guide di marketing per accelerare i tuoi sforzi di marketing.",
+        "tags": [
+          "Marketing",
+          "Modelli",
+          "Strategia"
+        ],
+        "whoItsFor": "Piccole imprese e imprenditori che necessitano di materiali di marketing professionali senza il prezzo dell'agenzia.",
+        "whatYouGet": [
+          "Modelli di strategia di marketing",
+          "Modelli di calendario contenuti",
+          "Modelli di social media",
+          "Modelli di campagne email",
+          "Framework di analisi marketing"
+        ],
+        "howItWorks": [
+          "Acquista e scarica il pacchetto",
+          "Personalizza i modelli con il tuo brand",
+          "Segui le guide e i framework inclusi",
+          "Implementa la tua strategia di marketing"
+        ],
+        "typicalTimeline": "Download istantaneo dopo l'acquisto.",
+        "faq": [
+          {
+            "question": "I modelli sono personalizzabili?",
+            "answer": "Sì, tutti i modelli sono forniti in formati modificabili (PDF, Word, Excel) per una facile personalizzazione."
+          }
+        ]
+      },
+      {
+        "slug": "business-plan-template-pack",
+        "title": "Pacchetto Modelli Piano di Business",
+        "category": "digital-products",
+        "shortDescription": "Modelli professionali di piano di business e guide per aiutarti a creare un piano di business convincente.",
+        "tags": [
+          "Piano di Business",
+          "Modelli",
+          "Pianificazione"
+        ],
+        "whoItsFor": "Imprenditori e proprietari di aziende che devono creare o aggiornare il loro piano di business.",
+        "whatYouGet": [
+          "Modello completo di piano di business",
+          "Modelli di proiezioni finanziarie",
+          "Framework di analisi di mercato",
+          "Modello di riepilogo esecutivo",
+          "Guida passo-passo"
+        ],
+        "howItWorks": [
+          "Scarica il pacchetto di modelli",
+          "Segui la guida inclusa",
+          "Compila le informazioni della tua azienda",
+          "Rivedi e perfeziona il tuo piano"
+        ],
+        "typicalTimeline": "Download istantaneo dopo l'acquisto.",
+        "faq": []
+      },
+      {
+        "slug": "sop-templates",
+        "title": "Modelli SOP",
+        "category": "digital-products",
+        "shortDescription": "Una libreria di modelli di procedure operative standard per processi aziendali comuni.",
+        "tags": [
+          "SOP",
+          "Processi",
+          "Documentazione"
+        ],
+        "whoItsFor": "Aziende che vogliono standardizzare le loro operazioni con modelli SOP professionali.",
+        "whatYouGet": [
+          "20+ modelli SOP per processi comuni",
+          "Guida alla scrittura SOP",
+          "Guida alla personalizzazione dei modelli",
+          "Documentazione delle migliori pratiche"
+        ],
+        "howItWorks": [
+          "Acquista e scarica i modelli",
+          "Seleziona SOP rilevanti per la tua azienda",
+          "Personalizza con i tuoi processi specifici",
+          "Implementa e forma il tuo team"
+        ],
+        "typicalTimeline": "Download istantaneo dopo l'acquisto.",
+        "faq": []
+      },
+      {
+        "slug": "custom-execution-system",
+        "title": "Sistema di Esecuzione Personalizzato (OS Aziendale)",
+        "category": "software-systems",
+        "shortDescription": "Un sistema operativo aziendale completamente personalizzato costruito specificamente per le esigenze della tua azienda.",
+        "tags": [
+          "Sviluppo Personalizzato",
+          "OS Aziendale",
+          "Integrazione"
+        ],
+        "whoItsFor": "Aziende in crescita che necessitano di un sistema unificato per gestire operazioni, processi e dati.",
+        "whatYouGet": [
+          "Sistema software personalizzato",
+          "Integrazione con strumenti esistenti",
+          "Formazione utenti e documentazione",
+          "Supporto e manutenzione continui",
+          "Proprietà del codice sorgente"
+        ],
+        "howItWorks": [
+          "Scoperta e raccolta requisiti",
+          "Progettazione e architettura del sistema",
+          "Sviluppo e test",
+          "Distribuzione e integrazione",
+          "Formazione e consegna"
+        ],
+        "typicalTimeline": "8-12 settimane a seconda della complessità.",
+        "faq": [
+          {
+            "question": "Quali tecnologie usate?",
+            "answer": "Utilizziamo tecnologie web moderne e possiamo integrarci con i tuoi strumenti e sistemi esistenti."
+          },
+          {
+            "question": "Possediamo il codice?",
+            "answer": "Sì, ricevi la piena proprietà del codice sorgente al completamento del progetto."
+          }
+        ]
+      },
+      {
+        "slug": "operations-tracker",
+        "title": "Tracker Operazioni",
+        "category": "software-systems",
+        "shortDescription": "Un sistema leggero per tracciare e gestire le tue operazioni quotidiane, attività e flussi di lavoro.",
+        "tags": [
+          "Operazioni",
+          "Gestione Attività",
+          "Tracciamento"
+        ],
+        "whoItsFor": "Piccoli team che necessitano di migliore visibilità e controllo sulle loro operazioni quotidiane.",
+        "whatYouGet": [
+          "Dashboard di tracciamento operazioni",
+          "Gestione attività e flussi di lavoro",
+          "Funzionalità di collaborazione team",
+          "Reportistica e analitica",
+          "Interfaccia responsive mobile"
+        ],
+        "howItWorks": [
+          "Configurazione",
+          "Onboarding e formazione del team",
+          "Personalizzazione dei tuoi flussi di lavoro",
+          "Go-live e supporto"
+        ],
+        "typicalTimeline": "2-3 settimane dalla configurazione al go-live.",
+        "faq": []
+      },
+      {
+        "slug": "sales-crm-lightweight",
+        "title": "Sistema Leggero Vendite + CRM",
+        "category": "software-systems",
+        "shortDescription": "Un sistema CRM semplice ed efficace progettato per piccole imprese che non necessitano di complessità aziendale.",
+        "tags": [
+          "CRM",
+          "Vendite",
+          "Gestione Clienti"
+        ],
+        "whoItsFor": "Piccole imprese che necessitano di funzionalità CRM senza la complessità e il costo di soluzioni aziendali.",
+        "whatYouGet": [
+          "Database clienti",
+          "Gestione pipeline vendite",
+          "Gestione contatti",
+          "Reportistica di base",
+          "Integrazione email"
+        ],
+        "howItWorks": [
+          "Configurazione del sistema",
+          "Migrazione dati (se applicabile)",
+          "Formazione del team",
+          "Go-live e supporto continuo"
+        ],
+        "typicalTimeline": "2-4 settimane dalla configurazione al go-live.",
+        "faq": [
+          {
+            "question": "Può integrarsi con la nostra email?",
+            "answer": "Sì, il sistema include integrazione email per un tracciamento della comunicazione fluido."
+          }
+        ]
+      }
+    ]
+  }
+}

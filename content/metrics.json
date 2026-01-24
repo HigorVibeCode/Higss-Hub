@@ -1,0 +1,86 @@
+{
+  "en": [
+    {
+      "value": "20+",
+      "label": "Projects delivered"
+    },
+    {
+      "value": "200+",
+      "label": "Processes mapped"
+    },
+    {
+      "value": "1000+",
+      "label": "Hours in diagnostics"
+    }
+  ],
+  "pt": [
+    {
+      "value": "20+",
+      "label": "Projetos entregues"
+    },
+    {
+      "value": "200+",
+      "label": "Processos mapeados"
+    },
+    {
+      "value": "1000+",
+      "label": "Horas em diagnósticos"
+    }
+  ],
+  "de": [
+    {
+      "value": "20+",
+      "label": "Projekte geliefert"
+    },
+    {
+      "value": "200+",
+      "label": "Prozesse kartiert"
+    },
+    {
+      "value": "1000+",
+      "label": "Stunden in Diagnosen"
+    }
+  ],
+  "fr": [
+    {
+      "value": "20+",
+      "label": "Projets livrés"
+    },
+    {
+      "value": "200+",
+      "label": "Processus cartographiés"
+    },
+    {
+      "value": "1000+",
+      "label": "Heures en diagnostics"
+    }
+  ],
+  "es": [
+    {
+      "value": "20+",
+      "label": "Proyectos entregados"
+    },
+    {
+      "value": "200+",
+      "label": "Procesos mapeados"
+    },
+    {
+      "value": "1000+",
+      "label": "Horas en diagnósticos"
+    }
+  ],
+  "it": [
+    {
+      "value": "20+",
+      "label": "Progetti consegnati"
+    },
+    {
+      "value": "200+",
+      "label": "Processi mappati"
+    },
+    {
+      "value": "1000+",
+      "label": "Ore in diagnosi"
+    }
+  ]
+}

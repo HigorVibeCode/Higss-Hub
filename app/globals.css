@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #071316;
+  --surface: #0B1A1E;
+  --card: #24343A;
+  --border: #3A4B52;
+  --text: #F4F6F7;
+  --muted: #A8B3B8;
+  --accent: #D87445;
+  --accent-hover: #F08B5C;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  /* Tipografia global refinada - SEM SERIF */
+  h1 {
+    @apply font-manrope font-bold text-text leading-tight tracking-tight;
+  }
+
+  h2 {
+    @apply font-manrope font-bold text-text leading-tight;
+  }
+
+  h3 {
+    @apply font-manrope font-semibold text-text;
+  }
+
+  p {
+    @apply text-text/90 leading-relaxed;
+  }
+
+  /* Respeitar prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Container padrão com max-width */
+  .container-content {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl;
+  }
+
+  /* Seção padrão com espaçamento generoso premium */
+  .section {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  /* Header de seção */
+  .section-header {
+    @apply mb-8 md:mb-12 lg:mb-16;
+  }
+
+  /* Botão primário premium */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 bg-accent hover:bg-accentHover active:scale-[0.98] text-white font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md border border-accent/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg min-h-[44px];
+  }
+
+  /* Botão secundário premium */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 border-2 border-accent text-accent hover:bg-surface/50 active:scale-[0.98] font-semibold rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg min-h-[44px];
+  }
+
+  /* Card padrão premium */
+  .card {
+    @apply bg-card border border-border/50 rounded-xl p-6 md:p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  /* Badge/Tag */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 text-xs font-medium rounded-full;
+  }
+
+  /* Divisor de seção */
+  .section-divider {
+    @apply border-t border-border/50;
+  }
+}

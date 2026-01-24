@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "products": "Produkte & Dienstleistungen",
+    "smartLab": "The Smart Lab",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "tagline": "Große Ergebnisse für kleine Unternehmen durch Technologie und Geschäftsstrategie schaffen.",
+    "quickLinks": "Schnelllinks",
+    "home": "Startseite",
+    "products": "Produkte & Dienstleistungen",
+    "smartLab": "The Smart Lab",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "title": "HIGSS HUB - Technologie- und Geschäftsstratege",
+    "description": "Große Ergebnisse für kleine Unternehmen durch Technologie und Geschäftsstrategie schaffen.",
+    "hero": {
+      "headline": "GROSSE ERGEBNISSE für KLEINE UNTERNEHMEN schaffen",
+      "subheadline": "Technologie- und Geschäftsstratege",
+      "ctaPrimary": "Diagnose buchen",
+      "ctaSecondary": "Produkte & Dienstleistungen erkunden"
+    },
+    "mainMessage": {
+      "paragraph1": "Was Sie hier sehen, ist nicht nur Software. Tatsächlich ist die Software nicht das Endergebnis. Es ist die Umsetzung einer Strategie.",
+      "paragraph2": "Dieses System wurde auf einer sehr klaren Grundlage aufgebaut: Menschen, Produkte und Prozesse. Jedes Element wurde sorgfältig entwickelt, um zusammenzuarbeiten und ein kohärentes System zu schaffen, das Ergebnisse liefert.",
+      "paragraph3": "Die Strategie hinter diesem System konzentriert sich darauf, Ihr Geschäft im Kern zu verstehen, Ihre Prozesse zu kartieren und Technologie zu implementieren, die wirklich Ihren Zielen dient.",
+      "paragraph4": "Es geht nicht darum, mehr Tools zu Ihrem Stack hinzuzufügen. Es geht darum, ein Ausführungssystem zu bauen, das transformiert, wie Sie arbeiten, wie Sie Erfolg messen und wie Sie wachsen."
+    },
+    "metrics": {
+      "title": "Auswirkungen in Zahlen"
+    },
+    "howIWork": {
+      "title": "Die Grundlagen",
+      "people": {
+        "title": "Menschen",
+        "description": "Ihr Team, ihre Bedürfnisse und wie sie zusammenarbeiten zu verstehen, ist die Grundlage jedes erfolgreichen Systems."
+      },
+      "products": {
+        "title": "Produkte",
+        "description": "Die richtigen Tools und Technologien auswählen und implementieren, die mit Ihren Geschäftszielen übereinstimmen."
+      },
+      "processes": {
+        "title": "Prozesse",
+        "description": "Ihre Workflows kartieren, standardisieren und optimieren, um Effizienz und Klarheit zu schaffen."
+      }
+    },
+    "cta": {
+      "title": "Ist Ihr Unternehmen im Kanton Bern?",
+      "button": "Loslegen"
+    }
+  },
+  "products": {
+    "title": "Produkte & Dienstleistungen",
+    "description": "Umfassende Lösungen zur Transformation Ihrer Geschäftsabläufe und Förderung des Wachstums.",
+    "categories": {
+      "all": "Alle",
+      "services": "Dienstleistungen",
+      "digital-products": "Digitale Produkte",
+      "software-systems": "Softwaresysteme"
+    },
+    "viewDetails": "Details anzeigen",
+    "backToCatalog": "Zurück zum Katalog",
+    "detail": {
+      "whoItsFor": "Für wen es ist",
+      "whatYouGet": "Was Sie erhalten",
+      "howItWorks": "Wie es funktioniert",
+      "timeline": "Typischer Zeitplan",
+      "faq": "FAQ",
+      "ctaTitle": "Bereit loszulegen?",
+      "ctaButton": "Angebot anfordern"
+    }
+  },
+  "smartLab": {
+    "title": "The Smart Lab",
+    "description": "Eine kuratierte Sammlung von Erkenntnissen, Lernprozessen und strategischem Denken, das prägt, wie ich arbeite.",
+    "allTags": "Alle",
+    "howIApplyIt": "Wie ich es anwende"
+  },
+  "contact": {
+    "title": "KONTAKTIEREN SIE MICH",
+    "titleItalic": "KONTAKTIEREN SIE",
+    "titleNormal": "MICH",
+    "eyebrow": "Kontakt aufnehmen",
+    "description": "Lassen Sie uns besprechen, wie wir Ihre Geschäftsabläufe transformieren und bedeutsame Ergebnisse erzielen können.",
+    "bodyText": {
+      "paragraph1": "Im Geschäftsleben dominieren diejenigen mit Klarheit — sie konkurrieren nicht, sie dominieren.",
+      "paragraph2": "Während Ihre Konkurrenten in nutzlosen Daten ertrinken, baue ich das wertvollste Asset für Ihren Betrieb:",
+      "clarity": "Klarheit",
+      "paragraph2Cont": "Meine Aufgabe ist es, Tools zu erstellen, die Lärm in Profit verwandeln und Ihnen ermöglichen, schnelle und präzise Entscheidungen zu treffen.",
+      "paragraph3": "Lassen Sie uns sprechen und eine Lösung für Ihr Unternehmen planen."
+    },
+    "info": {
+      "title": "Kontakt aufnehmen",
+      "location": "Standort",
+      "email": "E-Mail",
+      "phone": "Telefon"
+    },
+    "form": {
+      "title": "Nachricht senden",
+      "name": "Name",
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "ihre.email@beispiel.com",
+      "company": "Unternehmen",
+      "companyPlaceholder": "Ihr Firmenname",
+      "message": "Nachricht",
+      "messagePlaceholder": "Erzählen Sie mir von Ihrem Projekt...",
+      "submit": "Nachricht senden"
+    },
+    "whatsapp": {
+      "title": "Oder erreichen Sie mich auf WhatsApp",
+      "phonePlaceholder": "Ihre Telefonnummer",
+      "send": "Senden",
+      "defaultMessage": "Hallo, ich möchte ein Projekt mit HIGSS HUB besprechen."
+    },
+    "onsiteVisit": {
+      "title": "Vor-Ort-Besuche",
+      "description": "Buchen Sie einen Vor-Ort-Besuch im Kanton Bern",
+      "cta": "Vor-Ort-Besuch buchen",
+      "message": "Hallo, ich möchte einen Vor-Ort-Besuch im Kanton Bern buchen."
+    }
+  },
+  "footer": {
+    "tagline": "Große Ergebnisse für kleine Unternehmen durch Technologie und Geschäftsstrategie schaffen.",
+    "quickLinks": "Schnelllinks",
+    "home": "Startseite",
+    "products": "Produkte & Dienstleistungen",
+    "smartLab": "The Smart Lab",
+    "contact": "Kontakt",
+    "onsiteVisit": {
+      "title": "Vor-Ort-Besuche",
+      "cta": "Vor-Ort-Besuch im Kanton Bern buchen"
+    }
+  }
+}

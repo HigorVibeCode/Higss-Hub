@@ -1,0 +1,129 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products & Services",
+    "smartLab": "The Smart Lab",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "HIGSS HUB - Technology & Business Strategist",
+    "description": "Creating big results for small businesses through technology and business strategy.",
+    "hero": {
+      "headline": "CREATING BIG RESULTS for SMALL BUSINESSES",
+      "subheadline": "Technology & Business Strategist",
+      "ctaPrimary": "Book a Diagnostic",
+      "ctaSecondary": "Explore Products & Services"
+    },
+    "mainMessage": {
+      "paragraph1": "What you're seeing here is not just software. In fact, the software is not the final result. It is the execution of a strategy.",
+      "paragraph2": "This system was built on a very clear foundation: people, products, and processes. Each element was carefully designed to work together, creating a cohesive system that drives results.",
+      "paragraph3": "The strategy behind this system focuses on understanding your business at its core, mapping out your processes, and implementing technology that truly serves your goals.",
+      "paragraph4": "This is not about adding more tools to your stack. It's about building an execution system that transforms how you work, how you measure success, and how you grow."
+    },
+    "metrics": {
+      "title": "Impact by Numbers"
+    },
+    "howIWork": {
+      "title": "The Fundamentals",
+      "people": {
+        "title": "People",
+        "description": "Understanding your team, their needs, and how they work together is the foundation of any successful system."
+      },
+      "products": {
+        "title": "Products",
+        "description": "Selecting and implementing the right tools and technologies that align with your business goals."
+      },
+      "processes": {
+        "title": "Processes",
+        "description": "Mapping, standardizing, and optimizing your workflows to create efficiency and clarity."
+      }
+    },
+    "cta": {
+      "title": "Is your company in the Canton of Bern?",
+      "button": "Get Started"
+    }
+  },
+  "products": {
+    "title": "Products & Services",
+    "description": "Comprehensive solutions to transform your business operations and drive growth.",
+    "categories": {
+      "all": "All",
+      "services": "Services",
+      "digital-products": "Digital Products",
+      "software-systems": "Software Systems"
+    },
+    "viewDetails": "View details",
+    "backToCatalog": "Back to catalog",
+    "detail": {
+      "whoItsFor": "Who it's for",
+      "whatYouGet": "What you get",
+      "howItWorks": "How it works",
+      "timeline": "Typical timeline",
+      "faq": "FAQ",
+      "ctaTitle": "Ready to get started?",
+      "ctaButton": "Request proposal"
+    }
+  },
+  "smartLab": {
+    "title": "The Smart Lab",
+    "description": "A curated collection of insights, learnings, and strategic thinking that shapes how I work.",
+    "allTags": "All",
+    "howIApplyIt": "How I apply it"
+  },
+  "contact": {
+    "title": "CONTACT ME",
+    "titleItalic": "CONTACT",
+    "titleNormal": "ME",
+    "eyebrow": "Get In Touch",
+    "description": "Let's discuss how we can transform your business operations and drive meaningful results.",
+    "bodyText": {
+      "paragraph1": "In the game of business, those with clarity don't compete — they dominate.",
+      "paragraph2": "While your competitors drown in useless data, I build the most valuable asset for your operation:",
+      "clarity": "clarity",
+      "paragraph2Cont": "My job is to create tools that turn noise into profit, enabling you to make fast and precise decisions.",
+      "paragraph3": "Let's talk and plan a solution for your business."
+    },
+    "info": {
+      "title": "Get in Touch",
+      "location": "Location",
+      "email": "Email",
+      "phone": "Phone"
+    },
+    "form": {
+      "title": "Send a Message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "company": "Company",
+      "companyPlaceholder": "Your company name",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Send Message"
+    },
+    "whatsapp": {
+      "title": "Or reach me on WhatsApp",
+      "phonePlaceholder": "Your phone number",
+      "send": "Send",
+      "defaultMessage": "Hello, I'd like to discuss a project with HIGSS HUB."
+    },
+    "onsiteVisit": {
+      "title": "On-site Visits",
+      "description": "Book an on-site visit in the Canton of Bern",
+      "cta": "Book an on-site visit",
+      "message": "Hello, I'd like to book an on-site visit in the Canton of Bern."
+    }
+  },
+  "footer": {
+    "tagline": "Creating big results for small businesses through technology and business strategy.",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "products": "Products & Services",
+    "smartLab": "The Smart Lab",
+    "contact": "Contact",
+    "onsiteVisit": {
+      "title": "On-site Visits",
+      "cta": "Book an on-site visit in the Canton of Bern"
+    }
+  }
+}
