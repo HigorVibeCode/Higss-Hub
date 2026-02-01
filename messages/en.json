@@ -24,21 +24,34 @@
       "paragraph6": "It's about building an execution system that transforms how you work, how you measure success, and how you grow consistently."
     },
     "metrics": {
-      "title": "Impact by Numbers"
+      "line1": "If you recognized your business in any of these situations,",
+      "line2": "the problem isn't lack of effort.",
+      "line3": "It's lack of structure.",
+      "ctaButton": "Tell me your biggest operational problem"
     },
     "howIWork": {
       "title": "The Fundamentals",
+      "intro": "Every successful system rests on three pillars. Here are the typical pain points and what each pillar addresses.",
       "people": {
-        "title": "People",
-        "description": "Understanding your team, their needs, and how they work together is the foundation of any successful system."
-      },
-      "products": {
-        "title": "Products",
-        "description": "Selecting and implementing the right tools and technologies that align with your business goals."
+        "label": "People",
+        "pain1": "Constant struggle to find and retain good employees.",
+        "pain2": "The business suffers or stalls when a key person is missing.",
+        "pain3": "Different languages and cultures lead to misunderstandings in execution.",
+        "purpose": "Understanding your team, their needs, and how they work together is the foundation of any successful system."
       },
       "processes": {
-        "title": "Processes",
-        "description": "Mapping, standardizing, and optimizing your workflows to create efficiency and clarity."
+        "label": "Processes",
+        "pain1": "Data scattered across WhatsApp, Excel, email, and paper.",
+        "pain2": "Every employee performs the same task differently.",
+        "pain3": "The business cannot operate without the owner present to make decisions.",
+        "purpose": "Mapping, standardizing, and optimizing your workflows to create efficiency and clarity."
+      },
+      "products": {
+        "label": "Products",
+        "pain1": "The final result varies depending on who performed the service that day.",
+        "pain2": "Time wasted returning to the job site to fix avoidable errors.",
+        "pain3": "Small details are forgotten, generating complaints after delivery.",
+        "purpose": "Designing a consistent delivery standard so the customer experience stays reliable every time."
       }
     },
     "cta": {
@@ -90,7 +103,10 @@
       "title": "Get in Touch",
       "location": "Location",
       "email": "Email",
-      "phone": "Phone"
+      "phone": "Phone",
+      "phoneWhatsApp": "Phone / WhatsApp",
+      "callWhatsApp": "Tell me your main problem",
+      "call": "Call"
     },
     "form": {
       "title": "Send a Message",
@@ -108,7 +124,7 @@
       "title": "Or reach me on WhatsApp",
       "phonePlaceholder": "Your phone number",
       "send": "Send",
-      "defaultMessage": "Hello, I'd like to discuss a project with HIGSS HUB."
+      "defaultMessage": "Tell me your main problem."
     },
     "onsiteVisit": {
       "title": "On-site Visits",

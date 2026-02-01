@@ -32,21 +32,34 @@
       "paragraph6": "Es geht darum, ein Ausführungssystem zu bauen, das transformiert, wie Sie arbeiten, wie Sie Erfolg messen und wie Sie kontinuierlich wachsen."
     },
     "metrics": {
-      "title": "Auswirkungen in Zahlen"
+      "line1": "Wenn Sie Ihr Unternehmen in einer dieser Situationen erkannt haben,",
+      "line2": "liegt das Problem nicht an mangelndem Einsatz.",
+      "line3": "Es fehlt an Struktur.",
+      "ctaButton": "Erzählen Sie mir Ihr größtes operatives Problem"
     },
     "howIWork": {
       "title": "Die Grundlagen",
+      "intro": "Jedes erfolgreiche System ruht auf drei Säulen. Hier sind die typischen Schmerzpunkte und was jede Säule adressiert.",
       "people": {
-        "title": "Menschen",
-        "description": "Ihr Team, ihre Bedürfnisse und wie sie zusammenarbeiten zu verstehen, ist die Grundlage jedes erfolgreichen Systems."
-      },
-      "products": {
-        "title": "Produkte",
-        "description": "Die richtigen Tools und Technologien auswählen und implementieren, die mit Ihren Geschäftszielen übereinstimmen."
+        "label": "Menschen",
+        "pain1": "Ständiger Kampf, gute Mitarbeiter zu finden und zu halten.",
+        "pain2": "Das Geschäft leidet oder kommt zum Stillstand, wenn eine Schlüsselperson fehlt.",
+        "pain3": "Verschiedene Sprachen und Kulturen führen zu Missverständnissen bei der Umsetzung.",
+        "purpose": "Ihr Team, ihre Bedürfnisse und wie sie zusammenarbeiten zu verstehen, ist die Grundlage jedes erfolgreichen Systems."
       },
       "processes": {
-        "title": "Prozesse",
-        "description": "Ihre Workflows kartieren, standardisieren und optimieren, um Effizienz und Klarheit zu schaffen."
+        "label": "Prozesse",
+        "pain1": "Daten verstreut über WhatsApp, Excel, E-Mail und Papier.",
+        "pain2": "Jeder Mitarbeiter führt dieselbe Aufgabe anders aus.",
+        "pain3": "Das Geschäft kann ohne den Eigentümer nicht operieren, um Entscheidungen zu treffen.",
+        "purpose": "Ihre Workflows kartieren, standardisieren und optimieren, um Effizienz und Klarheit zu schaffen."
+      },
+      "products": {
+        "label": "Produkte",
+        "pain1": "Das Endergebnis variiert je nachdem, wer die Leistung an diesem Tag erbracht hat.",
+        "pain2": "Verschwendete Zeit durch Rückkehr zur Baustelle, um vermeidbare Fehler zu beheben.",
+        "pain3": "Kleine Details werden vergessen und erzeugen Beschwerden nach der Lieferung.",
+        "purpose": "Einen einheitlichen Lieferstandard zu gestalten, damit das Kundenerlebnis jedes Mal zuverlässig bleibt."
       }
     },
     "cta": {
@@ -98,7 +111,10 @@
       "title": "Kontakt aufnehmen",
       "location": "Standort",
       "email": "E-Mail",
-      "phone": "Telefon"
+      "phone": "Telefon",
+      "phoneWhatsApp": "Telefon / WhatsApp",
+      "callWhatsApp": "Erzählen Sie mir Ihr Hauptproblem",
+      "call": "Anrufen"
     },
     "form": {
       "title": "Nachricht senden",
@@ -116,7 +132,7 @@
       "title": "Oder erreichen Sie mich auf WhatsApp",
       "phonePlaceholder": "Ihre Telefonnummer",
       "send": "Senden",
-      "defaultMessage": "Hallo, ich möchte ein Projekt mit HIGSS HUB besprechen."
+      "defaultMessage": "Erzählen Sie mir Ihr Hauptproblem."
     },
     "onsiteVisit": {
       "title": "Vor-Ort-Besuche",

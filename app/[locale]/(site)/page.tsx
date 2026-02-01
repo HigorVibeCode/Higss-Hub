@@ -5,7 +5,6 @@ import { Hero } from '@/components/Hero';
 import { MainMessage } from '@/components/MainMessage';
 import { Metrics } from '@/components/Metrics';
 import { HowIWork } from '@/components/HowIWork';
-import { CTA } from '@/components/CTA';
 
 export async function generateMetadata({
   params
@@ -34,11 +33,9 @@ export default function HomePage() {
       <div className="section-divider" />
       <MainMessage />
       <div className="section-divider" />
-      <Metrics />
-      <div className="section-divider" />
       <HowIWork />
       <div className="section-divider" />
-      <CTA />
+      <Metrics />
     </div>
   );
 }

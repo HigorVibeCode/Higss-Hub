@@ -32,21 +32,34 @@
       "paragraph6": "Il s'agit de construire un système d'exécution qui transforme la façon dont vous travaillez, dont vous mesurez le succès et dont vous grandissez de manière cohérente."
     },
     "metrics": {
-      "title": "Impact en Chiffres"
+      "line1": "Si vous avez reconnu votre entreprise dans l'une de ces situations,",
+      "line2": "le problème n'est pas le manque d'effort.",
+      "line3": "C'est le manque de structure.",
+      "ctaButton": "Dites-moi votre plus gros problème opérationnel"
     },
     "howIWork": {
       "title": "Les Fondamentaux",
+      "intro": "Chaque système réussi repose sur trois piliers. Voici les points de douleur typiques et ce que chaque pilier adresse.",
       "people": {
-        "title": "Personnes",
-        "description": "Comprendre votre équipe, ses besoins et comment elle travaille ensemble est la base de tout système réussi."
-      },
-      "products": {
-        "title": "Produits",
-        "description": "Sélectionner et mettre en œuvre les bons outils et technologies qui s'alignent avec vos objectifs commerciaux."
+        "label": "Personnes",
+        "pain1": "Lutte constante pour trouver et garder de bons employés.",
+        "pain2": "L'entreprise souffre ou stagne quand une personne clé est absente.",
+        "pain3": "Les langues et cultures différentes mènent à des malentendus dans l'exécution.",
+        "purpose": "Comprendre votre équipe, ses besoins et comment elle travaille ensemble est la base de tout système réussi."
       },
       "processes": {
-        "title": "Processus",
-        "description": "Cartographier, standardiser et optimiser vos flux de travail pour créer de l'efficacité et de la clarté."
+        "label": "Processus",
+        "pain1": "Données dispersées entre WhatsApp, Excel, e-mail et papier.",
+        "pain2": "Chaque employé effectue la même tâche différemment.",
+        "pain3": "L'entreprise ne peut pas fonctionner sans le propriétaire présent pour prendre des décisions.",
+        "purpose": "Cartographier, standardiser et optimiser vos flux de travail pour créer de l'efficacité et de la clarté."
+      },
+      "products": {
+        "label": "Produits",
+        "pain1": "Le résultat final varie selon qui a effectué le service ce jour-là.",
+        "pain2": "Temps perdu à retourner sur le chantier pour corriger des erreurs évitables.",
+        "pain3": "Les petits détails sont oubliés, générant des plaintes après la livraison.",
+        "purpose": "Concevoir un standard de livraison cohérent pour que l'expérience client reste fiable à chaque fois."
       }
     },
     "cta": {
@@ -98,7 +111,10 @@
       "title": "Entrer en Contact",
       "location": "Localisation",
       "email": "Email",
-      "phone": "Téléphone"
+      "phone": "Téléphone",
+      "phoneWhatsApp": "Téléphone / WhatsApp",
+      "callWhatsApp": "Dites-moi votre principal problème",
+      "call": "Appeler"
     },
     "form": {
       "title": "Envoyer un Message",
@@ -116,7 +132,7 @@
       "title": "Ou contactez-moi sur WhatsApp",
       "phonePlaceholder": "Votre numéro de téléphone",
       "send": "Envoyer",
-      "defaultMessage": "Bonjour, j'aimerais discuter d'un projet avec HIGSS HUB."
+      "defaultMessage": "Dites-moi votre principal problème."
     },
     "onsiteVisit": {
       "title": "Visites sur site",

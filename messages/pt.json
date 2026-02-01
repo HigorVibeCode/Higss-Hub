@@ -24,21 +24,34 @@
       "paragraph6": "Trata-se de construir um sistema de execução que transforma como você trabalha, como mede o sucesso e como cresce de forma consistente."
     },
     "metrics": {
-      "title": "Impacto em Números"
+      "line1": "Se você reconheceu seu negócio em qualquer uma dessas situações,",
+      "line2": "o problema não é falta de esforço.",
+      "line3": "É falta de estrutura.",
+      "ctaButton": "Conte-me seu maior problema operacional"
     },
     "howIWork": {
       "title": "Os Fundamentos",
+      "intro": "Todo sistema bem-sucedido repousa sobre três pilares. Aqui estão os pontos de dor típicos e o que cada pilar aborda.",
       "people": {
-        "title": "Pessoas",
-        "description": "Entender sua equipe, suas necessidades e como trabalham juntos é a base de qualquer sistema bem-sucedido."
-      },
-      "products": {
-        "title": "Produtos",
-        "description": "Selecionar e implementar as ferramentas e tecnologias certas que se alinham com seus objetivos de negócio."
+        "label": "Pessoas",
+        "pain1": "Luta constante para encontrar e reter bons funcionários.",
+        "pain2": "O negócio sofre ou estagna quando uma pessoa-chave está ausente.",
+        "pain3": "Línguas e culturas diferentes levam a mal-entendidos na execução.",
+        "purpose": "Entender sua equipe, suas necessidades e como trabalham juntos é a base de qualquer sistema bem-sucedido."
       },
       "processes": {
-        "title": "Processos",
-        "description": "Mapear, padronizar e otimizar seus fluxos de trabalho para criar eficiência e clareza."
+        "label": "Processos",
+        "pain1": "Dados dispersos entre WhatsApp, Excel, e-mail e papel.",
+        "pain2": "Cada funcionário executa a mesma tarefa de forma diferente.",
+        "pain3": "O negócio não funciona sem o dono presente para tomar decisões.",
+        "purpose": "Mapear, padronizar e otimizar seus fluxos de trabalho para criar eficiência e clareza."
+      },
+      "products": {
+        "label": "Produtos",
+        "pain1": "O resultado final varia conforme quem realizou o serviço naquele dia.",
+        "pain2": "Tempo perdido voltando ao local de trabalho para corrigir erros evitáveis.",
+        "pain3": "Detalhes pequenos são esquecidos, gerando reclamações após a entrega.",
+        "purpose": "Desenhar um padrão de entrega consistente para que a experiência do cliente seja confiável toda vez."
       }
     },
     "cta": {
@@ -90,7 +103,10 @@
       "title": "Entre em Contato",
       "location": "Localização",
       "email": "Email",
-      "phone": "Telefone"
+      "phone": "Telefone",
+      "phoneWhatsApp": "Telefone / WhatsApp",
+      "callWhatsApp": "Conte-me seu principal problema",
+      "call": "Ligar"
     },
     "form": {
       "title": "Enviar Mensagem",
@@ -108,7 +124,7 @@
       "title": "Ou me encontre no WhatsApp",
       "phonePlaceholder": "Seu número de telefone",
       "send": "Enviar",
-      "defaultMessage": "Olá, gostaria de discutir um projeto com HIGSS HUB."
+      "defaultMessage": "Conte-me seu principal problema."
     },
     "onsiteVisit": {
       "title": "Visitas Presenciais",

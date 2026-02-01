@@ -6,6 +6,7 @@ import { Container } from '@/components/ui/Container';
 import { Divider } from '@/components/ui/Divider';
 import { Button } from '@/components/ui/Button';
 import { Logo } from '@/components/Logo';
+import { WhatsAppIcon } from '@/components/icons/WhatsAppIcon';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -98,12 +99,10 @@ export function Footer() {
                     href="https://wa.me/41782439213"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-green-500 transition-colors inline-flex items-center gap-2"
+                    className="hover:text-accent transition-colors inline-flex items-center gap-2"
                   >
                     WhatsApp
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
+                    <WhatsAppIcon size={16} className="shrink-0" />
                   </a>
                 </li>
               </ul>

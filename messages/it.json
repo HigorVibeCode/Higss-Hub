@@ -32,21 +32,34 @@
       "paragraph6": "Si tratta di costruire un sistema di esecuzione che trasforma come lavori, come misuri il successo e come cresci in modo coerente."
     },
     "metrics": {
-      "title": "Impatto in Numeri"
+      "line1": "Se hai riconosciuto la tua azienda in una di queste situazioni,",
+      "line2": "il problema non è la mancanza di impegno.",
+      "line3": "È la mancanza di struttura.",
+      "ctaButton": "Dimmi il tuo più grande problema operativo"
     },
     "howIWork": {
       "title": "I Fondamentali",
+      "intro": "Ogni sistema di successo poggia su tre pilastri. Ecco i tipici punti di dolore e cosa affronta ogni pilastro.",
       "people": {
-        "title": "Persone",
-        "description": "Comprendere il tuo team, le loro esigenze e come lavorano insieme è la base di qualsiasi sistema di successo."
-      },
-      "products": {
-        "title": "Prodotti",
-        "description": "Selezionare e implementare gli strumenti e le tecnologie giuste che si allineano con i tuoi obiettivi aziendali."
+        "label": "Persone",
+        "pain1": "Lotta costante per trovare e trattenere buoni dipendenti.",
+        "pain2": "L'azienda soffre o si blocca quando manca una persona chiave.",
+        "pain3": "Lingue e culture diverse portano a malintesi nell'esecuzione.",
+        "purpose": "Comprendere il tuo team, le loro esigenze e come lavorano insieme è la base di qualsiasi sistema di successo."
       },
       "processes": {
-        "title": "Processi",
-        "description": "Mappare, standardizzare e ottimizzare i tuoi flussi di lavoro per creare efficienza e chiarezza."
+        "label": "Processi",
+        "pain1": "Dati sparsi tra WhatsApp, Excel, email e carta.",
+        "pain2": "Ogni dipendente esegue lo stesso compito in modo diverso.",
+        "pain3": "L'azienda non può operare senza il proprietario presente per prendere decisioni.",
+        "purpose": "Mappare, standardizzare e ottimizzare i tuoi flussi di lavoro per creare efficienza e chiarezza."
+      },
+      "products": {
+        "label": "Prodotti",
+        "pain1": "Il risultato finale varia a seconda di chi ha eseguito il servizio quel giorno.",
+        "pain2": "Tempo sprecato tornando sul sito per correggere errori evitabili.",
+        "pain3": "Piccoli dettagli vengono dimenticati, generando lamentele dopo la consegna.",
+        "purpose": "Progettare uno standard di consegna coerente affinché l'esperienza del cliente resti affidabile ogni volta."
       }
     },
     "cta": {
@@ -98,7 +111,10 @@
       "title": "Mettersi in Contatto",
       "location": "Posizione",
       "email": "Email",
-      "phone": "Telefono"
+      "phone": "Telefono",
+      "phoneWhatsApp": "Telefono / WhatsApp",
+      "callWhatsApp": "Dimmi il tuo problema principale",
+      "call": "Chiamare"
     },
     "form": {
       "title": "Invia un Messaggio",
@@ -116,7 +132,7 @@
       "title": "O contattami su WhatsApp",
       "phonePlaceholder": "Il tuo numero di telefono",
       "send": "Invia",
-      "defaultMessage": "Ciao, vorrei discutere un progetto con HIGSS HUB."
+      "defaultMessage": "Dimmi il tuo problema principale."
     },
     "onsiteVisit": {
       "title": "Visite in loco",
