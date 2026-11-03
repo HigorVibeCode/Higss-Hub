@@ -4,7 +4,6 @@ import { getHubData, type Client, type Link } from '@/lib/data';
 import { clientUrl } from '@/lib/domain';
 import { env } from '@/lib/env';
 import { getDictionary } from '@/lib/i18n';
-import { getSupabase } from '@/lib/supabase/server';
 import { deleteClient, deleteLink, moveClient, moveLink, saveClient, saveLink, toggleLinkPublic } from './actions';
 
 const KIND_LABELS = getDictionary('pt').kinds;
@@ -13,8 +12,7 @@ type Props = { searchParams: Promise<{ editar?: string; cliente?: string }> };
 
 export default async function AdminPage({ searchParams }: Props) {
   const { editar, cliente } = await searchParams;
-  const supabase = (await getSupabase())!;
-  const { clients, links } = await getHubData(supabase);
+  const { clients, links } = await getHubData(true);
 
   const groups = [
     ...clients.map((c) => ({ client: c as Client | null, links: links.filter((l) => l.client_id === c.id) })),

@@ -48,10 +48,10 @@ export function SiteFooter({ children }: { children?: React.ReactNode }) {
 export function SetupNotice() {
   return (
     <div className="rounded-xl border border-accent/40 bg-accent/10 p-6 text-sm leading-relaxed text-text">
-      <p className="font-display font-bold">Supabase ainda não configurado</p>
+      <p className="font-display font-bold">Higss Hub ainda não configurado</p>
       <p className="mt-2 text-muted">
-        Defina <code>NEXT_PUBLIC_SUPABASE_URL</code> e <code>NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY</code> (veja{' '}
-        <code>.env.example</code>) e rode a migration em <code>supabase/migrations</code>.
+        Na Vercel, conecte um <strong>Blob privado</strong> ao projeto (Storage → Create → Blob) e defina a variável{' '}
+        <code>ADMIN_PASSWORD</code>. Depois, publique de novo.
       </p>
     </div>
   );

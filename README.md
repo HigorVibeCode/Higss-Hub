@@ -7,37 +7,36 @@ Hub de links do Higor: todos os projetos em um só lugar, com uma página própr
 | `higsshub.com` | O hub: links públicos agrupados por cliente, com busca. Logado, mostra também os privados |
 | `<cliente>.higsshub.com` | Só os links públicos daquele cliente (ex.: `orla.higsshub.com`) |
 | `higsshub.com/c/<cliente>` | A mesma página do cliente, útil nos previews `*.vercel.app` |
-| `higsshub.com/admin` | Painel para cadastrar clientes e links (login por link no e-mail) |
+| `higsshub.com/admin` | Painel para cadastrar clientes e links, protegido por senha |
 
-Stack: Next.js 16 (App Router), Tailwind 4, Supabase (banco + login). Idiomas da interface: en, pt, de, fr, es, it.
+Stack: Next.js 16 (App Router) e Tailwind 4, só com a Vercel. Os dados ficam num JSON privado no **Vercel Blob**. Idiomas da interface: en, pt, de, fr, es, it.
 
-## Colocar no ar
+## Colocar no ar (só na Vercel)
 
-1. **Supabase.** Crie um projeto novo e rode `supabase/migrations/20261103000000_hub_inicial.sql` no SQL Editor. A migration cria as tabelas, as regras de acesso (RLS), o admin (`public.admins`) e os 5 clientes iniciais.
-2. **Supabase → Authentication → URL Configuration.**
-   - Site URL: `https://higsshub.com`
-   - Redirect URLs: `https://higsshub.com/auth/callback` e `http://localhost:3000/auth/callback`
-3. **Vercel → Settings → Environment Variables.** Use os nomes do [.env.example](.env.example):
-   - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (ou a chave anon antiga)
-   - `ROOT_DOMAIN=higsshub.com`
-   - `ADMIN_EMAILS`
-4. **Vercel → Settings → Domains.** Adicione `*.higsshub.com`. O DNS já está na Vercel, então o certificado sai sozinho.
+1. **Storage → Create → Blob.** Crie um armazenamento com acesso **Private** e conecte ao projeto Higss-Hub. Isso cria sozinho a variável de acesso ao Blob.
+2. **Settings → Environment Variables.** Crie `ADMIN_PASSWORD` com a senha do painel. `ROOT_DOMAIN` já vale `higsshub.com` por padrão.
+3. **Settings → Domains.** Adicione `*.higsshub.com`. O DNS já está na Vercel, então o certificado sai sozinho.
+4. **Publique de novo** (Deployments → Redeploy) para as variáveis entrarem.
+
+No primeiro acesso o painel já traz os 5 clientes. O arquivo `hub.json` é criado no Blob na primeira vez que você salva algo.
 
 ## Rodar localmente
 
 ```bash
-cp .env.example .env.local   # preencha com as chaves do Supabase
+cp .env.example .env.local   # defina ADMIN_PASSWORD
 npm install
 npm run dev
 ```
 
-- `http://localhost:3000`: o hub.
-- `http://orla.localhost:3000`: a página do cliente (subdomínio em dev).
+- Sem as credenciais do Blob, os dados ficam em `.data/hub.json`, que não vai para o Git.
+- Para usar o Blob de produção localmente, rode `vercel env pull .env.local`.
+- `http://localhost:3000` abre o hub.
+- `http://orla.localhost:3000` abre a página do cliente.
 
 ## Como funciona
 
-- `proxy.ts`: transforma `<slug>.higsshub.com` em `/c/<slug>`, redireciona as URLs do site antigo (`/pt`, `/en/...`) para o hub e renova a sessão do admin.
-- Quem pode ver o quê é decidido pelo **RLS do banco**: visitantes só leem `links.is_public = true`, e o admin lê e edita tudo.
-- `ADMIN_EMAILS` só filtra quem recebe o link de login. A permissão de verdade é a tabela `public.admins`.
+- `lib/store.ts`: lê e grava o `hub.json`. A leitura fica em cache e cada gravação limpa o cache na hora. A gravação usa o ETag para não sobrescrever uma edição feita em outra aba.
+- `lib/auth.ts`: o login com `ADMIN_PASSWORD` gera um cookie assinado que vale 30 dias. Trocar a senha desconecta todas as sessões.
+- `proxy.ts`: transforma `<slug>.higsshub.com` em `/c/<slug>` e redireciona as URLs do site antigo (`/pt`, `/en/...`) para o hub.
+- O filtro de links privados acontece no servidor. Links privados nunca chegam ao navegador de quem não está logado, e as páginas de cliente mostram só os públicos.
 - Os textos da interface ficam em `lib/i18n.ts`. O idioma vem do cookie `locale` ou do navegador.

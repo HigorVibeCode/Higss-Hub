@@ -1,202 +1,163 @@
 'use server';
 
-import { revalidatePath } from 'next/cache';
-import { redirect, unstable_rethrow } from 'next/navigation';
+import { randomUUID } from 'node:crypto';
+import { redirect } from 'next/navigation';
 import type { ActionResult } from '@/components/admin/ActionForm';
-import { getViewer } from '@/lib/data';
+import { isAdmin } from '@/lib/auth';
 import { SLUG_RE } from '@/lib/domain';
-import { getSupabase } from '@/lib/supabase/server';
+import type { Kind } from '@/lib/i18n';
+import { updateHub, type HubData, type Link } from '@/lib/store';
 
-const KINDS = ['site', 'app', 'admin', 'staging', 'docs', 'other'];
+const KINDS: Kind[] = ['site', 'app', 'admin', 'staging', 'docs', 'other'];
 const RESERVED_SLUGS = ['www', 'admin', 'app', 'api'];
-
-async function adminClient() {
-  const supabase = await getSupabase();
-  if (!supabase) throw new Error('Supabase ainda não configurado.');
-  const viewer = await getViewer(supabase);
-  if (!viewer.isAdmin) throw new Error('Sem permissão.');
-  return supabase;
-}
 
 function text(fd: FormData, key: string) {
   const v = fd.get(key);
   return typeof v === 'string' ? v.trim() : '';
 }
 
-function dbError(error: { code?: string; message: string }): ActionResult {
-  if (error.code === '23505') return { error: 'Esse endereço já está em uso por outro cliente.' };
-  if (error.code === '23514') return { error: 'Algum campo está em formato inválido.' };
-  return { error: error.message };
-}
-
-function done() {
-  revalidatePath('/', 'layout');
-}
-
-async function guard<T>(fn: () => Promise<T>): Promise<T | ActionResult> {
+/** Checks the session, applies the change and turns a returned message into an error result. */
+async function save(mutate: (data: HubData) => string | void, ok?: string): Promise<ActionResult> {
+  if (!(await isAdmin())) return { error: 'Sessão expirada. Entre de novo.' };
   try {
-    return await fn();
+    const error = await updateHub(mutate);
+    return error ? { error } : ok ? { ok } : null;
   } catch (e) {
-    unstable_rethrow(e); // let redirect() through
-    return { error: e instanceof Error ? e.message : 'Erro inesperado.' };
+    return { error: e instanceof Error ? e.message : 'Erro inesperado ao salvar.' };
   }
 }
+
+const nextOrder = (items: { sort_order: number }[]) => Math.max(0, ...items.map((i) => i.sort_order)) + 10;
 
 // ---------- Clientes ----------
 
 export async function saveClient(_prev: ActionResult, fd: FormData): Promise<ActionResult> {
-  return guard(async () => {
-    const supabase = await adminClient();
-    const id = text(fd, 'id');
-    const name = text(fd, 'name');
-    const slug = text(fd, 'slug').toLowerCase();
-    const tagline = text(fd, 'tagline') || null;
-    const logo_url = text(fd, 'logo_url') || null;
-    const accent_color = text(fd, 'accent_color') || null;
+  const id = text(fd, 'id');
+  const name = text(fd, 'name');
+  const slug = text(fd, 'slug').toLowerCase();
+  const tagline = text(fd, 'tagline') || null;
+  const logo_url = text(fd, 'logo_url') || null;
+  const accent_color = text(fd, 'accent_color') || null;
 
-    if (!name) return { error: 'Dê um nome ao cliente.' };
-    if (!SLUG_RE.test(slug) || RESERVED_SLUGS.includes(slug))
-      return { error: 'Endereço inválido: use letras minúsculas, números e hífen (ex.: orla).' };
-    if (logo_url && !/^https?:\/\//i.test(logo_url)) return { error: 'A logo precisa ser um link começando com https://' };
-    if (accent_color && !/^#[0-9a-f]{6}$/i.test(accent_color)) return { error: 'Cor no formato #RRGGBB (ex.: #D87445).' };
+  if (!name) return { error: 'Dê um nome ao cliente.' };
+  if (!SLUG_RE.test(slug) || RESERVED_SLUGS.includes(slug))
+    return { error: 'Endereço inválido: use letras minúsculas, números e hífen (ex.: orla).' };
+  if (logo_url && !/^https?:\/\//i.test(logo_url)) return { error: 'A logo precisa ser um link começando com https://' };
+  if (accent_color && !/^#[0-9a-f]{6}$/i.test(accent_color)) return { error: 'Cor no formato #RRGGBB (ex.: #D87445).' };
 
-    const row = { name, slug, tagline, logo_url, accent_color };
-    if (id) {
-      const { error } = await supabase.from('clients').update(row).eq('id', id);
-      if (error) return dbError(error);
-      done();
-      redirect('/admin');
-    }
-    const { data: last } = await supabase.from('clients').select('sort_order').order('sort_order', { ascending: false }).limit(1);
-    const { error } = await supabase.from('clients').insert({ ...row, sort_order: (last?.[0]?.sort_order ?? 0) + 10 });
-    if (error) return dbError(error);
-    done();
-    return { ok: `Cliente ${name} criado.` };
-  });
+  const result = await save(
+    (data) => {
+      if (data.clients.some((c) => c.slug === slug && c.id !== id)) return 'Esse endereço já está em uso por outro cliente.';
+      const fields = { name, slug, tagline, logo_url, accent_color };
+      if (id) {
+        const client = data.clients.find((c) => c.id === id);
+        if (!client) return 'Cliente não encontrado.';
+        Object.assign(client, fields);
+      } else {
+        data.clients.push({ id: randomUUID(), ...fields, sort_order: nextOrder(data.clients) });
+      }
+    },
+    `Cliente ${name} criado.`,
+  );
+  if (id && !result?.error) redirect('/admin');
+  return result;
 }
 
 export async function deleteClient(_prev: ActionResult, fd: FormData): Promise<ActionResult> {
-  return guard(async () => {
-    const supabase = await adminClient();
-    const { error } = await supabase.from('clients').delete().eq('id', text(fd, 'id'));
-    if (error) return dbError(error);
-    done();
-    return { ok: 'Cliente excluído.' };
-  });
+  const id = text(fd, 'id');
+  return save((data) => {
+    data.clients = data.clients.filter((c) => c.id !== id);
+    // Links stay, moved to "Sem cliente".
+    data.links.forEach((l) => l.client_id === id && (l.client_id = null));
+  }, 'Cliente excluído.');
 }
 
 // ---------- Links ----------
 
-function normalizeUrl(raw: string) {
-  if (!raw) return '';
-  return /^https?:\/\//i.test(raw) ? raw : `https://${raw}`;
-}
-
-async function nextLinkOrder(supabase: Awaited<ReturnType<typeof adminClient>>, clientId: string | null) {
-  const q = supabase.from('links').select('sort_order').order('sort_order', { ascending: false }).limit(1);
-  const { data } = await (clientId ? q.eq('client_id', clientId) : q.is('client_id', null));
-  return (data?.[0]?.sort_order ?? 0) + 10;
-}
-
 export async function saveLink(_prev: ActionResult, fd: FormData): Promise<ActionResult> {
-  return guard(async () => {
-    const supabase = await adminClient();
-    const id = text(fd, 'id');
-    const title = text(fd, 'title');
-    const url = normalizeUrl(text(fd, 'url'));
-    const kind = text(fd, 'kind');
-    const client_id = text(fd, 'client_id') || null;
-    const row = {
-      title,
-      url,
-      kind: KINDS.includes(kind) ? kind : 'site',
-      client_id,
-      description: text(fd, 'description') || null,
-      is_public: fd.get('is_public') === 'on',
-    };
+  const id = text(fd, 'id');
+  const title = text(fd, 'title');
+  const rawUrl = text(fd, 'url');
+  const url = /^https?:\/\//i.test(rawUrl) ? rawUrl : `https://${rawUrl}`;
+  const kind = text(fd, 'kind') as Kind;
+  const client_id = text(fd, 'client_id') || null;
 
-    if (!title) return { error: 'Dê um nome ao link.' };
-    try {
-      new URL(url);
-    } catch {
-      return { error: 'Endereço inválido.' };
-    }
+  if (!title) return { error: 'Dê um nome ao link.' };
+  try {
+    new URL(url);
+  } catch {
+    return { error: 'Endereço inválido.' };
+  }
 
-    if (id) {
-      const { data: current } = await supabase.from('links').select('client_id').eq('id', id).single();
-      const moved = current && current.client_id !== client_id;
-      const { error } = await supabase
-        .from('links')
-        .update(moved ? { ...row, sort_order: await nextLinkOrder(supabase, client_id) } : row)
-        .eq('id', id);
-      if (error) return dbError(error);
-      done();
-      redirect('/admin');
-    }
-    const { error } = await supabase.from('links').insert({ ...row, sort_order: await nextLinkOrder(supabase, client_id) });
-    if (error) return dbError(error);
-    done();
-    return { ok: `Link ${title} adicionado.` };
-  });
+  const fields = {
+    title,
+    url,
+    kind: KINDS.includes(kind) ? kind : 'site',
+    client_id,
+    description: text(fd, 'description') || null,
+    is_public: fd.get('is_public') === 'on',
+  } satisfies Partial<Link>;
+
+  const result = await save(
+    (data) => {
+      if (client_id && !data.clients.some((c) => c.id === client_id)) return 'Cliente não encontrado.';
+      const group = data.links.filter((l) => l.client_id === client_id && l.id !== id);
+      if (id) {
+        const link = data.links.find((l) => l.id === id);
+        if (!link) return 'Link não encontrado.';
+        const moved = link.client_id !== client_id;
+        Object.assign(link, fields, moved ? { sort_order: nextOrder(group) } : {});
+      } else {
+        data.links.push({ id: randomUUID(), ...fields, sort_order: nextOrder(group) });
+      }
+    },
+    `Link ${title} adicionado.`,
+  );
+  if (id && !result?.error) redirect('/admin');
+  return result;
 }
 
 export async function deleteLink(_prev: ActionResult, fd: FormData): Promise<ActionResult> {
-  return guard(async () => {
-    const supabase = await adminClient();
-    const { error } = await supabase.from('links').delete().eq('id', text(fd, 'id'));
-    if (error) return dbError(error);
-    done();
-    return null;
+  const id = text(fd, 'id');
+  return save((data) => {
+    data.links = data.links.filter((l) => l.id !== id);
   });
 }
 
 export async function toggleLinkPublic(_prev: ActionResult, fd: FormData): Promise<ActionResult> {
-  return guard(async () => {
-    const supabase = await adminClient();
-    const { error } = await supabase
-      .from('links')
-      .update({ is_public: fd.get('is_public') === 'true' })
-      .eq('id', text(fd, 'id'));
-    if (error) return dbError(error);
-    done();
-    return null;
+  const id = text(fd, 'id');
+  return save((data) => {
+    const link = data.links.find((l) => l.id === id);
+    if (!link) return 'Link não encontrado.';
+    link.is_public = fd.get('is_public') === 'true';
   });
 }
 
 // ---------- Ordem ----------
 
 /** Swaps an item with its neighbour and rewrites the group's order as 10, 20, 30… */
-async function reorder(table: 'clients' | 'links', ids: string[], id: string, dir: string) {
-  const supabase = await adminClient();
-  const i = ids.indexOf(id);
+function reorder<T extends { id: string; sort_order: number }>(items: T[], id: string, dir: string) {
+  const sorted = [...items].sort((a, b) => a.sort_order - b.sort_order);
+  const i = sorted.findIndex((x) => x.id === id);
   const j = dir === 'up' ? i - 1 : i + 1;
-  if (i < 0 || j < 0 || j >= ids.length) return null;
-  [ids[i], ids[j]] = [ids[j], ids[i]];
-  const results = await Promise.all(ids.map((rowId, n) => supabase.from(table).update({ sort_order: (n + 1) * 10 }).eq('id', rowId)));
-  const failed = results.find((r) => r.error)?.error;
-  if (failed) return dbError(failed);
-  done();
-  return null;
+  if (i < 0 || j < 0 || j >= sorted.length) return;
+  [sorted[i], sorted[j]] = [sorted[j], sorted[i]];
+  sorted.forEach((x, n) => (x.sort_order = (n + 1) * 10));
 }
 
 export async function moveClient(_prev: ActionResult, fd: FormData): Promise<ActionResult> {
-  return guard(async () => {
-    const supabase = await adminClient();
-    const { data, error } = await supabase.from('clients').select('id').order('sort_order').order('name');
-    if (error) return dbError(error);
-    return reorder('clients', data.map((r) => r.id), text(fd, 'id'), text(fd, 'dir'));
-  });
+  return save((data) => reorder(data.clients, text(fd, 'id'), text(fd, 'dir')));
 }
 
 export async function moveLink(_prev: ActionResult, fd: FormData): Promise<ActionResult> {
-  return guard(async () => {
-    const supabase = await adminClient();
-    const id = text(fd, 'id');
-    const { data: link } = await supabase.from('links').select('client_id').eq('id', id).single();
-    if (!link) return { error: 'Link não encontrado.' };
-    const q = supabase.from('links').select('id').order('sort_order').order('created_at');
-    const { data, error } = await (link.client_id ? q.eq('client_id', link.client_id) : q.is('client_id', null));
-    if (error) return dbError(error);
-    return reorder('links', data.map((r) => r.id), id, text(fd, 'dir'));
+  const id = text(fd, 'id');
+  return save((data) => {
+    const link = data.links.find((l) => l.id === id);
+    if (!link) return 'Link não encontrado.';
+    reorder(
+      data.links.filter((l) => l.client_id === link.client_id),
+      id,
+      text(fd, 'dir'),
+    );
   });
 }

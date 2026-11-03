@@ -1,19 +1,18 @@
 import { LinkExplorer, type LinkGroup } from '@/components/LinkExplorer';
 import { SetupNotice, SiteFooter, SiteHeader } from '@/components/SiteChrome';
-import { getHubData, getViewer } from '@/lib/data';
+import { isAdmin } from '@/lib/auth';
+import { getHubData } from '@/lib/data';
 import { clientUrl } from '@/lib/domain';
 import { env } from '@/lib/env';
 import { getDictionary } from '@/lib/i18n';
 import { getLocale } from '@/lib/locale';
-import { getSupabase } from '@/lib/supabase/server';
+import { storageMode } from '@/lib/store';
 
 export default async function HubPage() {
   const locale = await getLocale();
   const t = getDictionary(locale);
-  const supabase = await getSupabase();
-  const [viewer, data] = supabase
-    ? await Promise.all([getViewer(supabase), getHubData(supabase)])
-    : [{ email: null, isAdmin: false }, null];
+  const admin = await isAdmin();
+  const data = storageMode ? await getHubData(admin) : null;
 
   const groups: LinkGroup[] = [];
   if (data) {
@@ -21,7 +20,7 @@ export default async function HubPage() {
       groups.push({
         id: client.id,
         title: client.name,
-        href: viewer.isAdmin ? clientUrl(client.slug, env.rootDomain) : undefined,
+        href: admin ? clientUrl(client.slug, env.rootDomain) : undefined,
         links: data.links.filter((l) => l.client_id === client.id),
       });
     }
@@ -32,7 +31,7 @@ export default async function HubPage() {
 
   return (
     <div className="flex min-h-dvh flex-col">
-      <SiteHeader locale={locale} languageLabel={t.language} panelLabel={t.panel} showPanel={viewer.isAdmin} />
+      <SiteHeader locale={locale} languageLabel={t.language} panelLabel={t.panel} showPanel={admin} />
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-16 pt-8 sm:px-6 sm:pt-14">
         <div className="mb-10 max-w-2xl">
           <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
@@ -40,7 +39,7 @@ export default async function HubPage() {
           </h1>
           <p className="mt-3 text-lg text-muted">{t.hubIntro}</p>
         </div>
-        {!supabase ? (
+        {!data ? (
           <SetupNotice />
         ) : total === 0 ? (
           <p className="rounded-xl border border-dashed border-border py-14 text-center text-muted">{t.empty}</p>

@@ -4,22 +4,21 @@ import { cache } from 'react';
 import { LinkExplorer } from '@/components/LinkExplorer';
 import { LogoMark } from '@/components/Logo';
 import { SetupNotice, SiteFooter, SiteHeader } from '@/components/SiteChrome';
-import { getClientPage, getViewer } from '@/lib/data';
+import { getClientPage } from '@/lib/data';
 import { SLUG_RE } from '@/lib/domain';
 import { env } from '@/lib/env';
 import { getDictionary } from '@/lib/i18n';
 import { getLocale } from '@/lib/locale';
-import { getSupabase } from '@/lib/supabase/server';
+import { storageMode } from '@/lib/store';
 
 type Props = { params: Promise<{ slug: string }> };
 
 const load = cache(async (slug: string) => {
   if (!SLUG_RE.test(slug)) notFound();
-  const supabase = await getSupabase();
-  if (!supabase) return null;
-  const page = await getClientPage(supabase, slug);
+  if (!storageMode) return null;
+  const page = await getClientPage(slug);
   if (!page) notFound();
-  return { supabase, ...page };
+  return page;
 });
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -35,7 +34,6 @@ export default async function ClientPage({ params }: Props) {
   const locale = await getLocale();
   const t = getDictionary(locale);
   const page = await load(slug);
-  const viewer = page ? await getViewer(page.supabase) : { email: null, isAdmin: false };
   const brand = page?.client.accent_color ?? undefined;
   const hubHref = `https://${env.rootDomain}`;
 
@@ -45,7 +43,7 @@ export default async function ClientPage({ params }: Props) {
         locale={locale}
         languageLabel={t.language}
         panelLabel={t.panel}
-        showPanel={viewer.isAdmin}
+        showPanel={false}
         homeHref={hubHref}
       />
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-16 pt-8 sm:px-6 sm:pt-14">
