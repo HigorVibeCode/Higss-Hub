@@ -1,7 +1,7 @@
 import { LinkExplorer, type LinkGroup } from '@/components/LinkExplorer';
 import { SetupNotice, SiteFooter, SiteHeader } from '@/components/SiteChrome';
 import { isAdmin } from '@/lib/auth';
-import { getHubData } from '@/lib/data';
+import { getHubView } from '@/lib/data';
 import { clientUrl } from '@/lib/domain';
 import { env } from '@/lib/env';
 import { getDictionary } from '@/lib/i18n';
@@ -12,7 +12,7 @@ export default async function HubPage() {
   const locale = await getLocale();
   const t = getDictionary(locale);
   const admin = await isAdmin();
-  const data = storageMode ? await getHubData(admin) : null;
+  const data = storageMode ? await getHubView(admin) : null;
 
   const groups: LinkGroup[] = [];
   if (data) {

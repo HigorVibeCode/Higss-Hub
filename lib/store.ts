@@ -23,6 +23,8 @@ export type Link = {
   kind: Kind;
   is_public: boolean;
   sort_order: number;
+  /** Manual cover; when empty the card uses the site's own share image. */
+  image_url?: string | null;
 };
 
 export type HubData = { clients: Client[]; links: Link[] };

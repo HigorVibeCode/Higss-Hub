@@ -1,6 +1,8 @@
 'use server';
 
 import { randomUUID } from 'node:crypto';
+import { revalidateTag } from 'next/cache';
+import { PREVIEW_TAG } from '@/lib/preview';
 import { redirect } from 'next/navigation';
 import type { ActionResult } from '@/components/admin/ActionForm';
 import { isAdmin } from '@/lib/auth';
@@ -95,8 +97,10 @@ export async function saveLink(_prev: ActionResult, fd: FormData): Promise<Actio
     kind: KINDS.includes(kind) ? kind : 'site',
     client_id,
     description: text(fd, 'description') || null,
+    image_url: text(fd, 'image_url') || null,
     is_public: fd.get('is_public') === 'on',
   } satisfies Partial<Link>;
+  if (fields.image_url && !/^https?:\/\//i.test(fields.image_url)) return { error: 'A capa precisa ser um link começando com https://' };
 
   const result = await save(
     (data) => {
@@ -131,6 +135,13 @@ export async function toggleLinkPublic(_prev: ActionResult, fd: FormData): Promi
     if (!link) return 'Link não encontrado.';
     link.is_public = fd.get('is_public') === 'true';
   });
+}
+
+/** Forgets every cached share image/icon so the next visit fetches them again. */
+export async function refreshPreviews(): Promise<ActionResult> {
+  if (!(await isAdmin())) return { error: 'Sessão expirada. Entre de novo.' };
+  revalidateTag(PREVIEW_TAG, { expire: 0 });
+  return { ok: 'Miniaturas atualizadas.' };
 }
 
 // ---------- Ordem ----------

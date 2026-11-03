@@ -23,8 +23,12 @@ const load = cache(async (slug: string) => {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = await load((await params).slug);
+  const title = page ? `${page.client.name} · Higss Hub` : 'Higss Hub';
+  const description = page?.client.tagline || (page ? page.links.map((l) => l.title).join(' · ') : undefined);
   return {
-    title: page ? `${page.client.name} · Higss Hub` : 'Higss Hub',
+    title,
+    description,
+    openGraph: { title, description },
     robots: { index: false, follow: false },
   };
 }

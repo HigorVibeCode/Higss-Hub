@@ -4,7 +4,16 @@ import { getHubData, type Client, type Link } from '@/lib/data';
 import { clientUrl } from '@/lib/domain';
 import { env } from '@/lib/env';
 import { getDictionary } from '@/lib/i18n';
-import { deleteClient, deleteLink, moveClient, moveLink, saveClient, saveLink, toggleLinkPublic } from './actions';
+import {
+  deleteClient,
+  deleteLink,
+  moveClient,
+  moveLink,
+  refreshPreviews,
+  saveClient,
+  saveLink,
+  toggleLinkPublic,
+} from './actions';
 
 const KIND_LABELS = getDictionary('pt').kinds;
 
@@ -28,6 +37,9 @@ export default async function AdminPage({ searchParams }: Props) {
           <p className="text-sm text-muted">
             {clients.length} clientes · {links.length} links · {publicCount} públicos
           </p>
+          <ActionForm action={refreshPreviews} className="mt-2 flex flex-wrap items-center gap-3">
+            <SubmitButton className="text-xs font-semibold text-accent hover:text-accent-hover">↻ Atualizar miniaturas</SubmitButton>
+          </ActionForm>
         </div>
         <details className="w-full sm:relative sm:w-auto">
           <summary className="btn-primary cursor-pointer list-none">+ Novo cliente</summary>
@@ -232,8 +244,11 @@ function LinkFields({ link, clients, clientId }: { link?: Link; clients: Client[
           <input name="url" required defaultValue={link?.url} className="field" placeholder="orladosol.com.br" />
         </Field>
       </div>
-      <Field label="Descrição (opcional)">
+      <Field label="Descrição (opcional)" hint="Vazia: usa a descrição do próprio site.">
         <input name="description" defaultValue={link?.description ?? ''} className="field" placeholder="Para que serve esse link" />
+      </Field>
+      <Field label="Imagem de capa (opcional)" hint="Vazia: usa a miniatura do site, a mesma que aparece no WhatsApp.">
+        <input name="image_url" type="url" defaultValue={link?.image_url ?? ''} className="field" placeholder="https://…/capa.jpg" />
       </Field>
       <div className="grid gap-3 sm:grid-cols-2">
         <Field label="Cliente">

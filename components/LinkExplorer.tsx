@@ -1,10 +1,10 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import type { Link } from '@/lib/data';
+import type { LinkView } from '@/lib/data';
 import { LinkCard, type CardLabels } from '@/components/LinkCard';
 
-export type LinkGroup = { id: string; title: string | null; href?: string; links: Link[] };
+export type LinkGroup = { id: string; title: string | null; href?: string; links: LinkView[] };
 
 type Labels = CardLabels & { search: string; noResults: string };
 
@@ -23,7 +23,7 @@ export function LinkExplorer({ groups, labels, searchable }: { groups: LinkGroup
         const groupHit = g.title ? normalize(g.title).includes(q) : false;
         const links = groupHit
           ? g.links
-          : g.links.filter((l) => normalize(`${l.title} ${l.url} ${l.description ?? ''}`).includes(q));
+          : g.links.filter((l) => normalize(`${l.title} ${l.url} ${l.summary ?? ''}`).includes(q));
         return { ...g, links };
       })
       .filter((g) => g.links.length > 0);
