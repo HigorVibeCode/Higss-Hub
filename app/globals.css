@@ -1,151 +1,58 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #071316;
+  --color-surface: #0b1a1e;
+  --color-card: #12252a;
+  --color-card-hover: #183036;
+  --color-border: #2a3d44;
+  --color-text: #f4f6f7;
+  --color-muted: #a8b3b8;
+  --color-accent: #d87445;
+  --color-accent-hover: #f08b5c;
+  --color-danger: #e5484d;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-manrope), var(--font-inter), ui-sans-serif, sans-serif;
+}
 
 :root {
-  --bg: #071316;
-  --surface: #0B1A1E;
-  --card: #24343A;
-  --border: #3A4B52;
-  --text: #F4F6F7;
-  --muted: #A8B3B8;
-  --accent: #D87445;
-  --accent-hover: #F08B5C;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  scroll-behavior: smooth;
+  color-scheme: dark;
+  --brand: var(--color-accent);
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100dvh;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@utility field {
+  @apply w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm text-text placeholder:text-muted/60 focus:border-accent focus:outline-none;
 }
 
-@layer base {
-  /* Tipografia global refinada - SEM SERIF */
-  h1 {
-    @apply font-manrope font-bold text-text leading-tight tracking-tight;
-  }
-
-  h2 {
-    @apply font-manrope font-bold text-text leading-tight;
-  }
-
-  h3 {
-    @apply font-manrope font-semibold text-text;
-  }
-
-  p {
-    @apply text-text/90 leading-relaxed;
-  }
-
-  /* Respeitar prefers-reduced-motion */
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-    }
-  }
+@utility btn {
+  @apply inline-flex min-h-9 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-50;
 }
 
-@layer components {
-  /* Container padrão com max-width */
-  .container-content {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl;
-  }
+@utility btn-primary {
+  @apply btn bg-accent text-white hover:bg-accent-hover;
+}
 
-  /* Seção padrão com espaçamento generoso premium */
-  .section {
-    @apply py-12 md:py-16 lg:py-20;
-  }
+@utility btn-ghost {
+  @apply btn border border-border text-muted hover:border-accent/60 hover:text-text;
+}
 
-  /* Header de seção */
-  .section-header {
-    @apply mb-8 md:mb-12 lg:mb-16;
-  }
+@utility btn-icon {
+  @apply inline-flex size-8 items-center justify-center rounded-md border border-border text-muted transition-colors hover:border-accent/60 hover:text-text disabled:opacity-30;
+}
 
-  /* Botão primário premium */
-  .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 bg-accent hover:bg-accentHover active:scale-[0.98] text-white font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md border border-accent/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg min-h-[44px];
-  }
-
-  /* Botão secundário premium */
-  .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 border-2 border-accent text-accent hover:bg-surface/50 active:scale-[0.98] font-semibold rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg min-h-[44px];
-  }
-
-  /* Card padrão premium */
-  .card {
-    @apply bg-card border border-border/50 rounded-xl p-6 md:p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:-translate-y-1;
-  }
-
-  /* Badge/Tag */
-  .badge {
-    @apply inline-flex items-center px-3 py-1 text-xs font-medium rounded-full;
-  }
-
-  /* Divisor de seção */
-  .section-divider {
-    @apply border-t border-border/50;
-  }
-
-  /* Animação para seta de scroll (mobile) */
-  @keyframes scroll-indicator {
-    0%, 100% {
-      opacity: 0.4;
-      transform: translateY(0);
-    }
-    50% {
-      opacity: 0.8;
-      transform: translateY(8px);
-    }
-  }
-
-  .scroll-arrow {
-    animation: scroll-indicator 2s ease-in-out infinite;
-  }
-
-  /* Respeitar prefers-reduced-motion para a seta */
-  @media (prefers-reduced-motion: reduce) {
-    .scroll-arrow {
-      animation: none;
-      opacity: 0.6;
-    }
-  }
-
-  /* Imagem flutuante sem bordas */
-  .floating-icon {
-    background: transparent !important;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-  }
-
-  .floating-icon img {
-    background: transparent !important;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
   }
 }

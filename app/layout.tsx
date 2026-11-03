@@ -1,41 +1,21 @@
 import type { Metadata } from 'next';
-import { Inter, Manrope, Playfair_Display } from 'next/font/google';
+import { Inter, Manrope } from 'next/font/google';
+import { getLocale } from '@/lib/locale';
 import './globals.css';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
-const manrope = Manrope({
-  subsets: ['latin'],
-  variable: '--font-manrope',
-  display: 'swap',
-});
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair',
-  display: 'swap',
-  style: ['italic', 'normal'],
-});
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: 'HIGSS HUB - Technology & Business Strategist',
-  description: 'Creating big results for small businesses through technology and business strategy.',
+  title: 'Higss Hub',
+  description: 'Projects, systems and sites — all in one place.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await getLocale();
   return (
-    <html className="dark">
-      <body className={`${inter.variable} ${manrope.variable} ${playfair.variable} font-sans antialiased`}>
-        {children}
-      </body>
+    <html lang={locale} className={`${inter.variable} ${manrope.variable}`}>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }
