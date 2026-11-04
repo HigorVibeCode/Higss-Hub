@@ -1,6 +1,5 @@
-import { ProjectAccess } from '@/components/ProjectAccess';
+import { Landing } from '@/components/home/Landing';
 import { LinkExplorer, type LinkGroup } from '@/components/LinkExplorer';
-import { LogoMark } from '@/components/Logo';
 import { SetupNotice, SiteFooter, SiteHeader } from '@/components/SiteChrome';
 import { isAdmin } from '@/lib/auth';
 import { getHubView } from '@/lib/data';
@@ -21,35 +20,6 @@ export default async function HomePage() {
       {admin ? <AdminHub locale={locale} /> : <Landing locale={locale} />}
       <SiteFooter />
     </div>
-  );
-}
-
-/** What everyone sees: no project or client is ever listed, only the field to open your own page. */
-function Landing({ locale }: { locale: Locale }) {
-  const t = getDictionary(locale);
-  return (
-    <main className="relative flex flex-1 items-center overflow-hidden">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-[480px] bg-[radial-gradient(ellipse_at_top,color-mix(in_oklab,var(--color-accent)_18%,transparent),transparent_65%)]"
-      />
-      <div className="relative mx-auto w-full max-w-xl px-4 py-16 text-center sm:px-6">
-        <LogoMark className="mx-auto size-14" />
-        <h1 className="mt-8 text-balance font-display text-4xl font-extrabold tracking-tight sm:text-5xl">{t.homeTitle}</h1>
-        <p className="mx-auto mt-4 max-w-md text-balance text-lg text-muted">{t.homeIntro}</p>
-        {storageMode ? (
-          <ProjectAccess
-            locale={locale}
-            labels={{ label: t.accessLabel, placeholder: t.accessPlaceholder, button: t.accessButton }}
-            suffix={`.${env.rootDomain}`}
-          />
-        ) : (
-          <div className="mt-10 text-left">
-            <SetupNotice />
-          </div>
-        )}
-      </div>
-    </main>
   );
 }
 

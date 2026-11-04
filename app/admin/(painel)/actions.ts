@@ -8,7 +8,7 @@ import type { ActionResult } from '@/components/admin/ActionForm';
 import { isAdmin } from '@/lib/auth';
 import { SLUG_RE } from '@/lib/domain';
 import type { Kind } from '@/lib/i18n';
-import { updateHub, type HubData, type Link } from '@/lib/store';
+import { updateHub, type HubData, type Link, type Stats } from '@/lib/store';
 
 const KINDS: Kind[] = ['site', 'app', 'admin', 'staging', 'docs', 'other'];
 const RESERVED_SLUGS = ['www', 'admin', 'app', 'api'];
@@ -136,6 +136,24 @@ export async function toggleLinkPublic(_prev: ActionResult, fd: FormData): Promi
     if (!link) return 'Link não encontrado.';
     link.is_public = fd.get('is_public') === 'true';
   });
+}
+
+/** Track record numbers on the public home; empty fields hide that number. */
+export async function saveStats(_prev: ActionResult, fd: FormData): Promise<ActionResult> {
+  const num = (key: string) => {
+    const v = text(fd, key);
+    return v === '' ? null : Math.max(0, Math.round(Number(v))) || null;
+  };
+  const stats: Stats = {
+    clients: num('clients'),
+    projects: num('projects'),
+    countries: num('countries'),
+    countries_list: text(fd, 'countries_list') || null,
+    languages: num('languages'),
+  };
+  return save((data) => {
+    data.stats = stats;
+  }, 'Números salvos.');
 }
 
 /** Forgets every cached share image/icon so the next visit fetches them again. */

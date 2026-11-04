@@ -12,8 +12,10 @@ import {
   refreshPreviews,
   saveClient,
   saveLink,
+  saveStats,
   toggleLinkPublic,
 } from './actions';
+import { DEFAULT_STATS, readHub } from '@/lib/store';
 
 const KIND_LABELS = getDictionary('pt').kinds;
 
@@ -21,7 +23,8 @@ type Props = { searchParams: Promise<{ editar?: string; cliente?: string }> };
 
 export default async function AdminPage({ searchParams }: Props) {
   const { editar, cliente } = await searchParams;
-  const { clients, links } = await getHubData(true);
+  const [{ clients, links }, hub] = await Promise.all([getHubData(true), readHub()]);
+  const stats = { ...DEFAULT_STATS, ...hub.stats };
 
   const groups = [
     ...clients.map((c) => ({ client: c as Client | null, links: links.filter((l) => l.client_id === c.id) })),
@@ -51,6 +54,33 @@ export default async function AdminPage({ searchParams }: Props) {
           </div>
         </details>
       </div>
+
+      <details className="rounded-2xl border border-border bg-surface">
+        <summary className="cursor-pointer list-none p-4">
+          <span className="font-display font-bold">Números da página inicial</span>
+          <span className="ml-2 text-sm text-muted">aparecem na seção “Feito na prática”; vazio esconde</span>
+        </summary>
+        <ActionForm action={saveStats} className="grid gap-3 border-t border-border p-4 sm:grid-cols-2">
+          <Field label="Clientes atendidos" hint={`Vazio: usa o total cadastrado (${clients.length}).`}>
+            <input name="clients" type="number" min="0" defaultValue={stats.clients ?? ''} className="field" />
+          </Field>
+          <Field label="Projetos entregues">
+            <input name="projects" type="number" min="0" defaultValue={stats.projects ?? ''} className="field" />
+          </Field>
+          <Field label="Países">
+            <input name="countries" type="number" min="0" defaultValue={stats.countries ?? ''} className="field" />
+          </Field>
+          <Field label="Siglas dos países" hint="Aparece embaixo do número, ex.: BR · CH · US">
+            <input name="countries_list" defaultValue={stats.countries_list ?? ''} className="field" />
+          </Field>
+          <Field label="Idiomas">
+            <input name="languages" type="number" min="0" defaultValue={stats.languages ?? ''} className="field" />
+          </Field>
+          <div className="flex items-end">
+            <SubmitButton>Salvar números</SubmitButton>
+          </div>
+        </ActionForm>
+      </details>
 
       {groups.map(({ client, links: groupLinks }, gi) => {
         if (!client && groupLinks.length === 0 && clients.length > 0) return null;

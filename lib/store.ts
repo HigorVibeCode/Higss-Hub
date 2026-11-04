@@ -27,7 +27,18 @@ export type Link = {
   image_url?: string | null;
 };
 
-export type HubData = { clients: Client[]; links: Link[] };
+/** Track record shown on the home page; null hides the number. `clients` falls back to the real client count. */
+export type Stats = {
+  clients: number | null;
+  projects: number | null;
+  countries: number | null;
+  countries_list: string | null;
+  languages: number | null;
+};
+
+export const DEFAULT_STATS: Stats = { clients: null, projects: null, countries: 3, countries_list: 'BR · CH · US', languages: null };
+
+export type HubData = { clients: Client[]; links: Link[]; stats?: Stats };
 
 const BLOB_PATH = 'hub.json';
 const LOCAL_FILE = path.join(process.cwd(), '.data', 'hub.json');
