@@ -30,6 +30,7 @@ type Dictionary = {
   clientProjects: string;
   clientEmpty: string;
   madeBy: string;
+  projects: string;
   homeTitle: string;
   homeIntro: string;
   accessLabel: string;
@@ -59,6 +60,7 @@ const dictionaries: Record<Locale, Dictionary> = {
     clientProjects: 'Your projects',
     clientEmpty: 'Your projects will appear here soon.',
     madeBy: 'Built by Higss Hub',
+    projects: 'projects',
     homeTitle: "Your projects, in one place.",
     homeIntro: "Websites, systems and catalogs built by Higss Hub. Enter your project name to open your page.",
     accessLabel: "Project name",
@@ -86,6 +88,7 @@ const dictionaries: Record<Locale, Dictionary> = {
     clientProjects: 'Seus projetos',
     clientEmpty: 'Seus projetos aparecerão aqui em breve.',
     madeBy: 'Feito por Higss Hub',
+    projects: 'projetos',
     homeTitle: "Seus projetos, em um só lugar.",
     homeIntro: "Sites, sistemas e catálogos feitos pela Higss Hub. Digite o nome do seu projeto para abrir a sua página.",
     accessLabel: "Nome do projeto",
@@ -113,6 +116,7 @@ const dictionaries: Record<Locale, Dictionary> = {
     clientProjects: 'Ihre Projekte',
     clientEmpty: 'Ihre Projekte erscheinen hier in Kürze.',
     madeBy: 'Erstellt von Higss Hub',
+    projects: 'Projekte',
     homeTitle: "Ihre Projekte an einem Ort.",
     homeIntro: "Websites, Systeme und Kataloge von Higss Hub. Geben Sie den Namen Ihres Projekts ein, um Ihre Seite zu öffnen.",
     accessLabel: "Projektname",
@@ -140,6 +144,7 @@ const dictionaries: Record<Locale, Dictionary> = {
     clientProjects: 'Vos projets',
     clientEmpty: 'Vos projets apparaîtront ici bientôt.',
     madeBy: 'Réalisé par Higss Hub',
+    projects: 'projets',
     homeTitle: "Vos projets, au même endroit.",
     homeIntro: "Sites, systèmes et catalogues réalisés par Higss Hub. Saisissez le nom de votre projet pour ouvrir votre page.",
     accessLabel: "Nom du projet",
@@ -167,6 +172,7 @@ const dictionaries: Record<Locale, Dictionary> = {
     clientProjects: 'Tus proyectos',
     clientEmpty: 'Tus proyectos aparecerán aquí pronto.',
     madeBy: 'Hecho por Higss Hub',
+    projects: 'proyectos',
     homeTitle: "Tus proyectos, en un solo lugar.",
     homeIntro: "Sitios, sistemas y catálogos hechos por Higss Hub. Escribe el nombre de tu proyecto para abrir tu página.",
     accessLabel: "Nombre del proyecto",
@@ -194,6 +200,7 @@ const dictionaries: Record<Locale, Dictionary> = {
     clientProjects: 'I tuoi progetti',
     clientEmpty: 'I tuoi progetti appariranno qui a breve.',
     madeBy: 'Realizzato da Higss Hub',
+    projects: 'progetti',
     homeTitle: "I tuoi progetti, in un unico posto.",
     homeIntro: "Siti, sistemi e cataloghi realizzati da Higss Hub. Inserisci il nome del tuo progetto per aprire la tua pagina.",
     accessLabel: "Nome del progetto",

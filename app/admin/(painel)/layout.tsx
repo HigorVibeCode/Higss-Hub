@@ -19,12 +19,16 @@ export default async function PanelLayout({ children }: { children: React.ReactN
   if (!(await isAdmin())) redirect('/admin/login');
 
   return (
-    <div className="min-h-dvh">
-      <header className="sticky top-0 z-10 border-b border-border bg-bg/90 backdrop-blur">
+    <div className="relative isolate min-h-dvh">
+      {/* Drafting-table grid only behind the top of the panel */}
+      <div aria-hidden className="blueprint absolute inset-x-0 top-0 -z-10 h-80" />
+      <header className="sticky top-0 z-10 border-b border-border bg-bg/80 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <a href="/admin" className="flex items-center gap-3">
             <Logo />
-            <span className="hidden rounded-full border border-border px-2 py-0.5 text-xs text-muted sm:inline">Painel</span>
+            <span className="hidden rounded-md border border-border px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.2em] text-accent sm:inline">
+              Painel
+            </span>
           </a>
           <div className="flex items-center gap-2">
             <a href="/" className="btn-ghost">

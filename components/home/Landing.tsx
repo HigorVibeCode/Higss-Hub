@@ -11,7 +11,7 @@ const WHATSAPP = '41782439213';
 const EMAIL = 'contact@higsshub.com';
 
 /** The public home: a story from sketch to system. It never lists a client or a project. */
-export async function Landing({ locale }: { locale: Locale }) {
+export async function Landing({ locale, header }: { locale: Locale; header: React.ReactNode }) {
   const t = getDictionary(locale);
   const c = getHomeCopy(locale);
   const access = { label: t.accessLabel, placeholder: t.accessPlaceholder, button: t.accessButton };
@@ -30,6 +30,7 @@ export async function Landing({ locale }: { locale: Locale }) {
     <main className="flex-1">
       {/* 0 — Opening: the drafting table */}
       <section className="blueprint relative isolate overflow-hidden">
+        {header}
         <div className="mx-auto flex min-h-[calc(100dvh-5rem)] max-w-6xl flex-col justify-center px-4 pb-16 pt-10 sm:px-6">
           <p className="reveal font-mono text-xs uppercase tracking-[0.25em] text-accent" style={{ animationDelay: '0ms' }}>
             {c.heroEyebrow}

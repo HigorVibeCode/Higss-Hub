@@ -50,68 +50,64 @@ export default async function ClientPage({ params }: Props) {
   const brand = page?.client.accent_color ?? undefined;
   const hubHref = `https://${env.rootDomain}`;
 
+  const saveLabels = {
+    save: t.save,
+    title: t.saveTitle,
+    install: t.installApp,
+    desktop: t.saveDesktop,
+    ios: t.saveIos,
+    android: t.saveAndroid,
+    close: t.close,
+  };
+
   return (
     <div className="relative isolate flex min-h-dvh flex-col" style={brand ? ({ '--brand': brand } as React.CSSProperties) : undefined}>
-      <SiteHeader
-        locale={locale}
-        languageLabel={t.language}
-        panelLabel={t.panel}
-        showPanel={false}
-        homeHref={hubHref}
-        actions={
-          page && (
-            <SaveButton
-              labels={{
-                save: t.save,
-                title: t.saveTitle,
-                install: t.installApp,
-                desktop: t.saveDesktop,
-                ios: t.saveIos,
-                android: t.saveAndroid,
-                close: t.close,
-              }}
-            />
-          )
-        }
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px] bg-[radial-gradient(ellipse_at_top,color-mix(in_oklab,var(--brand)_20%,transparent),transparent_65%)]"
-      />
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-16 pt-8 sm:px-6 sm:pt-14">
+      {/* Header and title share one drafting-table background, tinted in the client's colour */}
+      <div className="blueprint relative isolate border-b border-border/60">
+        <SiteHeader locale={locale} languageLabel={t.language} panelLabel={t.panel} showPanel={false} homeHref={hubHref} />
+        {page && (
+          <section className="mx-auto w-full max-w-6xl px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-14">
+            <p className="reveal flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] text-(--brand)">
+              <span className="inline-block h-px w-8 bg-(--brand)" />
+              {t.clientProjects} · {String(page.links.length).padStart(2, '0')} {t.projects}
+            </p>
+            <div className="reveal mt-6 flex flex-col gap-6 sm:flex-row sm:items-end" style={{ animationDelay: '80ms' }}>
+              <span className="relative shrink-0">
+                {page.client.logo_url ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={page.client.logo_url}
+                    alt=""
+                    className="size-20 rounded-2xl border border-border bg-white/5 object-contain p-2.5 sm:size-24"
+                  />
+                ) : (
+                  <span className="flex size-20 items-center justify-center rounded-2xl border border-border bg-surface font-display text-4xl font-extrabold text-(--brand) sm:size-24">
+                    {page.client.name.charAt(0)}
+                  </span>
+                )}
+              </span>
+              <h1 className="min-w-0 text-balance break-words font-display text-[clamp(2.5rem,7vw,5.75rem)] font-extrabold leading-[0.95] tracking-[-0.035em]">
+                {page.client.name}
+              </h1>
+            </div>
+            <div className="reveal mt-6 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-end [&>p]:sm:mr-auto" style={{ animationDelay: '160ms' }}>
+              {page.client.tagline && <p className="max-w-xl text-lg text-muted">{page.client.tagline}</p>}
+              <SaveButton labels={saveLabels} prominent />
+            </div>
+          </section>
+        )}
+      </div>
+      <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-20 pt-12 sm:px-6">
         {!page ? (
           <SetupNotice />
+        ) : page.links.length === 0 ? (
+          <p className="card-grid rounded-2xl border border-dashed border-border py-20 text-center text-muted">{t.clientEmpty}</p>
         ) : (
-          <>
-            <div className="mb-10 flex items-center gap-5">
-              {page.client.logo_url ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={page.client.logo_url}
-                  alt=""
-                  className="size-16 shrink-0 rounded-2xl bg-white/5 object-contain p-2 sm:size-20"
-                />
-              ) : (
-                <span className="flex size-16 shrink-0 items-center justify-center rounded-2xl border border-border bg-surface font-display text-2xl font-extrabold text-(--brand) sm:size-20">
-                  {page.client.name.charAt(0)}
-                </span>
-              )}
-              <div className="min-w-0">
-                <p className="text-sm font-semibold uppercase tracking-[0.14em] text-(--brand)">{t.clientProjects}</p>
-                <h1 className="font-display text-3xl font-extrabold tracking-tight sm:text-4xl">{page.client.name}</h1>
-                {page.client.tagline && <p className="mt-1 text-muted">{page.client.tagline}</p>}
-              </div>
-            </div>
-            {page.links.length === 0 ? (
-              <p className="rounded-xl border border-dashed border-border py-14 text-center text-muted">{t.clientEmpty}</p>
-            ) : (
-              <LinkExplorer
-                groups={[{ id: page.client.id, title: null, links: page.links }]}
-                searchable={page.links.length > 6}
-                labels={{ search: t.search, noResults: t.noResults, private: t.private, kinds: t.kinds }}
-              />
-            )}
-          </>
+          <LinkExplorer
+            groups={[{ id: page.client.id, title: null, links: page.links }]}
+            searchable={page.links.length > 6}
+            labels={{ search: t.search, noResults: t.noResults, private: t.private, kinds: t.kinds }}
+          />
         )}
       </main>
       <SiteFooter>

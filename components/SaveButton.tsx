@@ -10,7 +10,7 @@ type InstallPrompt = Event & { prompt: () => Promise<void> };
  * the native "install app" prompt where it exists (Chrome, Edge, Android), and otherwise
  * the right shortcut for the visitor's device.
  */
-export function SaveButton({ labels }: { labels: Labels }) {
+export function SaveButton({ labels, prominent = false }: { labels: Labels; prominent?: boolean }) {
   const [installPrompt, setInstallPrompt] = useState<InstallPrompt | null>(null);
   const [installed, setInstalled] = useState(false);
   const [device, setDevice] = useState<'ios' | 'android' | 'desktop'>('desktop');
@@ -32,7 +32,11 @@ export function SaveButton({ labels }: { labels: Labels }) {
 
   return (
     <>
-      <button type="button" className="btn-ghost" onClick={() => dialog.current?.showModal()}>
+      <button
+        type="button"
+        className={prominent ? 'btn min-h-11 shrink-0 rounded-xl bg-(--brand) px-5 text-bg hover:opacity-90' : 'btn-ghost'}
+        onClick={() => dialog.current?.showModal()}
+      >
         <svg viewBox="0 0 20 20" aria-hidden className="size-4">
           <path d="M5 3h10v14l-5-3.5L5 17z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
         </svg>

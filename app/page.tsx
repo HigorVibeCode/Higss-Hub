@@ -14,10 +14,19 @@ export default async function HomePage() {
   const t = getDictionary(locale);
   const admin = await isAdmin();
 
+  const header = <SiteHeader locale={locale} languageLabel={t.language} panelLabel={t.panel} showPanel={admin} />;
   return (
     <div className="flex min-h-dvh flex-col">
-      <SiteHeader locale={locale} languageLabel={t.language} panelLabel={t.panel} showPanel={admin} />
-      {admin ? <AdminHub locale={locale} /> : <Landing locale={locale} />}
+      {/* The landing draws the header inside its drafting-table background, so the grid runs to the top edge */}
+      {admin ? (
+        <div className="relative isolate flex flex-1 flex-col">
+          <div aria-hidden className="blueprint absolute inset-x-0 top-0 -z-10 h-96" />
+          {header}
+          <AdminHub locale={locale} />
+        </div>
+      ) : (
+        <Landing locale={locale} header={header} />
+      )}
       <SiteFooter />
     </div>
   );
@@ -41,7 +50,7 @@ async function AdminHub({ locale }: { locale: Locale }) {
   const total = groups.reduce((n, g) => n + g.links.length, 0);
 
   return (
-    <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-16 pt-8 sm:px-6 sm:pt-12">
+    <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 pt-8 sm:px-6 sm:pt-12">
       <div className="mb-8">
         <h1 className="font-display text-3xl font-extrabold tracking-tight">
           Higss <span className="text-accent">Hub</span>

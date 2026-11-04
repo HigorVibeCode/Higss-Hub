@@ -18,7 +18,7 @@ export function SiteHeader({
   actions?: React.ReactNode;
 }) {
   return (
-    <header className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-4 py-5 sm:px-6">
+    <header className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-5 sm:px-6">
       <a href={homeHref} aria-label="Higss Hub">
         <Logo />
       </a>
@@ -37,7 +37,7 @@ export function SiteHeader({
 
 export function SiteFooter({ children }: { children?: React.ReactNode }) {
   return (
-    <footer className="mx-auto mt-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-3 border-t border-border px-4 py-6 text-sm text-muted sm:px-6">
+    <footer className="mx-auto mt-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 border-t border-border px-4 py-6 text-sm text-muted sm:px-6">
       <span>© {new Date().getFullYear()} Higss Hub</span>
       {children ?? (
         <a href="mailto:contact@higsshub.com" className="hover:text-text">

@@ -36,7 +36,8 @@ export default async function AdminPage({ searchParams }: Props) {
     <main className="mx-auto flex max-w-4xl flex-col gap-6 px-4 py-8 sm:px-6">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="font-display text-2xl font-bold">Seus links</h1>
+          <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-accent">Painel</p>
+          <h1 className="mt-1 font-display text-3xl font-extrabold tracking-tight">Seus links</h1>
           <p className="text-sm text-muted">
             {clients.length} clientes · {links.length} links · {publicCount} públicos
           </p>
@@ -55,7 +56,7 @@ export default async function AdminPage({ searchParams }: Props) {
         </details>
       </div>
 
-      <details className="rounded-2xl border border-border bg-surface">
+      <details className="rounded-2xl border border-border bg-surface/90 backdrop-blur">
         <summary className="cursor-pointer list-none p-4">
           <span className="font-display font-bold">Números da página inicial</span>
           <span className="ml-2 text-sm text-muted">aparecem na seção “Feito na prática”; vazio esconde</span>
@@ -86,11 +87,11 @@ export default async function AdminPage({ searchParams }: Props) {
         if (!client && groupLinks.length === 0 && clients.length > 0) return null;
         const editingClient = client && cliente === client.id;
         return (
-          <section key={client?.id ?? 'sem-cliente'} id={client ? `c-${client.id}` : 'sem-cliente'} className="rounded-2xl border border-border bg-surface">
+          <section key={client?.id ?? 'sem-cliente'} id={client ? `c-${client.id}` : 'sem-cliente'} className="rounded-2xl border border-border bg-surface/90 backdrop-blur">
             <header className="flex flex-wrap items-center gap-3 border-b border-border p-4">
               {client?.accent_color && <span className="size-3 rounded-full" style={{ background: client.accent_color }} />}
               <div className="min-w-0 flex-1">
-                <h2 className="font-display text-lg font-bold">{client?.name ?? 'Sem cliente'}</h2>
+                <h2 className="font-display text-xl font-extrabold tracking-tight">{client?.name ?? 'Sem cliente'}</h2>
                 {client ? (
                   <a href={clientUrl(client.slug, env.rootDomain)} target="_blank" rel="noopener noreferrer" className="text-sm text-accent hover:text-accent-hover">
                     {client.slug}.{env.rootDomain} ↗
