@@ -238,7 +238,7 @@ function LinkFields({ link, clients, clientId }: { link?: Link; clients: Client[
     <>
       <div className="grid gap-3 sm:grid-cols-2">
         <Field label="Nome">
-          <input name="title" required defaultValue={link?.title} className="field" placeholder="Site da pousada" />
+          <input name="title" defaultValue={link?.title} className="field" placeholder="Vazio: usa o título do site" />
         </Field>
         <Field label="Endereço">
           <input name="url" required defaultValue={link?.url} className="field" placeholder="orladosol.com.br" />
@@ -273,7 +273,7 @@ function LinkFields({ link, clients, clientId }: { link?: Link; clients: Client[
       </div>
       <label className="flex items-center gap-2 text-sm">
         <input type="checkbox" name="is_public" defaultChecked={link?.is_public ?? false} className="size-4 accent-[#d87445]" />
-        Público — aparece no hub e na página do cliente
+        Visível na página do cliente
       </label>
     </>
   );

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
+import { headers } from 'next/headers';
 import { notFound } from 'next/navigation';
 import { cache } from 'react';
 import { LinkExplorer } from '@/components/LinkExplorer';
 import { LogoMark } from '@/components/Logo';
 import { SetupNotice, SiteFooter, SiteHeader } from '@/components/SiteChrome';
 import { getClientPage } from '@/lib/data';
-import { SLUG_RE } from '@/lib/domain';
+import { SaveButton } from '@/components/SaveButton';
+import { SLUG_RE, clientSlugFromHost } from '@/lib/domain';
 import { env } from '@/lib/env';
 import { getDictionary } from '@/lib/i18n';
 import { getLocale } from '@/lib/locale';
@@ -30,7 +32,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     openGraph: { title, description },
     robots: { index: false, follow: false },
+    // Lets the client install the page as an app named after them (see manifest.webmanifest/route.ts).
+    manifest: (await onClientSubdomain()) ? '/manifest.webmanifest' : `/c/${(await params).slug}/manifest.webmanifest`,
+    appleWebApp: { capable: true, title: page?.client.name ?? 'Higss Hub', statusBarStyle: 'black-translucent' },
   };
+}
+
+async function onClientSubdomain() {
+  return clientSlugFromHost((await headers()).get('host'), env.rootDomain) !== null;
 }
 
 export default async function ClientPage({ params }: Props) {
@@ -42,13 +51,32 @@ export default async function ClientPage({ params }: Props) {
   const hubHref = `https://${env.rootDomain}`;
 
   return (
-    <div className="flex min-h-dvh flex-col" style={brand ? ({ '--brand': brand } as React.CSSProperties) : undefined}>
+    <div className="relative isolate flex min-h-dvh flex-col" style={brand ? ({ '--brand': brand } as React.CSSProperties) : undefined}>
       <SiteHeader
         locale={locale}
         languageLabel={t.language}
         panelLabel={t.panel}
         showPanel={false}
         homeHref={hubHref}
+        actions={
+          page && (
+            <SaveButton
+              labels={{
+                save: t.save,
+                title: t.saveTitle,
+                install: t.installApp,
+                desktop: t.saveDesktop,
+                ios: t.saveIos,
+                android: t.saveAndroid,
+                close: t.close,
+              }}
+            />
+          )
+        }
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px] bg-[radial-gradient(ellipse_at_top,color-mix(in_oklab,var(--brand)_20%,transparent),transparent_65%)]"
       />
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-16 pt-8 sm:px-6 sm:pt-14">
         {!page ? (

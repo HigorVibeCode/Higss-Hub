@@ -1,10 +1,10 @@
 import { unstable_cache } from 'next/cache';
 
 /** What WhatsApp-style link previews show: the page's share image, icon and description. */
-export type Preview = { image: string | null; icon: string | null; description: string | null };
+export type Preview = { title: string | null; image: string | null; icon: string | null; description: string | null };
 
 export const PREVIEW_TAG = 'previews';
-const EMPTY: Preview = { image: null, icon: null, description: null };
+const EMPTY: Preview = { title: null, image: null, icon: null, description: null };
 
 function decode(value: string) {
   return value
@@ -53,7 +53,9 @@ export function parsePreview(html: string, pageUrl: string): Preview {
     }
   }
 
+  const titleTag = head.match(/<title[^>]*>([^<]*)<\/title>/i)?.[1];
   return {
+    title: meta.get('og:title') ?? (titleTag ? decode(titleTag) || null : null),
     image: absolute(meta.get('og:image:secure_url') ?? meta.get('og:image') ?? meta.get('twitter:image') ?? null, pageUrl),
     icon: absolute(icon, pageUrl),
     description: meta.get('og:description') ?? meta.get('description') ?? null,

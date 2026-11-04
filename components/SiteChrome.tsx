@@ -8,12 +8,14 @@ export function SiteHeader({
   panelLabel,
   showPanel,
   homeHref = '/',
+  actions,
 }: {
   locale: Locale;
   languageLabel: string;
   panelLabel: string;
   showPanel: boolean;
   homeHref?: string;
+  actions?: React.ReactNode;
 }) {
   return (
     <header className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-4 py-5 sm:px-6">
@@ -21,6 +23,7 @@ export function SiteHeader({
         <Logo />
       </a>
       <div className="flex items-center gap-2">
+        {actions}
         {showPanel && (
           <a href="/admin" className="btn-ghost">
             {panelLabel}

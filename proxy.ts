@@ -21,9 +21,9 @@ export function proxy(request: NextRequest) {
   // <slug>.higsshub.com serves the client page; anything else on that host goes to the main domain.
   const hostHeader = request.headers.get('host');
   const slug = clientSlugFromHost(hostHeader, env.rootDomain);
-  if (slug && pathname === '/') {
+  if (slug && (pathname === '/' || pathname === '/manifest.webmanifest')) {
     const url = request.nextUrl.clone();
-    url.pathname = `/c/${slug}`;
+    url.pathname = pathname === '/' ? `/c/${slug}` : `/c/${slug}/manifest.webmanifest`;
     return NextResponse.rewrite(url);
   }
   if (slug && !pathname.startsWith('/_next') && !hostHeader?.split(':')[0].endsWith('.localhost')) {
@@ -34,5 +34,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|icon.svg|robots.txt|.*\\.(?:png|jpg|jpeg|svg|webp|ico)$).*)'],
+  matcher: ['/((?!_next/static|_next/image|icon.svg|apple-icon|robots.txt|.*\\.(?:png|jpg|jpeg|svg|webp|ico)$).*)'],
 };

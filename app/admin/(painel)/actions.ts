@@ -2,7 +2,7 @@
 
 import { randomUUID } from 'node:crypto';
 import { revalidateTag } from 'next/cache';
-import { PREVIEW_TAG } from '@/lib/preview';
+import { PREVIEW_TAG, getPreview } from '@/lib/preview';
 import { redirect } from 'next/navigation';
 import type { ActionResult } from '@/components/admin/ActionForm';
 import { isAdmin } from '@/lib/auth';
@@ -78,18 +78,19 @@ export async function deleteClient(_prev: ActionResult, fd: FormData): Promise<A
 
 export async function saveLink(_prev: ActionResult, fd: FormData): Promise<ActionResult> {
   const id = text(fd, 'id');
-  const title = text(fd, 'title');
   const rawUrl = text(fd, 'url');
   const url = /^https?:\/\//i.test(rawUrl) ? rawUrl : `https://${rawUrl}`;
   const kind = text(fd, 'kind') as Kind;
   const client_id = text(fd, 'client_id') || null;
 
-  if (!title) return { error: 'Dê um nome ao link.' };
+  let host: string;
   try {
-    new URL(url);
+    host = new URL(url).hostname.replace(/^www\./, '');
   } catch {
     return { error: 'Endereço inválido.' };
   }
+  // Paste just the address: the name comes from the site itself.
+  const title = text(fd, 'title') || (await getPreview(url)).title?.slice(0, 80) || host;
 
   const fields = {
     title,
